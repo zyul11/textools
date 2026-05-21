@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字反轉器 免費 — 反轉文字、單詞或行的線上工具</title>
+<meta name="description" content="以三種方式即時反轉任何文字：反轉整個字串（字元級別）、反轉單詞順序、或反轉行順序。適合謎題創作、回文分析、文字轉換。100%私密。">
+<meta name="keywords" content="文字反轉 免費, 字元反轉 線上, 單詞反轉 工具, 瀏覽器處理 文字轉換">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/text-reverser.html">
+<meta property="og:title" content="↩️ 文字反轉器">
+<meta property="og:description" content="以三種方式即時反轉任何文字：反轉整個字串（字元級別）、反轉單詞順序、或反轉行順序。">
+<meta property="og:url" content="https://textools.site/zh-hk/text-reverser.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">首頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">↩️ 文字反轉器</span>
+  </div>
+  <h1>↩️ 文字反轉器</h1>
+  <p class="sub">即時反轉文字、單詞或行 — 實用又有趣</p>
+  <div class="trust-badge">🔒 你的資料絕不離開瀏覽器。100%本地處理。</div>
+
+  
+<textarea id="textInput" placeholder="貼上要反轉的文字..." oninput="reverseChars()"></textarea>
+<div class="actions" style="margin:8px 0">
+  <button onclick="reverseChars()">🔤 反轉字元</button>
+  <button onclick="reverseWords()">🔠 反轉單詞</button>
+  <button onclick="reverseLines()">📄 反轉行序</button>
+  <button onclick="copyOutput()">📋 複製</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+<textarea id="textOutput" readonly placeholder="反轉結果將顯示在此..." style="color:#a6e3a1"></textarea>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/text-diff.html">文字差異比對器</a>
+    <a href="/zh-hk/char-counter.html">字數計算機</a>
+    <a href="/zh-hk/base64-encoder.html">Base64編碼器/解碼器</a>
+    <a href="/zh-hk/url-encoder.html">URL編碼器/解碼器</a>
+    <a href="/zh-hk/json-formatter.html">JSON格式化工具</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown預覽</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上文字反轉器 — 反轉字元、單詞或行</h2>
+    <p>我們的文字反轉器讓你以三種方式即時反轉任何文字：反轉整個字串（字元級別）、反轉單詞順序、或反轉行順序。無論你在創作謎題、分析回文、為遊戲混淆文字，還是純粹享受文字轉換的樂趣，這個工具都快速又簡單。</p>
+    <p>文字反轉在密碼學謎題、資料混淆、創意寫作練習和回文檢查中非常有用。我們的工具在一個界面中提供三種反轉模式，並附有一鍵複製反轉結果的按鈕。所有處理均在本地進行。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>反轉字元</strong> — 逐個字元翻轉整個字串</li>
+      <li><strong>反轉單詞</strong> — 保持單詞完整但反轉其順序</li>
+      <li><strong>反轉行序</strong> — 從上到下翻轉行順序</li>
+      <li><strong>一鍵複製</strong> — 即時複製反轉後的文字</li>
+      <li><strong>100%私密</strong> — 所有處理在瀏覽器中完成 — 零上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/palindrome-checker.html">回文檢查器</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/text-diff.html">文字差異比對器</a></li>
+      <li><a href="/char-counter.html">字數計算機</a></li>
+      <li><a href="/base64-encoder.html">Base64編碼器/解碼器</a></li>
+      <li><a href="/url-encoder.html">URL編碼器/解碼器</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/markdown-preview.html">Markdown預覽</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/line-numberer.html">行號標記工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>↩️ 文字反轉器 | <a href="/tools/">更多工具</a> | <a href="/">首頁</a> | <a href="/privacy.html">私隱</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本地 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function reverseChars(){var t=document.getElementById('textInput').value;document.getElementById('textOutput').value=t.split('').reverse().join('');}
+function reverseWords(){var t=document.getElementById('textInput').value;document.getElementById('textOutput').value=t.trim()?t.trim().split(/\s+/).reverse().join(' '):'';}
+function reverseLines(){var t=document.getElementById('textInput').value;document.getElementById('textOutput').value=t.split('\n').reverse().join('\n');}
+function copyOutput(){var t=document.getElementById('textOutput').value;if(!t.trim()){showToast('⚠️ 沒有可複製的內容');return;}navigator.clipboard.writeText(t).then(function(){showToast('✅ 已複製！');}).catch(function(){});}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('textOutput').value='';showToast('已清除');}
+
+</script>
+</body>
+</html>

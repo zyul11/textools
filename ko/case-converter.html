@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>텍스트 대소문자 변환 무료 — UPPERCASE·lowercase·Title Case 변환</title>
+<meta name="description" content="텍스트를 대문자(UPPERCASE), 소문자(lowercase), 타이틀 케이스(Title Case), 카멜 케이스(camelCase) 등으로 변환. 무료 온라인 케이스 변환 도구. 100% 프라이빗 브라우저 처리.">
+<meta name="keywords" content="대소문자 변환 무료, 텍스트 케이스 변환 온라인, camelCase 변환, Title Case 변환, 브라우저 완결 텍스트 도구">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ko/case-converter.html">
+<meta property="og:title" content="텍스트 대소문자 변환 — UPPERCASE·lowercase·Title Case 온라인 변환">
+<meta property="og:description" content="텍스트를 UPPERCASE, lowercase, Title Case, camelCase 등으로 변환. 무료 온라인 케이스 변환 도구. 100% 프라이빗 브라우저 처리.">
+<meta property="og:url" content="https://textools.site/ko/case-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="텍스트 대소문자 변환 — UPPERCASE·lowercase·Title Case 온라인 변환">
+<meta name="twitter:description" content="텍스트를 UPPERCASE, lowercase, Title Case, camelCase 등으로 변환. 무료 온라인 케이스 변환 도구. 100% 프라이빗 브라우저 처리.">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:200px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s;margin-bottom:12px}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.case-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.case-buttons button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.case-buttons button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.case-buttons button.active{background:linear-gradient(135deg,#a6e3a1,#3aa87a);box-shadow:0 0 12px rgba(166,227,161,.2)}
+.case-buttons button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.case-buttons button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.stats-bar{display:flex;gap:16px;margin:10px 0;font-size:12px;color:#7f849c;flex-wrap:wrap}
+.stats-bar span strong{color:#89b4fa}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.active-case-label{font-size:11px;color:#585b70;margin-bottom:4px;min-height:16px}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6adc8;margin:14px 0 6px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 3, "name": "케이스 변환"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "어떤 케이스 형식을 지원하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UPPERCASE(모두 대문자), lowercase(모두 소문자), Title Case(각 단어 첫 글자 대문자), camelCase(첫 단어 소문자, 이후 단어 대문자 시작), PascalCase(모든 단어 첫 글자 대문자, 구분자 없음), snake_case(밑줄로 구분), kebab-case(하이픈으로 구분), Capitalize Words(각 단어 첫 글자만 대문자, 나머지 소문자) 등 8가지 형식을 지원합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "케이스 변환기는 무료인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 완전히 무료입니다. 사용 제한, 가입, 숨은 비용이 없습니다. 모든 텍스트 변환은 브라우저에서 로컬로 실행됩니다 — 서버에 업로드되지 않습니다. 원하는 만큼 자주 사용할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "줄바꿈과 공백 같은 서식이 유지되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 케이스 변환기는 줄바꿈, 단락 나누기, 공백 등 원래 서식을 유지합니다. 문자 케이스만 변경됩니다. 이는 여러 단락의 텍스트나 구조적 서식이 유지되어야 하는 코드 주석을 변환할 때 특히 중요합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Title Case와 Capitalize Words의 차이는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Title Case는 각 단어의 첫 글자를 대문자로 하고 나머지는 원래 케이스를 유지합니다. Capitalize Words는 각 단어의 첫 글자를 대문자로, 나머지 모든 글자를 소문자로 강제 변환합니다. 예를 들어 'hello WORLD'는 Title Case에서 'Hello WORLD'가 되지만 Capitalize Words에서는 'Hello World'가 됩니다."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">홈</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">케이스 변환</span>
+  </div>
+  <h1>🔄 텍스트 대소문자 변환</h1>
+  <p class="sub">텍스트를 UPPERCASE, lowercase, Title Case, camelCase 등으로 변환</p>
+  <div class="trust-badge">🔒 100% 프라이빗 — 브라우저에서 처리, 서버에 전송되지 않음</div>
+
+  <div class="active-case-label" id="activeCaseLabel">아래에서 케이스 형식을 선택하세요</div>
+
+  <textarea id="inputText" placeholder="텍스트를 붙여넣거나 입력하세요..." oninput="updateStats()"></textarea>
+
+  <div class="case-buttons" id="caseButtons">
+    <button onclick="applyCase('upper')">UPPERCASE</button>
+    <button onclick="applyCase('lower')">lowercase</button>
+    <button onclick="applyCase('title')">Title Case</button>
+    <button onclick="applyCase('camel')">camelCase</button>
+    <button onclick="applyCase('pascal')">PascalCase</button>
+    <button onclick="applyCase('snake')">snake_case</button>
+    <button onclick="applyCase('kebab')">kebab-case</button>
+    <button onclick="applyCase('words')">Capitalize Words</button>
+  </div>
+
+  <div class="stats-bar" id="statsBar">
+    <span>입력: <strong id="inputChars">0</strong>자</span>
+    <span>출력: <strong id="outputChars">0</strong>자</span>
+    <span>단어: <strong id="wordCount">0</strong></span>
+  </div>
+
+  <textarea id="outputText" readonly placeholder="변환된 텍스트가 여기에 표시됩니다..."></textarea>
+
+  <div class="actions">
+    <button class="secondary" onclick="clearAll()">🗑️ 지우기</button>
+    <button class="success" id="copyBtn" onclick="copyResult()">📋 복사</button>
+  </div>
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">📌 관련 도구:</span>
+    <a href="/ko/password-generator.html">비밀번호 생성</a>
+    <a href="/ko/find-replace.html">검색·치환</a>
+    <a href="/ko/word-counter.html">단어 수 카운터</a>
+    <a href="/ko/sort-lines.html">줄 정렬</a>
+    <a href="/ko/remove-duplicates.html">중복 줄 제거</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>무료 온라인 텍스트 케이스 변환기 — UPPERCASE, lowercase, Title Case, camelCase 등</h2>
+    <p>케이스 변환은 작가, 편집자, 개발자, 데이터 분석가, 콘텐츠 관리자에게 필수적인 작업입니다. 다양한 상황에 따라 다른 대문자/소문자 스타일이 필요하며, 수동으로 텍스트를 변환하는 것은 지루하고 오류가 발생하기 쉽습니다. 이 도구는 한 번의 클릭으로 즉각적이고 정확한 변환을 제공합니다. 실시간 문자 및 단어 수를 통해 변환이 텍스트 길이에 미치는 영향을 추적할 수 있습니다.</p>
+    <p>이 도구는 다양한 사용 사례를 지원합니다. 콘텐츠 작성자는 제목을 Title Case로 빠르게 재구성할 수 있습니다. 소프트웨어 개발자는 API 응답 필드 이름을 camelCase(JavaScript)와 snake_case(Python, 데이터베이스) 간에 변환할 수 있습니다. 데이터 분석가는 가져오기 전에 일관된 서식을 위해 텍스트 데이터를 정규화할 수 있습니다. 케이스 변환이 필요할 때마다 이 도구가 정확하고 즉각적인 결과를 제공합니다.</p>
+
+    <h3>주요 기능</h3>
+    <ul>
+      <li><strong>8가지 케이스 형식</strong> — UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, Capitalize Words</li>
+      <li><strong>즉시 변환</strong> — 한 번의 클릭으로 결과가 즉시 업데이트</li>
+      <li><strong>실시간 통계</strong> — 입력 및 출력 문자 수와 단어 수 표시</li>
+      <li><strong>원클릭 복사</strong> — 버튼 하나로 변환된 텍스트를 클립보드에 복사</li>
+      <li><strong>서식 유지</strong> — 줄바꿈, 공백, 단락 구조가 그대로 유지</li>
+      <li><strong>100% 프라이빗</strong> — 모든 처리가 브라우저에서 로컬로 실행</li>
+      <li><strong>가입 불필요</strong> — 무료 사용, 계정 없음, 추적 없음</li>
+    </ul>
+
+    <h3>FAQ</h3>
+    <p><strong>변환기가 비영어 문자를 처리하나요?</strong> 네. 악센트 문자, 유니코드 문자, 확장 라틴 문자 세트에서 작동합니다. é, ñ, ü 등 유럽 언어에서 흔히 사용되는 문자를 올바르게 처리합니다.</p>
+    <p><strong>코드 서식에 사용할 수 있나요?</strong> 물론입니다. camelCase, PascalCase, snake_case, kebab-case 변환기는 특히 코드 명명 규칙을 위해 설계되었습니다. camelCase와 PascalCase는 공백과 특수 문자를 제거하므로 모든 코드 컨텍스트에 적합하지 않을 수 있습니다.</p>
+    <p><strong>변환할 수 있는 텍스트 양에 제한이 있나요?</strong> 없습니다. 모든 처리가 브라우저에서 로컬로 이루어지므로 인위적인 제한이 없습니다. 브라우저의 사용 가능한 메모리가 유일한 제약입니다.</p>
+
+    <h3>관련 도구</h3>
+    <ul>
+      <li><a href="/password-generator.html">랜덤 비밀번호 생성기</a> — 강력한 보안 비밀번호 생성</li>
+      <li><a href="/find-replace.html">검색 및 치환</a> — 정규식 지원 텍스트 검색 및 치환</li>
+      <li><a href="/word-counter.html">단어 수 카운터</a> — 단어, 문자, 문장, 단락 개수 세기</li>
+      <li><a href="/sort-lines.html">줄 알파벳순 정렬</a> — 목록 A-Z 또는 Z-A 정리</li>
+      <li><a href="/remove-duplicates.html">중복 줄 제거</a> — 텍스트에서 반복 항목 정리</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="/">Textools</a> ·
+    <a href="/password-generator.html">Password Generator</a> ·
+    <a href="/case-converter.html">Case Converter</a> ·
+    <a href="/find-replace.html">Find &amp; Replace</a> ·
+    <a href="/word-counter.html">Word Counter</a> ·
+    <a href="/sort-lines.html">Sort Lines</a>
+    <br><br>
+    <span>© 2026 Textools — 프라이버시 우선 온라인 도구. 모든 처리는 브라우저에서 로컬로 실행됩니다.</span>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === Usage tracking ===
+(function(){
+  let n = localStorage.getItem('cc_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('cc_count', n);
+})();
+
+let currentCase = '';
+
+function updateStats() {
+  const input = document.getElementById('inputText').value;
+  document.getElementById('inputChars').textContent = input.length;
+  const output = document.getElementById('outputText').value;
+  document.getElementById('outputChars').textContent = output.length;
+  const words = input.trim() ? input.trim().split(/\s+/).length : 0;
+  document.getElementById('wordCount').textContent = words;
+}
+
+function applyCase(type) {
+  const input = document.getElementById('inputText').value;
+  if (!input.trim()) {
+    showToast('⚠️ 먼저 텍스트를 입력하세요.');
+    return;
+  }
+  
+  let result = '';
+  currentCase = type;
+  
+  // Highlight active button
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  switch(type) {
+    case 'upper':
+      result = input.toUpperCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: UPPERCASE';
+      break;
+    case 'lower':
+      result = input.toLowerCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: lowercase';
+      break;
+    case 'title':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1);
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: Title Case';
+      break;
+    case 'camel':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: camelCase';
+      break;
+    case 'pascal':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
+        .replace(/^[a-z]/, c => c.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: PascalCase';
+      break;
+    case 'snake':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_|_$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: snake_case';
+      break;
+    case 'kebab':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: kebab-case';
+      break;
+    case 'words':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ 적용됨: Capitalize Words';
+      break;
+  }
+  
+  document.getElementById('outputText').value = result;
+  updateStats();
+}
+
+function copyResult() {
+  const text = document.getElementById('outputText').value;
+  if (!text) { showToast('⚠️ 복사할 내용이 없습니다. 먼저 텍스트를 변환하세요.'); return; }
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = document.getElementById('copyBtn');
+  btn.textContent = '✅ 복사됨!';
+  setTimeout(() => { btn.textContent = '📋 복사'; }, 2000);
+  showToast('✅ 클립보드에 복사되었습니다!');
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('outputText').value = '';
+  document.getElementById('activeCaseLabel').textContent = '아래에서 케이스 형식을 선택하세요';
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  currentCase = '';
+  updateStats();
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

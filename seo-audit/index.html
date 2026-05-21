@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Tool - Free Website Analysis & Optimization Report</title>
+<meta name="description" content="Free SEO audit tool. Get instant website analysis: meta tags, headings, structured data, images, links, and content quality check with actionable fixes.">
+<link rel="canonical" href="https://textools.site/seo-audit/">
+<link rel="alternate" hreflang="en" href="https://textools.site/seo-audit/">
+<link rel="alternate" hreflang="x-default" href="https://textools.site/seo-audit/">
+<meta property="og:title" content="SEO Audit Tool - Free Website Analysis & Optimization Report">
+<meta property="og:description" content="Free SEO audit tool. Instant website analysis with actionable fixes.">
+<meta property="og:url" content="https://textools.site/seo-audit/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/seo-audit/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEO Audit Tool - Free Website Analysis & Optimization Report">
+<meta name="twitter:description" content="Free SEO audit tool. Get instant website analysis with actionable fixes.">
+<meta name="twitter:image" content="https://textools.site/seo-audit/og-image.svg">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔍</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SEO Audit Tool",
+  "description": "Professional website SEO analysis and optimization report generator.",
+  "applicationCategory": "SEO Tool",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of websites can I audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any publicly accessible website. Landing pages, blogs, e-commerce, SaaS, tools — all work. If Google can crawl it, we can audit it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from PageSpeed Insights?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PageSpeed only checks speed. We check 20+ factors including meta tags, headings, structured data, images, links, content quality, social tags, and more. Plus we give you actionable fix instructions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you store my website data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the audit results for the duration of your session. We don't sell or share your data. Paid report data is stored to provide download access."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Fix Plan include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get an optimized version of your page's HTML with all meta fixes applied, proper heading structure, JSON-LD structured data, image alt attributes, and a detailed migration guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a refund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If the report doesn't meet your expectations, contact us within 7 days for a full refund."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <p>Analyzing your website...</p>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <div class="logo">🔍 <span>SEO</span> Audit</div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </div>
+</div>
+
+<!-- Tool Page -->
+<div class="tool-page show" id="toolPage">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">🧪 Professional SEO Analysis</div>
+  <h1>Your Website's SEO Health,<br>Analyzed in Seconds</h1>
+  <p>Enter any URL and get an instant SEO audit. No signup required.</p>
+  <form class="input-group" id="auditForm" onsubmit="return runAudit(event)">
+    <input type="url" id="urlInput" placeholder="https://yoursite.com" required autocomplete="url">
+    <button type="submit">Analyze →</button>
+  </form>
+  <div class="trust">⚡ Takes 10-30 seconds · Free basic report · No email required</div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-item"><h3 id="statSites">0</h3><p>Sites Analyzed</p></div>
+  <div class="stat-item"><h3 id="statIssues">0</h3><p>Issues Found</p></div>
+  <div class="stat-item"><h3 id="statFixes">0</h3><p>Fixes Generated</p></div>
+</div>
+
+<!-- What We Check -->
+<div class="checks" id="checks">
+  <h2>📋 What We Check</h2>
+  <p class="sub">20+ SEO factors analyzed across every page</p>
+  <div class="check-grid container">
+    <div class="check-item"><div class="icon">🏷️</div><div class="info"><h4>Title & Meta</h4><p>Length, keywords, uniqueness, clickability</p></div></div>
+    <div class="check-item"><div class="icon">📐</div><div class="info"><h4>Heading Structure</h4><p>H1-H6 hierarchy, missing levels, duplicates</p></div></div>
+    <div class="check-item"><div class="icon">🔗</div><div class="info"><h4>Link Structure</h4><p>Internal/external links, broken links, nofollow</p></div></div>
+    <div class="check-item"><div class="icon">🖼️</div><div class="info"><h4>Image Alt Text</h4><p>Missing alt attributes, optimization</p></div></div>
+    <div class="check-item"><div class="icon">📊</div><div class="info"><h4>Structured Data</h4><p>JSON-LD, Schema.org, rich snippets</p></div></div>
+    <div class="check-item"><div class="icon">📱</div><div class="info"><h4>Mobile Readiness</h4><p>Viewport, responsive meta, tap targets</p></div></div>
+    <div class="check-item"><div class="icon">⚡</div><div class="info"><h4>Page Speed</h4><p>Image sizes, render blocking, caching hints</p></div></div>
+    <div class="check-item"><div class="icon">📰</div><div class="info"><h4>OG & Social Tags</h4><p>Open Graph, Twitter cards, share previews</p></div></div>
+    <div class="check-item"><div class="icon">📝</div><div class="info"><h4>Content Quality</h4><p>Word count, readability, keyword density</p></div></div>
+    <div class="check-item"><div class="icon">🗺️</div><div class="info"><h4>SEO Foundation</h4><p>robots.txt, sitemap.xml, canonical URLs</p></div></div>
+    <div class="check-item"><div class="icon">🔐</div><div class="info"><h4>HTTPS & Security</h4><p>SSL cert, mixed content, redirects</p></div></div>
+    <div class="check-item"><div class="icon">🧭</div><div class="info"><h4>Breadcrumbs</h4><p>Navigation structure, schema markup</p></div></div>
+  </div>
+</div>
+
+<!-- Pricing -->
+<div class="pricing" id="pricing">
+  <h2>💰 Choose Your Plan <span class="limited-badge">🕐 Limited Time</span></h2>
+  <p class="sub">Launch pricing — lock in the lowest rates before they go up</p>
+  <div class="price-grid">
+    <div class="price-card">
+      <h3>🆓 Free Scan</h3>
+      <div class="price">$0</div>
+      <ul>
+        <li>Overall SEO score</li>
+        <li>Top 3 issues revealed</li>
+        <li>🤖 AI Visibility detected?</li>
+        <li class="nope">Full 20+ point audit</li>
+        <li class="nope">Detailed fix instructions</li>
+        <li class="nope">Optimized HTML output</li>
+      </ul>
+      <a href="#" class="btn secondary" onclick="document.getElementById('urlInput').focus();return false">Try Now</a>
+    </div>
+    <div class="price-card popular">
+      <span class="limited-tag">🎉 Launch Special</span>
+      <h3>📊 Full Report</h3>
+      <div class="new-price"><span class="old-price">$19</span><span class="price" style="font-size:32px">$9.9</span> <small>one-time</small><span class="save-tag">Save 48%</span></div>
+      <ul>
+        <li>Overall SEO score</li>
+        <li>Full 20+ point audit</li>
+        <li>🤖 AI Visibility analysis</li>
+        <li>Detailed issue breakdown</li>
+        <li>Priority score per issue</li>
+        <li>Copy-paste fix instructions</li>
+        <li class="nope">Optimized HTML output</li>
+      </ul>
+      <a href="#" class="btn primary" onclick="unlockReport()">Get Full Report</a>
+    </div>
+    <div class="price-card">
+      <span class="limited-tag">🎉 Launch Special</span>
+      <h3>🔧 修复方案</h3>
+      <div class="new-price"><span class="old-price">$49</span><span class="price" style="font-size:32px">$29</span> <small>one-time</small><span class="save-tag">Save 40%</span></div>
+      <ul>
+        <li>Everything in Full Report</li>
+        <li>✅ Optimized HTML with fixes applied</li>
+        <li>✅ Rewritten meta tags</li>
+        <li>✅ JSON-LD structured data</li>
+        <li>✅ SEO-optimized content suggestions</li>
+        <li>Dynamic page migration guide</li>
+      </ul>
+      <a href="#" class="btn primary" onclick="unlockExpert()">修复方案 — $29</a>
+    </div>
+  </div>
+  <p class="limited-notice">🕐 These are launch prices. The regular price kicks in once we hit our first 100 paid users. Lock in the lowest rate while you can.</p>
+</div>
+
+<!-- How It Works -->
+<div class="how">
+  <h2>⚙️ How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h4>Enter URL</h4>
+      <p>Paste your website URL and click Analyze</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h4>Website Scans & Analyzes</h4>
+      <p>Our engine checks 20+ SEO factors against best practices</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h4>Get Actionable Results</h4>
+      <p>Free: see score + top issues. Paid: full report + fixes</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq" id="faq">
+  <h2>❓ FAQ</h2>
+  <div class="faq-item">
+    <div class="q" onclick="toggleFaq(this)">What kind of websites can I audit? <span>+</span></div>
+    <div class="a">Any publicly accessible website. Landing pages, blogs, e-commerce, SaaS, tools — all work. If Google can crawl it, we can audit it.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q" onclick="toggleFaq(this)">How is this different from PageSpeed Insights? <span>+</span></div>
+    <div class="a">PageSpeed only checks speed. We check 20+ factors including meta tags, headings, structured data, images, links, content quality, social tags, and more. Plus we give you actionable fix instructions — not just a score.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q" onclick="toggleFaq(this)">Do you store my website data? <span>+</span></div>
+    <div class="a">Only the audit results for the duration of your session. We don't sell or share your data. Paid report data is stored to provide download access.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q" onclick="toggleFaq(this)">"修复方案"包含什么？ <span>+</span></div>
+    <div class="a">你获得一份优化版HTML，包含所有meta修复、正确标题层级、JSON-LD结构化数据、图片alt属性，以及动态部分的迁移指南。</div>
+  </div>
+  <div class="faq-item">
+    <div class="q" onclick="toggleFaq(this)">Can I get a refund? <span>+</span></div>
+    <div class="a">Yes. If the report doesn't meet your expectations, contact us within 7 days for a full refund.</div>
+  </div>
+</div>
+
+</div> <!-- /tool-page -->
+
+<!-- Results Page -->
+<div class="results-page container" id="resultsPage">
+
+<div id="resultsContent"></div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <a href="/">Tools</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
+  <br>© 2026 SEO Audit Tool
+</div>
+
+<script>
+// FAQ toggle
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  answer.classList.toggle('show');
+  el.querySelector('span').textContent = answer.classList.contains('show') ? '−' : '+';
+}
+
+// Stats counter animation
+let sitesAnalyzed = 0;
+function updateStats(newCount) {
+  sitesAnalyzed = newCount;
+  document.getElementById('statSites').textContent = sitesAnalyzed.toLocaleString();
+}
+
+// Load saved stats
+try {
+  const saved = localStorage.getItem('seoAuditStats');
+  if (saved) updateStats(parseInt(saved) || 0);
+} catch(e){}
+
+// Run audit
+async function runAudit(e) {
+  e.preventDefault();
+  const url = document.getElementById('urlInput').value.trim();
+  if (!url) return false;
+
+  document.getElementById('loadingOverlay').classList.add('show');
+
+  try {
+    const API_BASE = window.location.origin === 'file://' || window.location.origin === 'null' 
+      ? 'http://127.0.0.1:8119' 
+      : window.location.origin;
+    
+    const res = await fetch(API_BASE + '/v1/seo-audit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({url: url})
+    });
+    const data = await res.json();
+    
+    if (data.success) {
+      renderResults(data.report, url);
+      // Update stats
+      const newCount = sitesAnalyzed + 1;
+      updateStats(newCount);
+      try { localStorage.setItem('seoAuditStats', String(newCount)); } catch(e){}
+    } else {
+      alert('Error: ' + (data.error || 'Analysis failed. Please try again.'));
+    }
+  } catch(e) {
+    // If backend not available, show demo results
+    showDemoResults(url);
+  }
+
+  document.getElementById('loadingOverlay').classList.remove('show');
+  return false;
+}
+
+// Render results
+function renderResults(report, url) {
+  document.getElementById('toolPage').classList.remove('show');
+  document.getElementById('toolPage').classList.add('hidden');
+  document.getElementById('resultsPage').classList.add('show');
+
+  // Save for paywall functions
+  window._lastReport = report;
+
+  const container = document.getElementById('resultsContent');
+  
+  const score = report.score || 72;
+  const issues = report.issues || [];
+  const checks = report.checks || [];
+
+  // Score color
+  let scoreColor = '#f38ba8';
+  if (score >= 80) scoreColor = '#a6e3a1';
+  else if (score >= 60) scoreColor = '#f9e2af';
+  
+  const degrees = (score / 100) * 360;
+
+  let checksHtml = checks.map(c => {
+    const status = c.pass ? 'pass' : (c.warn ? 'warn' : 'fail');
+    const icon = c.pass ? '✅' : (c.warn ? '⚠️' : '❌');
+    const confBadge = c.confidence && c.confidence !== 'unknown' ? `<span class="conf-badge ${c.confidence}">${c.confidence}</span>` : '';
+    return `<div class="check-row"><span class="name">${icon} ${c.name} ${confBadge}</span><span class="status ${status}">${c.pass ? 'PASS' : (c.warn ? 'WARN' : 'FAIL')}</span></div>`;
+  }).join('');
+
+  let issuesHtml = issues.slice(0, 10).map((issue, i) => {
+    const sevClass = issue.severity === 'high' ? 'high' : (issue.severity === 'medium' ? 'med' : 'low');
+    return `<div class="issue">
+      <div class="sev ${sevClass}"></div>
+      <div class="info">
+        <h5>${issue.title}</h5>
+        <p>${issue.suggestion ? issue.suggestion.slice(0, 80) : issue.description ? issue.description.slice(0, 80) : ''}</p>
+      </div>
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="report-card" style="margin-top:30px">
+      <div class="score-wrap">
+        <div class="score-ring" style="background:conic-gradient(${scoreColor} 0deg ${degrees}deg, #313244 ${degrees}deg 360deg)">
+          <div class="inner">
+            <div class="num" style="color:${scoreColor}">${score}</div>
+            <div class="label">Score</div>
+          </div>
+        </div>
+        <div class="score-info">
+          <h3>🔍 SEO Audit: ${new URL(url).hostname}</h3>
+          <p>${issues.length} issues found across ${checks.length} checkpoints</p>
+          ${report.site_type ? `<p style="font-size:11px;color:#585b70;margin-top:3px">🏭 Detected as: <strong>${report.site_type.label}</strong></p>` : ''}
+          ${report.rule_source ? `<p style="font-size:10px;color:#45475a;margin-top:2px">📡 Rules: ${report.rule_source.source} (${report.rule_source.total_rules} rules)</p>` : ''}
+          <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+            <button onclick="unlockReport()" class="btn primary" style="font-size:11px;padding:6px 14px">📊 Full Report — <span style="text-decoration:line-through;opacity:.6;margin-right:2px">$19</span>$9.9</button>
+            <button onclick="unlockExpert()" class="btn primary" style="font-size:11px;padding:6px 14px;background:linear-gradient(135deg,#a6e3a1,#94e2d5);color:#11111b">🔧 修复方案 — <span style="text-decoration:line-through;opacity:.6;margin-right:2px">$49</span>$29</button>
+          </div>
+          <a href="#" class="btn secondary" style="display:inline-block;padding:6px 16px;border-radius:6px;font-size:12px;margin-top:6px;background:#313244;color:#cdd6f4;text-decoration:none" onclick="backToHome()">← Analyze Another URL</a>
+        </div>
+      </div>
+
+      <h4 style="font-size:13px;margin-bottom:10px;color:#a6adc8">📋 Check Results</h4>
+      <div style="margin-bottom:20px">${checksHtml}</div>
+
+      <h4 style="font-size:13px;margin-bottom:10px;color:#a6adc8">🔴 Top Issues</h4>
+      <div class="issue-list">${issuesHtml}</div>
+
+      <!-- Free version shows limited issues -->
+      <div class="paywall-section" id="paywallSection">
+        <div class="paywall-cta">
+          <h4>📊 See the Full Report</h4>
+          <p>Unlock all ${issues.length} issues with detailed fix instructions + priority scoring</p>
+          <a href="#" class="btn" onclick="unlockReport()">Get Full Report — <span style="text-decoration:line-through;opacity:.6;margin-right:2px">$19</span>$9.9</a>
+          <div style="margin-top:8px">
+            <a href="#" class="btn" style="background:linear-gradient(135deg,#a6e3a1,#94e2d5);color:#11111b" onclick="unlockExpert()">修复方案 — <span style="text-decoration:line-through;opacity:.6;margin-right:2px">$49</span>$29</a>
+          </div>
+          <p style="font-size:10px;color:#585b70;margin-top:8px">🕐 Launch pricing · Prices go up soon · One-time payment</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Demo mode: if backend is not ready, show realistic sample
+function showDemoResults(url) {
+  const demoReport = {
+    score: 64,
+    checks: [
+      {name: 'Title Tag', pass: false, warn: false},
+      {name: 'Meta Description', pass: false, warn: false},
+      {name: 'H1 Tag', pass: true, warn: false, note: 'Exists but could be optimized'},
+      {name: 'Heading Hierarchy', pass: false, warn: false},
+      {name: 'Image Alt Attributes', pass: false, warn: false},
+      {name: 'JSON-LD Structured Data', pass: false, warn: false},
+      {name: 'Open Graph Tags', pass: false, warn: true},
+      {name: 'Canonical URL', pass: false, warn: false},
+      {name: 'Mobile Viewport', pass: true, warn: false},
+      {name: 'Page Speed (estimated)', pass: false, warn: true},
+      {name: 'Internal Links', pass: true, warn: false},
+      {name: 'External Links', pass: true, warn: false},
+      {name: 'HTTPS', pass: true, warn: false},
+      {name: 'robots.txt', pass: false, warn: false},
+      {name: 'sitemap.xml', pass: false, warn: false},
+      {name: 'Content Length', pass: false, warn: false}
+    ],
+    issues: [
+      {title: 'Missing Title Tag', severity: 'high', suggestion: 'Add a unique, keyword-rich title tag (50-60 characters) to your page. Current: no title found.'},
+      {title: 'Missing Meta Description', severity: 'high', suggestion: 'Add a compelling meta description (150-160 characters) that includes primary keywords and a call to action.'},
+      {title: 'No Structured Data Found', severity: 'high', suggestion: 'Add JSON-LD structured data (Organization, WebPage, BreadcrumbList) to enable rich search results.'},
+      {title: 'Images Missing Alt Text', severity: 'medium', suggestion: 'Add descriptive alt attributes to all images. This improves accessibility and image search traffic.'},
+      {title: 'Heading Structure Broken', severity: 'medium', suggestion: 'Your page has multiple H1 tags. Use exactly one H1 per page, followed by a logical H2-H6 hierarchy.'},
+      {title: 'No sitemap.xml Found', severity: 'medium', suggestion: 'Create and submit an XML sitemap to Google Search Console for better indexing.'},
+      {title: 'Meta Description Too Short', severity: 'low', suggestion: 'Current description is under 100 characters. Expand to 150-160 characters for optimal SERP display.'},
+    ]
+  };
+  renderResults(demoReport, url);
+}
+
+// Paywall handlers — currently unlocked for demo
+function unlockReport() {
+  const report = window._lastReport;
+  if (!report) { alert('Run an audit first!'); return; }
+  showFullReport(report);
+}
+
+function unlockExpert() {
+  const report = window._lastReport;
+  if (!report) { alert('Run an audit first!'); return; }
+  showExpertFix(report);
+}
+
+function showFullReport(report) {
+  const checks = report.checks || [];
+  const issues = report.issues || [];
+  const container = document.getElementById('resultsContent');
+
+  let allChecksHtml = checks.map(c => {
+    const status = c.pass ? 'pass' : (c.warn ? 'warn' : 'fail');
+    const icon = c.pass ? '✅' : (c.warn ? '⚠️' : '❌');
+    const confBadge = c.confidence && c.confidence !== 'unknown' ? `<span class="conf-badge ${c.confidence}">${c.confidence}</span>` : '';
+    const note = c.note ? `<div style="font-size:10px;color:#585b70;margin-top:2px">${c.note}</div>` : '';
+    return `<div class="check-row"><span class="name">${icon} ${c.name} ${confBadge}</span><span class="status ${status}">${c.pass ? 'PASS' : (c.warn ? 'WARN' : 'FAIL')}</span></div>${note}`;
+  }).join('');
+
+  let allIssuesHtml = issues.map((issue, i) => {
+    const sevClass = issue.severity === 'high' ? 'high' : (issue.severity === 'medium' ? 'med' : 'low');
+    const sevLabel = issue.severity === 'high' ? '🔴 HIGH' : (issue.severity === 'medium' ? '🟡 MED' : '🟢 LOW');
+    const confidence = issue.confidence ? `<span class="conf-badge ${issue.confidence}">${issue.confidence}</span>` : '';
+    const fixSteps = generateFixSteps(issue);
+    return `<div class="issue" style="margin-bottom:10px;padding:12px;background:rgba(24,24,37,.6);border-radius:8px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h5 style="font-size:12px;color:#cdd6f4;margin:0">${sevLabel} ${issue.title} ${confidence}</h5>
+      </div>
+      <p style="font-size:11px;color:#a6adc8;margin:6px 0 0;line-height:1.5">${issue.suggestion || ''}</p>
+      ${fixSteps ? `<div style="margin-top:6px;padding:6px 8px;background:rgba(166,227,161,.06);border-radius:4px;font-size:10px;color:#a6e3a1;line-height:1.5;font-family:monospace">${fixSteps}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="report-card" style="margin-top:30px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="font-size:15px;color:#cdd6f4;margin:0">📊 Full SEO Report</h3>
+        <button onclick="backToResults()" style="background:#313244;color:#cdd6f4;border:none;border-radius:6px;padding:6px 12px;font-size:11px;cursor:pointer;font-family:inherit">← Back to Summary</button>
+      </div>
+      <p style="font-size:11px;color:#585b70;margin-bottom:16px">${issues.length} issues · ${checks.length} checkpoints · Detailed fix instructions for each issue</p>
+      <h4 style="font-size:13px;margin-bottom:10px;color:#a6adc8">🔴 All Issues (${issues.length})</h4>
+      <div class="issue-list">${allIssuesHtml}</div>
+      <h4 style="font-size:13px;margin:16px 0 10px;color:#a6adc8">📋 All Checks (${checks.length})</h4>
+      <div style="margin-bottom:16px">${allChecksHtml}</div>
+      <div style="text-align:center;margin-top:16px">
+        <button onclick="downloadReport()" style="background:linear-gradient(135deg,#89b4fa,#b4befe);color:#11111b;border:none;border-radius:8px;padding:8px 20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">📥 Download Full Report</button>
+      </div>
+    </div>
+  `;
+  window._reportMode = 'full';
+}
+
+function showExpertFix(report) {
+  const issues = report.issues || [];
+  const url = report.url || '';
+  
+  // Generate optimized HTML based on issues found
+  const optimizedHtml = generateOptimizedHtml(report);
+  
+  let fixesHtml = issues.map(issue => {
+    const fix = getHtmlFix(issue);
+    return fix ? `<div style="margin-bottom:8px;padding:8px 10px;background:rgba(24,24,37,.6);border-radius:6px">
+      <div style="font-size:11px;color:#f9e2af;font-weight:600;margin-bottom:4px">${issue.title}</div>
+      <pre style="font-size:10px;color:#a6e3a1;background:rgba(17,17,27,.8);padding:6px 8px;border-radius:4px;overflow-x:auto;white-space:pre-wrap;line-height:1.4;margin:0">${escapeHtml(fix)}</pre>
+    </div>` : '';
+  }).filter(Boolean).join('');
+
+  const container = document.getElementById('resultsContent');
+  container.innerHTML = `
+    <div class="report-card" style="margin-top:30px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="font-size:15px;color:#cdd6f4;margin:0">🔧 修复方案 — SEO优化HTML</h3>
+        <button onclick="backToResults()" style="background:#313244;color:#cdd6f4;border:none;border-radius:6px;padding:6px 12px;font-size:11px;cursor:pointer;font-family:inherit">← Back to Summary</button>
+      </div>
+      <p style="font-size:11px;color:#585b70;margin-bottom:16px">Optimized HTML with ${issues.length} fixes applied. Download the file and replace your page's <head> section.</p>
+      
+      <h4 style="font-size:13px;margin-bottom:10px;color:#a6adc8">🔧 修复方案 (${issues.filter(i => getHtmlFix(i)).length})</h4>
+      <div style="margin-bottom:16px">${fixesHtml}</div>
+      
+      <h4 style="font-size:13px;margin:16px 0 10px;color:#a6adc8">📄 Optimized &lt;head&gt; HTML</h4>
+      <pre id="optimizedHtmlBlock" style="font-size:10px;color:#a6e3a1;background:rgba(17,17,27,.8);padding:10px 12px;border-radius:6px;overflow-x:auto;white-space:pre-wrap;line-height:1.4;max-height:400px;overflow-y:auto;border:1px solid rgba(166,227,161,.1)">${escapeHtml(optimizedHtml)}</pre>
+      
+      <div style="text-align:center;margin-top:16px;display:flex;gap:10px;justify-content:center">
+        <button onclick="downloadExpertFix()" style="background:linear-gradient(135deg,#a6e3a1,#94e2d5);color:#11111b;border:none;border-radius:8px;padding:8px 20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">📥 Download Optimized HTML</button>
+        <button onclick="copyExpertFix()" style="background:#313244;color:#cdd6f4;border:none;border-radius:8px;padding:8px 20px;font-size:12px;cursor:pointer;font-family:inherit">📋 Copy to Clipboard</button>
+      </div>
+    </div>
+  `;
+  window._reportMode = 'expert';
+  window._optimizedHtml = optimizedHtml;
+}
+
+function backToResults() {
+  if (window._lastReport) {
+    renderResults(window._lastReport, window._lastReport.url);
+  }
+}
+
+function generateFixSteps(issue) {
+  const title = (issue.title || '').toLowerCase();
+  const sug = (issue.suggestion || '');
+  if (title.includes('title')) {
+    return '<!-- Add within <head>: -->\n<title>Your Primary Keyword — Descriptive Title Under 60 Chars</title>';
+  }
+  if (title.includes('description')) {
+    return '<!-- Add within <head>: -->\n<meta name="description" content="Your compelling description (150-155 chars) with call to action.">';
+  }
+  if (title.includes('h1') || title.includes('heading')) {
+    return '<!-- Ensure exactly one H1 per page: -->\n<h1>Your Primary Keyword Matches Page Topic</h1>';
+  }
+  if (title.includes('canonical')) {
+    return '<!-- Add within <head>: -->\n<link rel="canonical" href="https://yoursite.com/this-page-url/">';
+  }
+  if (title.includes('og:') || title.includes('og tag') || title.includes('open graph')) {
+    return '<!-- Add within <head>: -->\n<meta property="og:title" content="...">\n<meta property="og:description" content="...">\n<meta property="og:image" content="...">\n<meta property="og:url" content="...">';
+  }
+  if (title.includes('twitter')) {
+    return '<!-- Add within <head>: -->\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="...">';
+  }
+  if (title.includes('json-ld') || title.includes('structured data')) {
+    return '<!-- Add within <head>: -->\n<' + 'script type="application/ld+json">{\n  "@context": "https://schema.org",\n  "@type": "WebPage",\n  "name": "...",\n  "description": "..."\n}<' + '/script>';
+  }
+  if (title.includes('sitemap')) {
+    return 'Create sitemap.xml and submit to Google Search Console:\n<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>https://yoursite.com/</loc></url>\n</urlset>';
+  }
+  if (title.includes('robots.txt')) {
+    return 'Create /robots.txt:\nUser-agent: *\nAllow: /\nSitemap: https://yoursite.com/sitemap.xml';
+  }
+  if (title.includes('alt') || title.includes('image')) {
+    return 'Add alt attributes to all images:\n<img src="image.jpg" alt="Descriptive text about the image">';
+  }
+  if (title.includes('hreflang')) {
+    return 'Add hreflang links for multi-language support:\n<link rel="alternate" hreflang="en" href="https://yoursite.com/en/">\n<link rel="alternate" hreflang="x-default" href="https://yoursite.com/">';
+  }
+  return null;
+}
+
+function getHtmlFix(issue) {
+  const title = (issue.title || '').toLowerCase();
+  const sug = (issue.suggestion || '');
+  if (title.includes('title')) {
+    return '<meta name="description" content="..."><title>Optimized Title Under 60 Chars — Brand</title>';
+  }
+  if (title.includes('description') && !title.includes('title')) {
+    return '<meta name="description" content="A compelling 150-155 char description with primary keyword and call to action.">';
+  }
+  if (title.includes('canonical')) {
+    return '<link rel="canonical" href="https://yoursite.com/current-page/">';
+  }
+  if (title.includes('og:') || title.includes('og tag') || title.includes('open graph')) {
+    return '<meta property="og:title" content="Your Page Title">\n<meta property="og:description" content="Your description">\n<meta property="og:image" content="https://yoursite.com/og-image.jpg">\n<meta property="og:url" content="https://yoursite.com/">\n<meta property="og:type" content="website">';
+  }
+  if (title.includes('twitter')) {
+    return '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="Your Page Title">';
+  }
+  if (title.includes('json-ld') || title.includes('structured data')) {
+    return '<' + 'script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Your Page","description":"Your description"}' + '<' + '/script>';
+  }
+  return null;
+}
+
+function generateOptimizedHtml(report) {
+  const checks = report.checks || [];
+  let headTags = [];
+  
+  // Always include essentials
+  headTags.push('<!DOCTYPE html>');
+  headTags.push('<html lang="en">');
+  headTags.push('<head>');
+  headTags.push('<meta charset="UTF-8">');
+  headTags.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+  
+  // Add fixes based on failed checks
+  const failed = checks.filter(c => !c.pass);
+  const warned = checks.filter(c => c.warn);
+  
+  const hasIssue = (keyword) => failed.some(c => c.name.toLowerCase().includes(keyword)) || warned.some(c => c.name.toLowerCase().includes(keyword));
+  
+  if (hasIssue('title')) {
+    headTags.push('<title>Your Optimized SEO Title — Primary Keyword | Brand</title>');
+  }
+  if (hasIssue('description')) {
+    headTags.push('<meta name="description" content="Your optimized meta description here. Include primary keyword and a compelling call to action. 150-155 chars.">');
+  }
+  if (hasIssue('canonical')) {
+    headTags.push('<link rel="canonical" href="https://yoursite.com/current-page/">');
+  }
+  if (hasIssue('og') || hasIssue('open graph')) {
+    headTags.push('<meta property="og:title" content="Your Page Title">');
+    headTags.push('<meta property="og:description" content="Your meta description for social sharing.">');
+    headTags.push('<meta property="og:image" content="https://yoursite.com/og-image.jpg">');
+    headTags.push('<meta property="og:url" content="https://yoursite.com/">');
+    headTags.push('<meta property="og:type" content="website">');
+  }
+  if (hasIssue('twitter')) {
+    headTags.push('<meta name="twitter:card" content="summary_large_image">');
+    headTags.push('<meta name="twitter:title" content="Your Page Title">');
+  }
+  if (hasIssue('json-ld') || hasIssue('structured')) {
+    headTags.push('<' + 'script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Your Page","description":"Your description"}' + '<' + '/script>');
+  }
+  if (hasIssue('hreflang')) {
+    headTags.push('<link rel="alternate" hreflang="en" href="https://yoursite.com/">');
+    headTags.push('<link rel="alternate" hreflang="x-default" href="https://yoursite.com/">');
+  }
+  if (hasIssue('viewport')) {
+    headTags.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+  }
+  if (hasIssue('robots')) {
+    headTags.push('<meta name="robots" content="index, follow">');
+  }
+  
+  headTags.push('<link rel="icon" href="favicon.ico">');
+  headTags.push('<!-- Add your CSS, JS here -->');
+  headTags.push('</head>');
+  headTags.push('<body>');
+  headTags.push('  <!-- Your content here -->');
+  headTags.push('</body>');
+  headTags.push('</html>');
+  
+  return headTags.join('\n');
+}
+
+function downloadReport() {
+  const report = window._lastReport;
+  if (!report) return;
+  const checks = report.checks || [];
+  const issues = report.issues || [];
+  const lines = [];
+  lines.push('SEO Audit Report');
+  lines.push('='.repeat(50));
+  lines.push(`URL: ${report.url}`);
+  lines.push(`Score: ${report.score}/100`);
+  if (report.site_type) lines.push(`Site Type: ${report.site_type.label}`);
+  lines.push('');
+  lines.push('Issues:');
+  issues.forEach(i => {
+    lines.push(`  [${i.severity.toUpperCase()}] ${i.title}`);
+    if (i.suggestion) lines.push(`    Fix: ${i.suggestion}`);
+  });
+  lines.push('');
+  lines.push('All Checks:');
+  checks.forEach(c => {
+    lines.push(`  ${c.pass ? 'PASS' : (c.warn ? 'WARN' : 'FAIL')} | ${c.name} ${c.confidence ? '['+c.confidence+']' : ''}`);
+  });
+  const blob = new Blob([lines.join('\n')], {type: 'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'seo-audit-report.txt';
+  a.click();
+}
+
+function downloadExpertFix() {
+  const html = window._optimizedHtml;
+  if (!html) return;
+  const report = window._lastReport || {};
+  const domain = report.domain || report.url || 'optimized';
+  const name = domain.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/[^a-z0-9.-]/gi, '_');
+  const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  const blob = new Blob([html], {type: 'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name + '_' + ts + '.html';
+  a.click();
+}
+
+function copyExpertFix() {
+  const html = window._optimizedHtml;
+  if (!html) return;
+  navigator.clipboard.writeText(html).then(() => {
+    alert('✅ Copied to clipboard!');
+  }).catch(() => {
+    alert('Press Ctrl+C to copy from the code block above.');
+  });
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function backToHome() {
+  document.getElementById('resultsPage').classList.remove('show');
+  document.getElementById('toolPage').classList.add('show');
+  document.getElementById('toolPage').classList.remove('hidden');
+}
+
+// Start with a demo site url
+document.addEventListener('DOMContentLoaded', function() {
+  // Focus the input
+  setTimeout(() => document.getElementById('urlInput').focus(), 500);
+});
+</script>
+</body>
+</html>

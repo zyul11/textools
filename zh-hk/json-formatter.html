@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON 格式化驗證器 — 免費線上 JSON 工具 | Ziwei 文字工具</title>
+<meta name="description" content="我們的 JSON 格式化驗證器可協助開發者格式化、美化、壓縮及驗證 JSON 數據。貼上任何 JSON 字串，即時獲得美觀的格式化結果。100% 私隱保護。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/json-formatter.html">
+<meta property="og:title" content="📦 JSON 格式化器 & 驗證器">
+<meta property="og:description" content="格式化、美化、壓縮及驗證 JSON 數據。貼上 JSON 字串即時獲得整齊格式化的結果。">
+<meta property="og:url" content="https://textools.site/zh-hk/json-formatter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">主頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/zh-hk/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">📦 JSON 格式化器 & 驗證器</span>
+  </div>
+  <h1>📦 JSON 格式化器 & 驗證器</h1>
+  <p class="sub">格式化、驗證及美化 JSON 數據，附語法高亮度顯示</p>
+  <div class="trust-badge">🔒 100% 私隱保護 — 瀏覽器端處理，不上傳伺服器</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">輸入 JSON</div>
+    <textarea id="textInput" placeholder='在此貼上 JSON... 例如 {"name":"John"}' oninput="autoFormat()" style="height:220px"></textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">格式化輸出</div>
+    <textarea id="textOutput" readonly style="height:220px;color:#a6e3a1"></textarea>
+  </div>
+</div>
+<div class="actions">
+  <button onclick="formatJSON()">✨ 美化</button>
+  <button onclick="minifyJSON()">🗜️ 壓縮</button>
+  <button onclick="copyOutput()">📋 複製</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+<div id="jsonError" style="font-size:12px;color:#ff6b6b;margin-top:6px;min-height:18px"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/char-counter.html">字元計數器</a>
+    <a href="/zh-hk/base64-encoder.html">Base64 編碼解碼器</a>
+    <a href="/zh-hk/line-numberer.html">行號工具</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上 JSON 格式化器 & 驗證器 — 美化與除錯 JSON</h2>
+    <p>我們的 JSON 格式化驗證器可協助開發者格式化、美化、壓縮及驗證 JSON 數據。貼上任何 JSON 字串，即時獲得美觀、縮排整齊的格式版本。驗證器會捕獲語法錯誤，並準確顯示問題所在位置，讓除錯 JSON 變得輕而易舉。</p>
+    <p>JSON（JavaScript Object Notation）是網絡上最廣泛使用的數據交換格式。無論您是在處理 REST API、配置檔案、NoSQL 數據庫還是數據序列化，一個可靠的格式化驗證器都是必備工具。我們的工具在本地處理一切 — 您的敏感 JSON 數據絕不離開瀏覽器。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>格式化與美化</strong> — 為原始 JSON 加入縮排和結構以提高可讀性</li>
+      <li><strong>壓縮 JSON</strong> — 移除空白字元以壓縮 JSON</li>
+      <li><strong>語法驗證</strong> — 檢測錯誤並顯示行/欄位置</li>
+      <li><strong>複製格式化結果</strong> — 一鍵複製美化或壓縮後的結果</li>
+      <li><strong>100% 私隱</strong> — 所有處理在瀏覽器中進行，資料絕不上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/zh-hk/base64-encoder.html">Base64 編碼解碼器</a></li>
+      <li><a href="/zh-hk/char-counter.html">字元計數器</a></li>
+      <li><a href="/zh-hk/line-numberer.html">行號工具</a></li>
+      <li><a href="/zh-hk/">🧰 所有工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>📦 JSON 格式化器 & 驗證器 | <a href="/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function autoFormat(){setTimeout(formatJSON,300);}
+function formatJSON(){
+  var t=document.getElementById('textInput').value;var err=document.getElementById('jsonError');
+  if(!t.trim()){document.getElementById('textOutput').value='';err.textContent='';return;}
+  try{var p=JSON.parse(t);document.getElementById('textOutput').value=JSON.stringify(p,null,2);err.textContent='';}catch(e){err.textContent='❌ '+e.message;document.getElementById('textOutput').value=t;}
+}
+function minifyJSON(){
+  var t=document.getElementById('textInput').value;var err=document.getElementById('jsonError');
+  if(!t.trim()){document.getElementById('textOutput').value='';err.textContent='';return;}
+  try{var p=JSON.parse(t);document.getElementById('textOutput').value=JSON.stringify(p);err.textContent='';}catch(e){err.textContent='❌ '+e.message;}
+}
+function copyOutput(){var t=document.getElementById('textOutput').value;if(!t){showToast('⚠️ 沒有可複製的內容');return;}navigator.clipboard.writeText(t).then(function(){showToast('✅ 已複製！');}).catch(function(){});}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('textOutput').value='';document.getElementById('jsonError').textContent='';showToast('已清除');}
+
+</script>
+</body>
+</html>

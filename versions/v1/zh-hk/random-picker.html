@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隨機揀選器 免費 — 從列表中隨機揀選項目</title>
+<meta name="description" content="從列表中隨機揀選項目。每個項目一行，設定揀選數量，一按即可進行公平隨機抽選。適合抽獎、禮物抽籤、團隊分組。">
+<meta name="keywords" content="隨機揀選器 免費, 隨機抽選 線上, 抽籤工具, 瀏覽器處理 抽獎">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/random-picker.html">
+<meta property="og:title" content="🎲 隨機揀選器">
+<meta property="og:description" content="從列表中隨機揀選項目。每個項目一行，設定揀選數量。公平隨機抽選。">
+<meta property="og:url" content="https://textools.site/zh-hk/random-picker.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">首頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🎲 隨機揀選器</span>
+  </div>
+  <h1>🎲 隨機揀選器</h1>
+  <p class="sub">從列表中隨機揀選一個或多個項目 — 公平且無偏頗</p>
+  <div class="trust-badge">🔒 你的資料絕不離開瀏覽器。100%本地處理。</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">列表（每行一個項目）</div>
+    <textarea id="textInput" placeholder="輸入項目，每行一個..." style="height:200px">選項 A
+選項 B
+選項 C
+選項 D</textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">揀選結果</div>
+    <div id="pickOutput" style="background:#11111b;border:1px solid #89b4fa;border-radius:10px;padding:14px;min-height:200px;font-size:18px;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#cdd6f4;line-height:1.8"></div>
+  </div>
+</div>
+<div class="actions" style="margin:8px 0">
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px">揀選 <input id="pickCount" type="number" value="1" min="1" max="100" style="width:45px;background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:4px;padding:4px;font-size:11px;text-align:center;outline:none"></label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="allowRepeat" style="accent-color:#89b4fa"> 允許重複</label>
+  <button onclick="pickRandom()">🎲 揀選！</button>
+  <button onclick="shuffleList()">🔀 隨機排序</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/text-diff.html">文字差異比對器</a>
+    <a href="/zh-hk/char-counter.html">字數計算機</a>
+    <a href="/zh-hk/base64-encoder.html">Base64編碼器/解碼器</a>
+    <a href="/zh-hk/url-encoder.html">URL編碼器/解碼器</a>
+    <a href="/zh-hk/json-formatter.html">JSON格式化工具</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown預覽</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上隨機揀選器 — 從列表中隨機揀選項目</h2>
+    <p>我們的隨機揀選器讓你從任何列表中隨機揀選項目。每個項目一行，設定揀選數量，一按即可獲得公平、無偏頗的隨機揀選結果。適合抽獎、贈品活動、團體決策、隨機抽樣和課堂活動。</p>
+    <p>無論你是抽選抽獎得主、揀選問卷受訪者、決定去哪裏吃飯，還是為團隊活動建立隨機分組，我們的揀選器都能確保真正的隨機性。你可以一次揀選多個項目，允許或禁止重複，以及對整個列表進行隨機排序。所有處理均在本地進行，保障私隱。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>隨機揀選</strong> — 從任何列表中公平揀選一個或多個項目</li>
+      <li><strong>可調數量</strong> — 選擇一次揀選多少個項目</li>
+      <li><strong>允許重複切換</strong> — 有放回或無放回揀選</li>
+      <li><strong>隨機排序模式</strong> — 隨機排序整個列表</li>
+      <li><strong>100%私密</strong> — 所有處理在瀏覽器中完成 — 零上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/sort-lines.html">行排序</a></li>
+      <li><a href="/remove-duplicates.html">移除重複</a></li>
+      <li><a href="/text-diff.html">文字差異比對器</a></li>
+      <li><a href="/char-counter.html">字數計算機</a></li>
+      <li><a href="/base64-encoder.html">Base64編碼器/解碼器</a></li>
+      <li><a href="/url-encoder.html">URL編碼器/解碼器</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/markdown-preview.html">Markdown預覽</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/line-numberer.html">行號標記工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🎲 隨機揀選器 | <a href="/tools/">更多工具</a> | <a href="/">首頁</a> | <a href="/privacy.html">私隱</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本地 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function getItems(){
+  return document.getElementById('textInput').value.split('\n').filter(function(s){return s.trim();});
+}
+function pickRandom(){
+  var items=getItems();
+  if(!items.length){document.getElementById('pickOutput').innerHTML='<span style="font-size:14px;color:#585b70">列表中沒有項目</span>';return;}
+  var count=Math.min(parseInt(document.getElementById('pickCount').value)||1,items.length);
+  var repeat=document.getElementById('allowRepeat').checked;
+  var picked=[];
+  if(repeat){
+    for(var i=0;i<count;i++)picked.push(items[Math.floor(Math.random()*items.length)]);
+  }else{
+    var shuffled=items.slice().sort(function(){return Math.random()-0.5;});
+    picked=shuffled.slice(0,count);
+  }
+  var html='';
+  if(picked.length===1){html='<div style="font-size:32px;color:#89b4fa;margin-bottom:4px">🎯</div><div>'+escHtml(picked[0])+'</div>';}
+  else{
+    html='<div style="font-size:14px;color:#7f849c;margin-bottom:8px">揀選了 '+picked.length+' 個項目：</div>';
+    for(var i=0;i<picked.length;i++)html+='<div style="font-size:16px;padding:2px 0">'+(i+1)+'. '+escHtml(picked[i])+'</div>';
+  }
+  document.getElementById('pickOutput').innerHTML=html;
+}
+function shuffleList(){
+  var items=getItems();
+  if(!items.length)return;
+  for(var i=items.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=items[i];items[i]=items[j];items[j]=t;}
+  document.getElementById('textInput').value=items.join('\n');
+  showToast('🔀 已隨機排序！');
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('pickOutput').innerHTML='<span style="font-size:14px;color:#585b70">加入項目以開始揀選</span>';showToast('已清除');}
+
+</script>
+</body>
+</html>
