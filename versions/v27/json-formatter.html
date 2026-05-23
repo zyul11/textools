@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter Validator — Free Online JSON Tool</title>
+<meta name="description" content="Our JSON formatter and validator helps developers format, beautify, minify, and validate JSON data. Paste any JSON string and instantly get a beautifu">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/tools/json-formatter.html">
+<meta property="og:title" content="📦 JSON Formatter & Validator">
+<meta property="og:description" content="Our JSON formatter and validator helps developers format, beautify, minify, and validate JSON data. Paste any JSON strin">
+<meta property="og:url" content="https://textools.site/tools/json-formatter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+.seo-banner{background:linear-gradient(135deg,rgba(137,180,250,.12),rgba(166,227,161,.10));border:1px solid rgba(137,180,250,.25);border-radius:10px;padding:10px 16px;margin-bottom:16px;position:relative;overflow:hidden}.seo-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#89b4fa,#a6e3a1);opacity:.6}.seo-banner-content{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.seo-banner-icon{font-size:22px;flex-shrink:0}.seo-banner-text{flex:1;min-width:0;font-size:13px;color:#cdd6f4;line-height:1.5}.seo-banner-text strong{color:#89b4fa}.seo-banner-cta{background:linear-gradient(135deg,#89b4fa,#a6e3a1);color:#1e1e2e;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0}.seo-banner-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(137,180,250,.35)}</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="seo-banner">
+    <div class="seo-banner-content">
+      <span class="seo-banner-icon">🧬</span>
+      <div class="seo-banner-text">
+        <strong>Self-Evolving SEO Audit</strong> — 24-point scan + AI Visibility check. Free.
+      </div>
+      <a href="https://seo.textools.site/" class="seo-banner-cta" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">Home</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">Tools</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">📦 JSON Formatter & Validator</span>
+  </div>
+  <h1>📦 JSON Formatter & Validator</h1>
+  <p class="sub">Format, validate, and beautify JSON data with syntax highlighting</p>
+  <div class="trust-badge">🔒 Your data never leaves your browser. 100% local processing.</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Input JSON</div>
+    <textarea id="textInput" placeholder='Paste JSON here... e.g. {"name":"John"}' oninput="autoFormat()" style="height:220px"></textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Formatted Output</div>
+    <textarea id="textOutput" readonly style="height:220px;color:#a6e3a1"></textarea>
+  </div>
+</div>
+<div class="actions">
+  <button onclick="formatJSON()">✨ Beautify</button>
+  <button onclick="minifyJSON()">🗜️ Minify</button>
+  <button onclick="copyOutput()">📋 Copy</button>
+  <button class="alt" onclick="clearAll()">Clear</button>
+</div>
+<div id="jsonError" style="font-size:12px;color:#ff6b6b;margin-top:6px;min-height:18px"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ Also try:</span>
+    <a href="/tools/text-diff.html">Text Diff Checker</a>
+    <a href="/tools/char-counter.html">Chinese Character Counter</a>
+    <a href="/tools/base64-encoder.html">Base64 Encoder/Decoder</a>
+    <a href="/tools/url-encoder.html">URL Encoder/Decoder</a>
+    <a href="/tools/markdown-preview.html">Markdown Preview</a>
+    <a href="/tools/text-splitter.html">Text Splitter</a>
+    <a href="/tools/">🧰 All Tools</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online JSON Formatter & Validator — Beautify and Debug JSON</h2>
+    <p>Our JSON formatter and validator helps developers format, beautify, minify, and validate JSON data. Paste any JSON string and instantly get a beautifully formatted, indented version with syntax highlighting. The validator catches syntax errors and shows you exactly where the problem is — making debugging JSON a breeze.</p>
+    <p>JSON (JavaScript Object Notation) is the most widely used data interchange format on the web. Whether you're working with REST APIs, configuration files, NoSQL databases, or data serialization, having a reliable formatter and validator is essential. Our tool processes everything locally — your sensitive JSON data never leaves your browser.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Format & beautify</strong> — Indent and structure raw JSON for readability</li>
+      <li><strong>Minify JSON</strong> — Compress JSON by removing whitespace</li>
+      <li><strong>Syntax validation</strong> — Detects errors with line/column position</li>
+      <li><strong>Copy formatted</strong> — One-click copy of beautified or minified results</li>
+      <li><strong>100% private</strong> — All processing in your browser — zero uploads</li>
+    </ul>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/base64-encoder.html">Base64 Encoder/Decoder</a></li>
+      <li><a href="/url-encoder.html">URL Encoder/Decoder</a></li>
+      <li><a href="/text-diff.html">Text Diff Checker</a></li>
+      <li><a href="/char-counter.html">Chinese Character Counter</a></li>
+      <li><a href="/base64-encoder.html">Base64 Encoder/Decoder</a></li>
+      <li><a href="/url-encoder.html">URL Encoder/Decoder</a></li>
+      <li><a href="/markdown-preview.html">Markdown Preview</a></li>
+      <li><a href="/text-splitter.html">Text Splitter</a></li>
+      <li><a href="/line-numberer.html">Line Numberer</a></li>
+      <li><a href="/text-rev
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>📦 JSON Formatter & Validator | <a href="/tools/">More Tools</a> | <a href="/">Home</a> | <a href="/privacy.html">Privacy</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · All processing is local · Zero data uploads</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function autoFormat(){setTimeout(formatJSON,300);}
+function formatJSON(){
+  var t=document.getElementById('textInput').value;var err=document.getElementById('jsonError');
+  if(!t.trim()){document.getElementById('textOutput').value='';err.textContent='';return;}
+  try{var p=JSON.parse(t);document.getElementById('textOutput').value=JSON.stringify(p,null,2);err.textContent='';}catch(e){err.textContent='❌ '+e.message;document.getElementById('textOutput').value=t;}
+}
+function minifyJSON(){
+  var t=document.getElementById('textInput').value;var err=document.getElementById('jsonError');
+  if(!t.trim()){document.getElementById('textOutput').value='';err.textContent='';return;}
+  try{var p=JSON.parse(t);document.getElementById('textOutput').value=JSON.stringify(p);err.textContent='';}catch(e){err.textContent='❌ '+e.message;}
+}
+function copyOutput(){var t=document.getElementById('textOutput').value;if(!t){showToast('⚠️ Nothing to copy');return;}navigator.clipboard.writeText(t).then(function(){showToast('✅ Copied!');}).catch(function(){});}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('textOutput').value='';document.getElementById('jsonError').textContent='';showToast('Cleared');}
+
+</script>
+</body>
+</html>

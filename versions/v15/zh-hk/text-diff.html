@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字差異比對器 免費 — 線上比較文字工具</title>
+<meta name="description" content="比較兩個文字區塊，精確顯示更改內容。適合文件修訂審查、程式碼變更檢查、草稿比較。單詞級別差異比對。100%私密。">
+<meta name="keywords" content="文字差異 免費, 文章比較 線上, diff 比對器, 文字比較 瀏覽器處理">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/text-diff.html">
+<meta property="og:title" content="📋 文字差異比對器">
+<meta property="og:description" content="比較兩個文字區塊，精確顯示更改內容。適合文件修訂審查、程式碼變更檢查。">
+<meta property="og:url" content="https://textools.site/zh-hk/text-diff.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a14;color:#d0c8e0;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#e0c8ff,#7b68ee,#4a3aa0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7a6a9a;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(100,220,150,.08);border:1px solid rgba(100,220,150,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#64c896;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#0e0e1a;border:1px solid #1e1e3a;border-radius:10px;padding:14px;color:#d0c8e0;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#7b68ee}
+textarea[readonly]{color:#c4a0ff}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(26,26,46,.93),rgba(16,16,30,.93));border:1px solid rgba(123,104,238,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#e0c8ff}
+.stat-card .label{font-size:11px;color:#7a6a9a;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#7b68ee,#5a4acd);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #3a2a5a;color:#7a6a9a}
+.actions button.alt:hover{background:rgba(123,104,238,.08);border-color:#7b68ee;color:#c0b8d0}
+.actions button.success{background:rgba(100,220,150,.15);border:1px solid rgba(100,220,150,.3);color:#64c896}
+.actions button.success:hover{background:rgba(100,220,150,.25);color:#80e0a0}
+.actions select{background:#0e0e1a;color:#d0c8e0;border:1px solid #1e1e3a;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#7b68ee}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a1a2e;border:1px solid #7b68ee;color:#e0c8ff;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(26,26,46,.93),rgba(16,16,30,.93));border:1px solid rgba(123,104,238,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7a6a9a;margin-right:4px}
+.rec-bar a{font-size:12px;color:#7b68ee;text-decoration:none;padding:4px 10px;border:1px solid rgba(123,104,238,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(123,104,238,.1);border-color:#7b68ee}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(123,104,238,.08)}
+.seo-content h2{font-size:16px;color:#c4a0ff;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a898b8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#8a7a9a;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#5a4a7a}
+.seo-content h3{font-size:14px;color:#c4a0ff;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#3a2a5a;font-size:11px;margin-top:20px}
+.footer a{color:#5a4a7a;text-decoration:none}
+.footer a:hover{color:#7b68ee}
+select{background:#0e0e1a;color:#d0c8e0;border:1px solid #1e1e3a;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#7b68ee}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#5a4a7a;margin-bottom:10px">
+    <a href="/" style="color:#5a4a7a;text-decoration:none">首頁</a>
+    <span style="color:#3a2a5a">›</span>
+    <a href="/tools/" style="color:#5a4a7a;text-decoration:none">工具</a>
+    <span style="color:#3a2a5a">›</span>
+    <span style="color:#7a6a9a">📋 文字差異比對器</span>
+  </div>
+  <h1>📋 文字差異比對器</h1>
+  <p class="sub">比較兩段文字並高亮差異 — 單詞級別比對</p>
+  <div class="trust-badge">🔒 你的資料絕不離開瀏覽器。100%本地處理。</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#5a4a7a;margin-bottom:4px">原始文字 (A)</div>
+    <textarea id="textA" placeholder="在此貼上原始文字..." oninput="computeDiff()"></textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#5a4a7a;margin-bottom:4px">修改後文字 (B)</div>
+    <textarea id="textB" placeholder="在此貼上修改後文字..." oninput="computeDiff()"></textarea>
+  </div>
+</div>
+<div class="actions">
+  <button onclick="swapTexts()">⇄ 交換 A↔B</button>
+  <button onclick="clearAll()">全部清除</button>
+</div>
+<div style="font-size:11px;color:#5a4a7a;margin-bottom:6px">比對結果</div>
+<div id="diffOutput" style="background:#0e0e1a;border:1px solid #1e1e3a;border-radius:10px;padding:14px;color:#d0c8e0;font-size:13px;font-family:'SF Mono','Fira Code',monospace;min-height:100px;white-space:pre-wrap;word-break:break-word"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/char-counter.html">字數計算機</a>
+    <a href="/zh-hk/base64-encoder.html">Base64編碼器/解碼器</a>
+    <a href="/zh-hk/url-encoder.html">URL編碼器/解碼器</a>
+    <a href="/zh-hk/json-formatter.html">JSON格式化工具</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown預覽</a>
+    <a href="/zh-hk/text-splitter.html">文字分割器</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上文字差異比對器 — 即時比較文字</h2>
+    <p>我們的免費文字差異比對器讓你比較兩個文字區塊，並精確查看更改內容。無論你是審查文件修訂、檢查程式碼變更、比較草稿，還是驗證資料準確性，差異比對工具都能即時高亮顯示新增內容（綠色）、刪除內容（紅色）和不變的文字。所有處理均在瀏覽器中進行 — 你的文字絕不離開你的裝置。</p>
+    <p>差異比對演算法在單詞級別運作，非常適合自然語言比較、程式碼審查、抄襲檢查和版本控制。與需要上傳的伺服器端差異工具不同，我們的工具完全尊重你的私隱。貼上兩個版本，即時查看每個更改。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>並排比較</strong> — 兩個輸入面板，附顏色編碼的差異輸出</li>
+      <li><strong>單詞級別比對</strong> — 高亮顯示個別單詞更改，不限於行級別</li>
+      <li><strong>顏色編碼結果</strong> — 綠色表示新增，紅色表示刪除，中性表示不變</li>
+      <li><strong>100%私密</strong> — 所有比較處理在瀏覽器中運行</li>
+      <li><strong>無限制</strong> — 比較任何長度的文字，即時獲得結果</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/remove-duplicates.html">移除重複行</a></li>
+      <li><a href="/sort-lines.html">行排序</a></li>
+      <li><a href="/char-counter.html">字數計算機</a></li>
+      <li><a href="/base64-encoder.html">Base64編碼器/解碼器</a></li>
+      <li><a href="/url-encoder.html">URL編碼器/解碼器</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/markdown-preview.html">Markdown預覽</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/line-numberer.html">行號標記工具</a></li>
+      <li><a href="/text-reverser.html">文字反轉器</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>📋 文字差異比對器 | <a href="/tools/">更多工具</a> | <a href="/">首頁</a> | <a href="/privacy.html">私隱</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本地 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+var diffTimeout;
+function computeDiff(){
+  clearTimeout(diffTimeout);
+  diffTimeout=setTimeout(function(){
+    var a=document.getElementById('textA').value;
+    var b=document.getElementById('textB').value;
+    diffAndRender(a,b);
+  },200);
+}
+function diffAndRender(a,b){
+  var out=document.getElementById('diffOutput');
+  if(!a&&!b){out.innerHTML='<span style="color:#5a4a7a">在兩個面板中貼上文字以查看差異</span>';return;}
+  var wordsA=a.split(/(\s+)/);
+  var wordsB=b.split(/(\s+)/);
+  var lcs=buildLCS(wordsA,wordsB);
+  var html='';
+  var ai=0,bi=0;
+  for(var k=0;k<lcs.length;k++){
+    var lcsWord=lcs[k];
+    while(ai<wordsA.length&&wordsA[ai]!==lcsWord){
+      html+='<span style="background:rgba(255,80,80,0.2);color:#ff6b6b">'+escHtml(wordsA[ai])+'</span>';
+      ai++;
+    }
+    while(bi<wordsB.length&&wordsB[bi]!==lcsWord){
+      html+='<span style="background:rgba(80,200,120,0.2);color:#64c896">'+escHtml(wordsB[bi])+'</span>';
+      bi++;
+    }
+    if(ai<wordsA.length){html+=escHtml(lcsWord);ai++;bi++;}
+  }
+  while(ai<wordsA.length){html+='<span style="background:rgba(255,80,80,0.2);color:#ff6b6b">'+escHtml(wordsA[ai])+'</span>';ai++;}
+  while(bi<wordsB.length){html+='<span style="background:rgba(80,200,120,0.2);color:#64c896">'+escHtml(wordsB[bi])+'</span>';bi++;}
+  out.innerHTML=html||'<span style="color:#5a4a7a">未發現差異</span>';
+}
+function buildLCS(a,b){
+  var m=a.length,n=b.length;
+  var dp=Array(m+1);for(var i=0;i<=m;i++)dp[i]=Array(n+1).fill(0);
+  for(var i=1;i<=m;i++)for(var j=1;j<=n;j++)dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1]);
+  var res=[];var i=m,j=n;
+  while(i>0&&j>0){
+    if(a[i-1]===b[j-1]){res.unshift(a[i-1]);i--;j--;}
+    else if(dp[i-1][j]>dp[i][j-1])i--;else j--;
+  }
+  return res;
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function swapTexts(){var a=document.getElementById('textA'),b=document.getElementById('textB');var t=a.value;a.value=b.value;b.value=t;computeDiff();}
+function clearAll(){document.getElementById('textA').value='';document.getElementById('textB').value='';computeDiff();showToast('已清除');}
+
+</script>
+</body>
+</html>

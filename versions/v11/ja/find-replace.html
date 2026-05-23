@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>検索・置換 無料 — オンライン文章検索・置換ツール | Ziwei Tools</title>
+<meta name="description" content="文章内のテキストを検索して置換。正規表現対応、大文字小文字区別、マッチハイライト表示。無料のオンラインツール。100%プライベート。">
+<meta name="keywords" content="検索置換 無料, テキスト置換 オンライン, 正規表現 置換 ツール, ブラウザ完結 文章編集">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ja/find-replace.html">
+<meta property="og:title" content="検索・置換 オンライン — 無料テキスト検索・置換ツール">
+<meta property="og:description" content="文章内のテキストを検索して置換。正規表現対応、大文字小文字区別、マッチハイライト表示。無料のオンラインツール。100%プライベート。">
+<meta property="og:url" content="https://textools.site/ja/find-replace.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="検索・置換 オンライン — 無料テキスト検索・置換ツール">
+<meta name="twitter:description" content="文章内のテキストを検索して置換。正規表現対応、大文字小文字区別、マッチハイライト表示。無料のオンラインツール。100%プライベート。">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:220px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s;margin-bottom:10px}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.search-row{display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.search-row input{flex:1;min-width:120px;background:#11111b;border:1px solid #313244;border-radius:8px;padding:8px 12px;color:#cdd6f4;font-size:12px;outline:none;transition:border-color .2s}
+.search-row input:focus{border-color:#89b4fa}
+.search-row input::placeholder{color:#45475a}
+.options-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.options-row label{font-size:12px;color:#a6adc8;display:flex;align-items:center;gap:5px;cursor:pointer}
+.options-row input[type="checkbox"]{accent-color:#89b4fa;cursor:pointer}
+.match-count{font-size:12px;color:#89b4fa;margin-bottom:8px;min-height:18px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.danger{background:rgba(255,68,68,.12);border:1px solid rgba(255,68,68,.3);color:#ff6666}
+.actions button.danger:hover{background:rgba(255,68,68,.2)}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.highlighted-text{width:100%;min-height:160px;max-height:300px;overflow-y:auto;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;white-space:pre-wrap;word-wrap:break-word;margin-bottom:8px}
+.highlighted-text mark{background:rgba(137,180,250,.35);color:#e0d0ff;border-radius:2px;padding:0 2px}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6adc8;margin:14px 0 6px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.search-row input{min-width:100px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 3, "name": "検索・置換"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the find and replace tool support regular expressions (regex)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Toggle the 'Regex mode' switch to enable regular expression pattern matching. This allows you to search for patterns like \\d+ (all digits), \\w+ (all words), or custom patterns. You can use capturing groups in your search pattern and reference them in the replacement string with $1, $2, etc."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I replace occurrences one at a time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this tool performs a single 'Replace All' operation with a confirmation showing the number of matches found. This is intentional — for one-at-a-time replacement, we recommend copying the text to a full-featured code editor. Our tool focuses on bulk find-and-replace operations with clear match highlighting and count display."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text safe and private when using this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. All text processing happens entirely in your browser using JavaScript. Your text is never uploaded to any server, never stored, never logged, and never leaves your device. This is a core privacy principle of Textools — we believe your data belongs to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the regex I entered is invalid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the regex pattern is invalid, the tool will display a clear error message telling you that the pattern could not be compiled. Common issues include unclosed parentheses, invalid escape sequences, or unsupported regex features. The tool catches these errors gracefully without affecting your text."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">ホーム</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">Find &amp; Replace</span>
+  </div>
+  <h1>🔍 検索・置換</h1>
+  <p class="sub">文章内のテキストを検索して置換 — 正規表現・大文字小文字区別・マッチハイライト対応</p>
+  <div class="trust-badge">🔒 100%プライベート — ブラウザ上で処理、サーバーに送信されません</div>
+
+  <textarea id="inputText" placeholder="Paste or type your text here..." oninput="updateHighlight()"></textarea>
+
+  <div class="search-row">
+    <input type="text" id="findInput" placeholder="Find..." oninput="updateHighlight()">
+    <input type="text" id="replaceInput" placeholder="Replace with..." oninput="updateHighlight()">
+  </div>
+
+  <div class="options-row">
+    <label><input type="checkbox" id="caseSensitive" onchange="updateHighlight()"> Case sensitive</label>
+    <label><input type="checkbox" id="regexMode" onchange="updateHighlight()"> Regex mode</label>
+  </div>
+
+  <div class="match-count" id="matchCount">0 matches found</div>
+
+  <div class="highlighted-text" id="highlightedOutput"><span style="color:#45475a">Text with highlights will appear here...</span></div>
+
+  <div class="actions">
+    <button onclick="replaceAll()">Replace All</button>
+    <button class="success" onclick="copyResult()">📋 Copy Result</button>
+    <button class="secondary" onclick="clearAll()">🗑️ Clear</button>
+  </div>
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">📌 関連ツール:</span>
+    <a href="/ja/password-generator.html">パスワード生成</a>
+    <a href="/ja/case-converter.html">大文字小文字変換</a>
+    <a href="/ja/word-counter.html">文字数カウンター</a>
+    <a href="/ja/sort-lines.html">行ソート</a>
+    <a href="/ja/remove-duplicates.html">重複行削除</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online Find and Replace Tool — Search and Replace Text Instantly</h2>
+    <p>Our Find and Replace tool is a powerful, free online utility for searching and replacing text in any document. Whether you need to update names across a document, fix typos throughout an article, reformat data using regular expressions, or simply find how many times a word appears, this tool provides instant visual feedback with match highlighting. All processing happens in your browser — your text never leaves your device, ensuring complete privacy.</p>
+    <p>The tool features a live preview that highlights all matching text directly in the document view. As you type in the "Find" field, matching portions are highlighted in purple, making it easy to see exactly what will be replaced. The match counter updates in real time, showing you the exact number of occurrences. You can optionally enable case-sensitive search to distinguish between "Apple" and "apple", or enable regex mode for advanced pattern matching.</p>
+    <p>Find and replace is one of the most frequently used text editing operations, and having a reliable, private, browser-based tool is essential for anyone who works with text. Our tool is designed to be simple enough for everyday use — fixing a misspelled name across a long article — while powerful enough for advanced tasks like reformatting data with regex capture groups. The highlighted preview ensures you always know exactly what will be changed before you commit to the replacement.</p>
+
+    <h3>Why Use This Find and Replace Tool?</h3>
+    <p>Most operating systems and text editors include basic find and replace functionality, but browser-based tools offer unique advantages. First, there's no software to install — open the page and start working immediately. Second, the live highlighting preview gives you instant visual confirmation of what will be replaced, unlike many desktop editors that require you to click through each match. Third, the regex mode supports advanced pattern matching that goes far beyond simple text replacement.</p>
+    <p>Regular expression support is particularly powerful. With regex mode enabled, you can search for patterns like \d+ to find all numbers, \b\w{4}\b to find all 4-letter words, or ^(.+)@(.+)\.(.+)$ to capture parts of email addresses. You can then use captured groups in your replacement text with $1, $2, $3 references. This makes the tool suitable for data cleaning, log file analysis, code refactoring, and text transformation tasks that would be tedious or impossible with simple text search.</p>
+    <p>The case sensitivity toggle gives you fine-grained control over matching behavior. When case sensitivity is off (default), the tool matches regardless of capitalization — useful for catching variations like "textools", "Textools", and "TEXTOOLS". When case sensitivity is on, only exact matches are highlighted and replaced — essential when you need to distinguish between words that differ only in capitalization.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Live match highlighting</strong> — all matches are highlighted in real time as you type</li>
+      <li><strong>Real-time match count</strong> — see exactly how many occurrences are found</li>
+      <li><strong>Case-sensitive toggle</strong> — choose whether to ignore or respect letter casing</li>
+      <li><strong>Regex mode</strong> — full regular expression support with capture groups ($1, $2, etc.)</li>
+      <li><strong>Replace All</strong> — instantly replace all matches in one click</li>
+      <li><strong>Copy result</strong> — one-click copy of the modified text</li>
+      <li><strong>Clear separation</strong> — input and output are clearly separated for verification</li>
+      <li><strong>Error handling</strong> — invalid regex patterns show clear error messages</li>
+      <li><strong>100% private</strong> — all processing in your browser, zero data uploaded</li>
+      <li><strong>No signup needed</strong> — free to use, no accounts, no tracking</li>
+    </ul>
+
+    <h3>Practical Applications</h3>
+    <p><strong>Content editing and proofreading:</strong> Fix typos, update names, or replace outdated terms across long articles, blog posts, or documentation. The live highlighting lets you verify every change before applying it, reducing the risk of unintended modifications.</p>
+    <p><strong>Data cleaning and normalization:</strong> Clean up CSV exports, database dumps, or user-generated content by replacing inconsistent formatting. Use regex to standardize phone numbers, email addresses, dates, or any structured text pattern across large datasets.</p>
+    <p><strong>Code refactoring:</strong> Rename variables, update function names, or change import paths across code snippets. The case-sensitive mode ensures you only match exact identifiers, avoiding accidental replacements of similar-looking variable names.</p>
+    <p><strong>Log file analysis:</strong> Search through server logs, error reports, or application logs for specific patterns. Use regex to find all IP addresses, timestamps, error codes, or user IDs in a log file, then optionally replace or extract them for reporting.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <p><strong>Can I undo a replacement?</strong> The tool performs replacement on a copy of your text. Your original text remains unchanged in the input text area. If you make a mistake, you can simply copy your original text back from the input area and start over.</p>
+    <p><strong>Does this work with large documents?</strong> Yes. Since all processing happens in your browser, performance depends on your browser's JavaScript engine. Modern browsers can handle documents with tens of thousands of words without issue. For extremely large documents (hundreds of thousands of words), you may experience slight lag in the live highlighting.</p>
+    <p><strong>What regex syntax is supported?</strong> The tool uses JavaScript's built-in RegExp engine, which supports most common regex features including character classes (\d, \w, \s), quantifiers (+, *, ?, {n,m}), anchors (^, $), groups and capturing, alternation (|), and flags like 'i' (case-insensitive — use our toggle instead) and 'g' (global — always enabled).</p>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/password-generator.html">Random Password Generator</a> — Generate strong secure passwords</li>
+      <li><a href="/case-converter.html">Text Case Converter</a> — Convert text between different case formats</li>
+      <li><a href="/word-counter.html">Word Counter</a> — Count words, characters, sentences, and paragraphs</li>
+      <li><a href="/sort-lines.html">Sort Lines Alphabetically</a> — Organize lists A-Z or Z-A</li>
+      <li><a href="/remove-duplicates.html">Remove Duplicate Lines</a> — Clean up repeated entries from text</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="/">Textools</a> ·
+    <a href="/password-generator.html">Password Generator</a> ·
+    <a href="/case-converter.html">Case Converter</a> ·
+    <a href="/find-replace.html">Find &amp; Replace</a> ·
+    <a href="/word-counter.html">Word Counter</a> ·
+    <a href="/sort-lines.html">Sort Lines</a>
+    <br><br>
+    <span>© 2026 Textools · © 2026 Textools — プライバシーファーストのオンラインツール。すべての処理はブラウザ上でローカルに実行されます。</span>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === Usage tracking ===
+(function(){
+  let n = localStorage.getItem('fr_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('fr_count', n);
+})();
+
+function getFindRegex() {
+  const findText = document.getElementById('findInput').value;
+  if (!findText) return null;
+  const caseSensitive = document.getElementById('caseSensitive').checked;
+  const regexMode = document.getElementById('regexMode').checked;
+  
+  try {
+    const flags = 'g' + (caseSensitive ? '' : 'i');
+    if (regexMode) {
+      return new RegExp(findText, flags);
+    } else {
+      // Escape special regex characters
+      const escaped = findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp(escaped, flags);
+    }
+  } catch(e) {
+    return { error: e.message };
+  }
+}
+
+function updateHighlight() {
+  const inputText = document.getElementById('inputText').value;
+  const findText = document.getElementById('findInput').value;
+  const outputEl = document.getElementById('highlightedOutput');
+  const matchCountEl = document.getElementById('matchCount');
+  
+  if (!inputText.trim() || !findText.trim()) {
+    if (!inputText.trim()) {
+      outputEl.innerHTML = '<span style="color:#45475a">Enter text above to see highlighted matches...</span>';
+    } else {
+      outputEl.textContent = inputText;
+    }
+    matchCountEl.textContent = '0 matches found';
+    return;
+  }
+  
+  const regex = getFindRegex();
+  if (!regex) {
+    outputEl.textContent = inputText;
+    matchCountEl.textContent = '0 matches found';
+    return;
+  }
+  
+  if (regex.error) {
+    outputEl.innerHTML = '<span style="color:#ff6666">⚠️ Invalid pattern: ' + regex.error + '</span>';
+    matchCountEl.textContent = '⚠️ Invalid pattern';
+    return;
+  }
+  
+  // Count matches
+  const textCopy = inputText;
+  const matches = textCopy.match(regex);
+  const count = matches ? matches.length : 0;
+  matchCountEl.textContent = count + ' match' + (count !== 1 ? 'es' : '') + ' found';
+  
+  // Highlight matches
+  const highlighted = textCopy.replace(regex, match => '<mark>' + match + '</mark>');
+  outputEl.innerHTML = highlighted;
+}
+
+function replaceAll() {
+  const inputText = document.getElementById('inputText').value;
+  const findText = document.getElementById('findInput').value;
+  const replaceText = document.getElementById('replaceInput').value;
+  
+  if (!inputText.trim()) {
+    showToast('⚠️ Please enter some text first.');
+    return;
+  }
+  if (!findText.trim()) {
+    showToast('⚠️ Please enter text to find.');
+    return;
+  }
+  
+  const regex = getFindRegex();
+  if (!regex) return;
+  if (regex.error) {
+    showToast('⚠️ Invalid regex pattern: ' + regex.error);
+    return;
+  }
+  
+  const matches = inputText.match(regex);
+  const count = matches ? matches.length : 0;
+  
+  if (count === 0) {
+    showToast('⚠️ No matches found.');
+    return;
+  }
+  
+  let result;
+  if (document.getElementById('regexMode').checked) {
+    result = inputText.replace(regex, replaceText);
+  } else {
+    const escaped = replaceText.replace(/\$/g, '$$$$');
+    result = inputText.replace(regex, escaped);
+  }
+  
+  document.getElementById('inputText').value = result;
+  updateHighlight();
+  showToast('✅ Replaced ' + count + ' occurrence' + (count !== 1 ? 's' : '') + '!');
+}
+
+function copyResult() {
+  const text = document.getElementById('highlightedOutput').textContent;
+  if (!text || text.startsWith('Enter') || text.startsWith('⚠')) {
+    showToast('⚠️ Nothing to copy.');
+    return;
+  }
+  navigator.clipboard.writeText(text).catch(() => {});
+  showToast('✅ Copied to clipboard!');
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('findInput').value = '';
+  document.getElementById('replaceInput').value = '';
+  updateHighlight();
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

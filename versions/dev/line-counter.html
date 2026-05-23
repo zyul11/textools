@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Line Counter Online — Count Lines in Text Instantly | Textools</title>
+<meta name="description" content="Free online line counter — count total lines, non-empty lines, and blank lines in any text. 100% private browser processing. No uploads, no signup.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/line-counter.html">
+<meta property="og:title" content="Line Counter Online — Free Line Counting Tool">
+<meta property="og:description" content="Count total lines, non-empty lines, and blank lines in your text instantly. 100% private browser processing.">
+<meta property="og:url" content="https://textools.site/line-counter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px;text-align:center}
+.stat-card .num{font-size:28px;font-weight:800;color:#89b4fa;line-height:1.2}
+.stat-card .label{font-size:10px;color:#585b70;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.stat-card .num.green{color:#a6e3a1}
+.stat-card .num.orange{color:#fab387}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6e3a1;margin:16px 0 8px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.seo-content ul li strong{color:#cdd6f4}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr}.stat-card .num{font-size:24px}}
+.seo-banner{background:linear-gradient(135deg,rgba(137,180,250,.12),rgba(166,227,161,.10));border:1px solid rgba(137,180,250,.25);border-radius:10px;padding:10px 16px;margin-bottom:16px;position:relative;overflow:hidden}.seo-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#89b4fa,#a6e3a1);opacity:.6}.seo-banner-content{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.seo-banner-icon{font-size:22px;flex-shrink:0}.seo-banner-text{flex:1;min-width:0;font-size:13px;color:#cdd6f4;line-height:1.5}.seo-banner-text strong{color:#89b4fa}.seo-banner-cta{background:linear-gradient(135deg,#89b4fa,#a6e3a1);color:#1e1e2e;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0}.seo-banner-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(137,180,250,.35)}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://textools.site/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Line Counter"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the line counter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our line counter is completely free to use with no limits, no sign-up, and no hidden charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it count blank lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the tool shows three counts: total lines, non-empty lines (lines with at least one character), and blank lines (empty lines with zero characters)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data safe when using this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100% safe. All processing happens locally in your browser using JavaScript. Nothing is uploaded to any server — your text never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many lines can I count at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no hard limit — the tool works entirely in your browser memory. Most modern browsers can handle hundreds of thousands of lines without issues."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <div class="seo-banner">
+    <div class="seo-banner-content">
+      <span class="seo-banner-icon">🧬</span>
+      <div class="seo-banner-text">
+        <strong>Self-Evolving SEO Audit</strong> — 24-point scan + AI Visibility check. Free.
+      </div>
+      <a href="https://seo.textools.site/" class="seo-banner-cta" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">Home</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">Tools</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">Line Counter</span>
+  </div>
+  <h1>📏 Line Counter</h1>
+  <p class="sub">Count total lines, non-empty lines, and blank lines in any text instantly</p>
+  <div class="trust-badge">🔒 100% private — processed in your browser</div>
+
+  <textarea id="inputText" placeholder="Paste or type your text here to count lines..." oninput="processText()"></textarea>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="num" id="totalLines">0</div>
+      <div class="label">Total Lines</div>
+    </div>
+    <div class="stat-card">
+      <div class="num green" id="nonEmptyLines">0</div>
+      <div class="label">Non-Empty Lines</div>
+    </div>
+    <div class="stat-card">
+      <div class="num orange" id="blankLines">0</div>
+      <div class="label">Blank Lines</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button onclick="processText()">Count Lines</button>
+    <button class="secondary" onclick="copyResults()">Copy Results</button>
+    <button class="secondary" onclick="clearAll()">Clear</button>
+  </div>
+
+  <div class="rec-bar">
+    <span class="label">⚡ Also try:</span>
+    <a href="/word-counter.html">📊 Word Counter</a>
+    <a href="/char-counter.html">🔢 Character Counter</a>
+    <a href="/remove-duplicates.html">🗑️ Remove Duplicates</a>
+    <a href="/sort-lines.html">🔤 Sort Lines</a>
+    <a href="/line-numberer.html">🔢 Line Numberer</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>What Is a Line Counter?</h2>
+    <p>A line counter is a simple but essential tool that counts the number of lines in a block of text. It provides three key metrics: total lines (every line including blanks), non-empty lines (lines that contain at least one character), and blank lines (lines with no content at all). This breakdown gives you a much clearer picture of your text structure than a simple total line count.</p>
+    <p>Our free online line counter processes everything locally in your browser. There's no server upload, no data storage, and no privacy concerns — your text stays on your device at all times. Just paste your text and see the line statistics instantly.</p>
+
+    <h3>How to Use the Line Counter</h3>
+    <p>Using the line counter is straightforward:</p>
+    <ul>
+      <li><strong>Step 1:</strong> Paste or type your text into the text area above</li>
+      <li><strong>Step 2:</strong> The line statistics update automatically as you type or paste — total lines, non-empty lines, and blank lines</li>
+      <li><strong>Step 3:</strong> Use the "Copy Results" button to copy the stats to your clipboard, or "Clear" to reset</li>
+    </ul>
+
+    <h3>Common Use Cases</h3>
+    <p><strong>Code and log file analysis:</strong> Developers frequently need to count lines in code files, log outputs, or configuration files. The non-empty line count is especially useful for measuring actual code content versus blank lines that serve as formatting.</p>
+    <p><strong>Writing and editing:</strong> Writers use line counters to measure the length of poetry, scripts, or formatted text where line count matters more than word count. Screenwriters, poets, and lyricists all benefit from precise line counting.</p>
+    <p><strong>Data processing:</strong> When working with CSV exports, database dumps, or scraped data, knowing the number of lines helps you understand dataset size and detect formatting issues like extra blank lines at the end of files.</p>
+    <p><strong>Academic and administrative:</strong> Researchers counting survey responses, administrators processing form submissions, and students checking document formatting all rely on line counting for accuracy and consistency.</p>
+
+    <h3>Why Choose Textools Line Counter?</h3>
+    <p>Unlike many online line counters that send your data to remote servers, our tool is 100% client-side. This means your text is never transmitted, stored, or accessible to anyone else. The tool is also completely free with no usage limits, no account required, and no ads interrupting your workflow. It works offline too — once the page loads, you can disconnect from the internet and it continues to function perfectly.</p>
+  </div>
+
+  <div class="footer">
+    <p>📏 Line Counter | <a href="/word-counter.html">Word Counter</a> | <a href="/char-counter.html">Character Counter</a> | <a href="/">Home</a> | <a href="/privacy.html">Privacy</a> | <a href="/articles/">Articles</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · All processing is local · Zero data uploads</p>
+  </div>
+</div>
+<script>
+function processText(){
+  const input=document.getElementById('inputText');
+  const text=input.value;
+  if(text===''){
+    document.getElementById('totalLines').textContent='0';
+    document.getElementById('nonEmptyLines').textContent='0';
+    document.getElementById('blankLines').textContent='0';
+    return;
+  }
+  const lines=text.split('\n');
+  const total=lines.length;
+  let nonEmpty=0;
+  let blank=0;
+  for(let l of lines){
+    if(l.trim()===''){blank++;}
+    else{nonEmpty++;}
+  }
+  document.getElementById('totalLines').textContent=total;
+  document.getElementById('nonEmptyLines').textContent=nonEmpty;
+  document.getElementById('blankLines').textContent=blank;
+}
+function copyResults(){
+  const total=document.getElementById('totalLines').textContent;
+  const nonEmpty=document.getElementById('nonEmptyLines').textContent;
+  const blank=document.getElementById('blankLines').textContent;
+  const text=`Total Lines: ${total}\nNon-Empty Lines: ${nonEmpty}\nBlank Lines: ${blank}`;
+  navigator.clipboard.writeText(text).catch(()=>{});
+}
+function clearAll(){
+  document.getElementById('inputText').value='';
+  document.getElementById('totalLines').textContent='0';
+  document.getElementById('nonEmptyLines').textContent='0';
+  document.getElementById('blankLines').textContent='0';
+}
+</script>
+</body>
+</html>

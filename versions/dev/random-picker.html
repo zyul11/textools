@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Picker — Randomly Pick Items from a List Online</title>
+<meta name="description" content="Our random picker lets you randomly select items from any list. Enter each item on a new line, choose how many items to pick, and click to get a fair,">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/tools/random-picker.html">
+<meta property="og:title" content="🎲 Random Picker">
+<meta property="og:description" content="Our random picker lets you randomly select items from any list. Enter each item on a new line, choose how many items to ">
+<meta property="og:url" content="https://textools.site/tools/random-picker.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+.seo-banner{background:linear-gradient(135deg,rgba(137,180,250,.12),rgba(166,227,161,.10));border:1px solid rgba(137,180,250,.25);border-radius:10px;padding:10px 16px;margin-bottom:16px;position:relative;overflow:hidden}.seo-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#89b4fa,#a6e3a1);opacity:.6}.seo-banner-content{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.seo-banner-icon{font-size:22px;flex-shrink:0}.seo-banner-text{flex:1;min-width:0;font-size:13px;color:#cdd6f4;line-height:1.5}.seo-banner-text strong{color:#89b4fa}.seo-banner-cta{background:linear-gradient(135deg,#89b4fa,#a6e3a1);color:#1e1e2e;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0}.seo-banner-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(137,180,250,.35)}</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="seo-banner">
+    <div class="seo-banner-content">
+      <span class="seo-banner-icon">🧬</span>
+      <div class="seo-banner-text">
+        <strong>Self-Evolving SEO Audit</strong> — 24-point scan + AI Visibility check. Free.
+      </div>
+      <a href="https://seo.textools.site/" class="seo-banner-cta" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">Home</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">Tools</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🎲 Random Picker</span>
+  </div>
+  <h1>🎲 Random Picker</h1>
+  <p class="sub">Randomly pick one or more items from your list — fair and unbiased</p>
+  <div class="trust-badge">🔒 Your data never leaves your browser. 100% local processing.</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">List (one item per line)</div>
+    <textarea id="textInput" placeholder="Enter items, one per line..." style="height:200px">Option A
+Option B
+Option C
+Option D</textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Picked Items</div>
+    <div id="pickOutput" style="background:#11111b;border:1px solid #89b4fa;border-radius:10px;padding:14px;min-height:200px;font-size:18px;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#cdd6f4;line-height:1.8"></div>
+  </div>
+</div>
+<div class="actions" style="margin:8px 0">
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px">Pick <input id="pickCount" type="number" value="1" min="1" max="100" style="width:45px;background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:4px;padding:4px;font-size:11px;text-align:center;outline:none"></label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="allowRepeat" style="accent-color:#89b4fa"> Allow repeats</label>
+  <button onclick="pickRandom()">🎲 Pick!</button>
+  <button onclick="shuffleList()">🔀 Shuffle</button>
+  <button class="alt" onclick="clearAll()">Clear</button>
+</div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ Also try:</span>
+    <a href="/tools/text-diff.html">Text Diff Checker</a>
+    <a href="/tools/char-counter.html">Chinese Character Counter</a>
+    <a href="/tools/base64-encoder.html">Base64 Encoder/Decoder</a>
+    <a href="/tools/url-encoder.html">URL Encoder/Decoder</a>
+    <a href="/tools/json-formatter.html">JSON Formatter</a>
+    <a href="/tools/markdown-preview.html">Markdown Preview</a>
+    <a href="/tools/">🧰 All Tools</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online Random Picker — Randomly Choose Items from Your List</h2>
+    <p>Our random picker lets you randomly select items from any list. Enter each item on a new line, choose how many items to pick, and click to get a fair, unbiased random selection. Perfect for raffles, giveaways, group decision making, random sampling, and classroom activities.</p>
+    <p>Whether you're picking a raffle winner, selecting survey respondents, deciding where to eat, or creating random groups for team activities, our picker ensures true randomness. You can pick multiple items at once, allow or disallow repeats, and shuffle the entire list. All processing is local and private.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Random selection</strong> — Fairly pick one or more items from any list</li>
+      <li><strong>Adjustable count</strong> — Choose how many items to pick at once</li>
+      <li><strong>Allow repeats toggle</strong> — Pick with or without replacement</li>
+      <li><strong>Shuffle mode</strong> — Randomly shuffle the entire list</li>
+      <li><strong>100% private</strong> — All processing in your browser — zero uploads</li>
+    </ul>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/sort-lines.html">Sort Lines</a></li>
+      <li><a href="/remove-duplicates.html">Remove Duplicates</a></li>
+      <li><a href="/text-diff.html">Text Diff Checker</a></li>
+      <li><a href="/char-counter.html">Chinese Character Counter</a></li>
+      <li><a href="/base64-encoder.html">Base64 Encoder/Decoder</a></li>
+      <li><a href="/url-encoder.html">URL Encoder/Decoder</a></li>
+      <li><a href="/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/markdown-preview.html">Markdown Preview</a></li>
+      <li><a href="/text-splitter.html">Text Splitter</a></li>
+      <li><a href="/line-n
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🎲 Random Picker | <a href="/tools/">More Tools</a> | <a href="/">Home</a> | <a href="/privacy.html">Privacy</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · All processing is local · Zero data uploads</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function getItems(){
+  return document.getElementById('textInput').value.split('\n').filter(function(s){return s.trim();});
+}
+function pickRandom(){
+  var items=getItems();
+  if(!items.length){document.getElementById('pickOutput').innerHTML='<span style="font-size:14px;color:#585b70">No items in list</span>';return;}
+  var count=Math.min(parseInt(document.getElementById('pickCount').value)||1,items.length);
+  var repeat=document.getElementById('allowRepeat').checked;
+  var picked=[];
+  if(repeat){
+    for(var i=0;i<count;i++)picked.push(items[Math.floor(Math.random()*items.length)]);
+  }else{
+    var shuffled=items.slice().sort(function(){return Math.random()-0.5;});
+    picked=shuffled.slice(0,count);
+  }
+  var html='';
+  if(picked.length===1){html='<div style="font-size:32px;color:#89b4fa;margin-bottom:4px">🎯</div><div>'+escHtml(picked[0])+'</div>';}
+  else{
+    html='<div style="font-size:14px;color:#7f849c;margin-bottom:8px">Picked '+picked.length+' items:</div>';
+    for(var i=0;i<picked.length;i++)html+='<div style="font-size:16px;padding:2px 0">'+(i+1)+'. '+escHtml(picked[i])+'</div>';
+  }
+  document.getElementById('pickOutput').innerHTML=html;
+}
+function shuffleList(){
+  var items=getItems();
+  if(!items.length)return;
+  for(var i=items.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=items[i];items[i]=items[j];items[j]=t;}
+  document.getElementById('textInput').value=items.join('\n');
+  showToast('🔀 Shuffled!');
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('pickOutput').innerHTML='<span style="font-size:14px;color:#585b70">Add items to pick from</span>';showToast('Cleared');}
+
+</script>
+</body>
+</html>

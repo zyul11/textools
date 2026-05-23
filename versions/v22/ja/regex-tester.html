@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>正規表現テスター 無料 — オンライン正規表現テストツール | Ziwei Tools</title>
+<meta name="description" content="正規表現（regex）をリアルタイムにテスト。パターンとテストテキストを入力するだけで、すべてのマッチを即座にハイライト表示。100%プライベートブラウザ処理。">
+<meta name="keywords" content="正規表現 テスター 無料, 正規表現 テスト オンライン, regex ツール, ブラウザ完結 正規表現">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ja/regex-tester.html">
+<meta property="og:title" content="🔍 正規表現テスター">
+<meta property="og:description" content="正規表現（regex）をリアルタイムにテスト。パターンを入力するだけでマッチをハイライト表示。">
+<meta property="og:url" content="https://textools.site/ja/regex-tester.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">ホーム</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">ツール</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🔍 Regex Tester</span>
+  </div>
+  <h1>🔍 正規表現テスター</h1>
+  <p class="sub">正規表現をリアルタイムにテスト・デバッグ</p>
+  <div class="trust-badge">🔒 ブラウザ上で完結 — サーバーにデータは送信されません</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Regex Pattern</div>
+    <input id="regexPattern" placeholder="e.g. \b\w+\b" oninput="testRegex()" style="width:100%;background:#11111b;border:1px solid #313244;border-radius:8px;padding:10px 12px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;outline:none;margin-bottom:8px">
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Test Text</div>
+    <textarea id="textInput" placeholder="Enter test text..." oninput="testRegex()" style="height:220px">Hello world! This is a test.
+The regex will match patterns here.
+123-456-7890</textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Matches (<span id="matchCount">0</span>)</div>
+    <div id="matchOutput" style="background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;min-height:220px;font-size:13px;font-family:'SF Mono','Fira Code',monospace;white-space:pre-wrap;word-break:break-word;line-height:1.7"></div>
+  </div>
+</div>
+<div class="actions" style="margin:8px 0">
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagGlobal" checked onchange="testRegex()" style="accent-color:#89b4fa"> Global (g)</label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagCase" onchange="testRegex()" style="accent-color:#89b4fa"> Case-insensitive (i)</label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagMulti" onchange="testRegex()" style="accent-color:#89b4fa"> Multiline (m)</label>
+  <button class="alt" onclick="clearAll()">Clear</button>
+</div>
+<div id="regexError" style="font-size:11px;color:#ff6b6b;min-height:16px"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 関連ツール:</span>
+    <a href="/ja/text-diff.html">テキスト差分チェッカー</a>
+    <a href="/ja/char-counter.html">文字数カウンター</a>
+    <a href="/ja/base64-encoder.html">Base64エンコーダー/デコーダー</a>
+    <a href="/ja/url-encoder.html">URLエンコーダー/デコーダー</a>
+    <a href="/ja/json-formatter.html">JSONフォーマッター</a>
+    <a href="/ja/markdown-preview.html">Markdownプレビュー</a>
+    <a href="/ja/">🧰 すべてのツール</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online Regex Tester — Test and Debug Regular Expressions</h2>
+    <p>Our regex tester lets you write and test regular expressions in real time. Enter your regex pattern and test text, and instantly see all matches highlighted. Choose from common flags (global, case-insensitive, multiline) and get detailed match information including match position and capture groups.</p>
+    <p>Regular expressions are a powerful tool for text pattern matching used in programming, data validation, search-and-replace, and text extraction. Whether you're a developer debugging a regex pattern, a data analyst extracting information from logs, or a student learning regex syntax, our tester provides instant visual feedback. すべてローカル処理.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Real-time matching</strong> — See matches highlighted instantly as you type</li>
+      <li><strong>Flags support</strong> — Toggle global, case-insensitive, and multiline flags</li>
+      <li><strong>Match details</strong> — Shows match position, count, and capture groups</li>
+      <li><strong>Clear error messages</strong> — Get helpful feedback on invalid regex patterns</li>
+      <li><strong>100% private</strong> — All processing in your browser — zero uploads</li>
+    </ul>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/find-replace.html">Find and Replace</a></li>
+      <li><a href="/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/text-diff.html">Text Diff Checker</a></li>
+      <li><a href="/char-counter.html">Chinese Character Counter</a></li>
+      <li><a href="/base64-encoder.html">Base64 Encoder/Decoder</a></li>
+      <li><a href="/url-encoder.html">URL Encoder/Decoder</a></li>
+      <li><a href="/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/markdown-preview.html">Markdown Preview</a></li>
+      <li><a href="/text-splitter.html">Text Splitter</a></li>
+      <li><a href="/line-n
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🔍 正規表現テスター <a href="/tools/">他のツール</a> | <a href="/">ホーム</a> | <a href="/privacy.html">プライバシー</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · すべてローカル処理 · データのアップロードはありません</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function testRegex(){
+  var pattern=document.getElementById('regexPattern').value;
+  var text=document.getElementById('textInput').value;
+  var matchOut=document.getElementById('matchOutput');
+  var errEl=document.getElementById('regexError');
+  var countEl=document.getElementById('matchCount');
+  if(!pattern.trim()){matchOut.innerHTML='<span style="color:#585b70">Enter a regex pattern...</span>';errEl.textContent='';countEl.textContent='0';return;}
+  try{
+    var flags='';
+    if(document.getElementById('flagGlobal').checked)flags+='g';
+    if(document.getElementById('flagCase').checked)flags+='i';
+    if(document.getElementById('flagMulti').checked)flags+='m';
+    var regex=new RegExp(pattern,flags);
+    var matches=text.match(regex);
+    var count=matches?matches.length:0;
+    countEl.textContent=count;
+    errEl.textContent='';
+    if(!count){matchOut.innerHTML='<span style="color:#585b70">No matches found</span>';return;}
+    var html='<div style="color:#7f849c;font-size:11px;margin-bottom:6px">Found '+count+' match'+(count>1?'es':'')+':</div>';
+    var highlighted=text.replace(regex,function(m){return '<span style="background:rgba(137,180,250,.3);color:#cdd6f4;border-radius:3px;padding:1px 2px">'+escHtml(m)+'</span>';});
+    html+='<div style="background:#11111b;padding:8px;border-radius:6px;border:1px solid rgba(137,180,250,.1)">'+highlighted+'</div>';
+    matchOut.innerHTML=html;
+  }catch(e){
+    errEl.textContent='❌ '+e.message;
+    matchOut.innerHTML='<span style="color:#585b70">Fix the regex...</span>';
+    countEl.textContent='0';
+  }
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('regexPattern').value='';document.getElementById('textInput').value='';document.getElementById('matchOutput').innerHTML='<span style="color:#585b70">Enter a regex pattern...</span>';document.getElementById('regexError').textContent='';document.getElementById('matchCount').textContent='0';showToast('Cleared');}
+
+</script>
+</body>
+</html>

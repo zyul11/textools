@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>正則表達式測試器 免費 — 線上Regex測試工具</title>
+<meta name="description" content="即時測試正則表達式（regex）。輸入正則模式及測試文字，所有匹配結果即時高亮顯示。100%私密瀏覽器處理。">
+<meta name="keywords" content="正則表達式 測試器 免費, 正則測試 線上, regex 工具, 瀏覽器處理 正則表達式">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/regex-tester.html">
+<meta property="og:title" content="🔍 正則表達式測試器">
+<meta property="og:description" content="即時測試正則表達式（regex）。輸入正則模式，匹配結果即時高亮顯示。">
+<meta property="og:url" content="https://textools.site/zh-hk/regex-tester.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">首頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🔍 正則表達式測試器</span>
+  </div>
+  <h1>🔍 正則表達式測試器</h1>
+  <p class="sub">即時測試和除錯正則表達式</p>
+  <div class="trust-badge">🔒 你的資料絕不離開瀏覽器。100%本地處理。</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">正則模式</div>
+    <input id="regexPattern" placeholder="例如：\b\w+\b" oninput="testRegex()" style="width:100%;background:#11111b;border:1px solid #313244;border-radius:8px;padding:10px 12px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;outline:none;margin-bottom:8px">
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">測試文字</div>
+    <textarea id="textInput" placeholder="輸入測試文字..." oninput="testRegex()" style="height:220px">Hello world! This is a test.
+The regex will match patterns here.
+123-456-7890</textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">匹配結果 (<span id="matchCount">0</span>)</div>
+    <div id="matchOutput" style="background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;min-height:220px;font-size:13px;font-family:'SF Mono','Fira Code',monospace;white-space:pre-wrap;word-break:break-word;line-height:1.7"></div>
+  </div>
+</div>
+<div class="actions" style="margin:8px 0">
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagGlobal" checked onchange="testRegex()" style="accent-color:#89b4fa"> 全域 (g)</label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagCase" onchange="testRegex()" style="accent-color:#89b4fa"> 不區分大小寫 (i)</label>
+  <label style="font-size:11px;color:#7f849c;display:flex;align-items:center;gap:4px"><input type="checkbox" id="flagMulti" onchange="testRegex()" style="accent-color:#89b4fa"> 多行模式 (m)</label>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+<div id="regexError" style="font-size:11px;color:#ff6b6b;min-height:16px"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/text-diff.html">文字差異比對器</a>
+    <a href="/zh-hk/char-counter.html">字數計算機</a>
+    <a href="/zh-hk/base64-encoder.html">Base64編碼器/解碼器</a>
+    <a href="/zh-hk/url-encoder.html">URL編碼器/解碼器</a>
+    <a href="/zh-hk/json-formatter.html">JSON格式化工具</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown預覽</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上正則表達式測試器 — 測試和除錯正則表達式</h2>
+    <p>我們的正則表達式測試器讓你可即時編寫和測試正則表達式。輸入正則模式和測試文字，所有匹配結果即時高亮顯示。可選擇常用標誌（全域、不區分大小寫、多行模式），並獲取詳細的匹配資訊，包括匹配位置和捕獲組。</p>
+    <p>正則表達式是一種強大的文字模式匹配工具，用於程式設計、資料驗證、搜尋取代和文字提取。無論你是開發者正在除錯正則模式、資料分析師正從日誌中提取資訊，還是學生正在學習正則語法，我們的測試器都能提供即時視覺回饋。所有處理均在本地進行。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>即時匹配</strong> — 輸入時即時高亮顯示匹配結果</li>
+      <li><strong>標誌支援</strong> — 切換全域、不區分大小寫和多行標誌</li>
+      <li><strong>匹配詳情</strong> — 顯示匹配位置、數量和捕獲組</li>
+      <li><strong>清晰的錯誤訊息</strong> — 針對無效正則模式提供有用回饋</li>
+      <li><strong>100%私密</strong> — 所有處理在瀏覽器中完成 — 零上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/find-replace.html">尋找與取代</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/text-diff.html">文字差異比對器</a></li>
+      <li><a href="/char-counter.html">字數計算機</a></li>
+      <li><a href="/base64-encoder.html">Base64編碼器/解碼器</a></li>
+      <li><a href="/url-encoder.html">URL編碼器/解碼器</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/markdown-preview.html">Markdown預覽</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/line-numberer.html">行號標記工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🔍 正則表達式測試器 | <a href="/tools/">更多工具</a> | <a href="/">首頁</a> | <a href="/privacy.html">私隱</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本地 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function testRegex(){
+  var pattern=document.getElementById('regexPattern').value;
+  var text=document.getElementById('textInput').value;
+  var matchOut=document.getElementById('matchOutput');
+  var errEl=document.getElementById('regexError');
+  var countEl=document.getElementById('matchCount');
+  if(!pattern.trim()){matchOut.innerHTML='<span style="color:#585b70">輸入正則模式...</span>';errEl.textContent='';countEl.textContent='0';return;}
+  try{
+    var flags='';
+    if(document.getElementById('flagGlobal').checked)flags+='g';
+    if(document.getElementById('flagCase').checked)flags+='i';
+    if(document.getElementById('flagMulti').checked)flags+='m';
+    var regex=new RegExp(pattern,flags);
+    var matches=text.match(regex);
+    var count=matches?matches.length:0;
+    countEl.textContent=count;
+    errEl.textContent='';
+    if(!count){matchOut.innerHTML='<span style="color:#585b70">未找到匹配</span>';return;}
+    var html='<div style="color:#7f849c;font-size:11px;margin-bottom:6px">找到 '+count+' 個匹配：</div>';
+    var highlighted=text.replace(regex,function(m){return '<span style="background:rgba(137,180,250,.3);color:#cdd6f4;border-radius:3px;padding:1px 2px">'+escHtml(m)+'</span>';});
+    html+='<div style="background:#11111b;padding:8px;border-radius:6px;border:1px solid rgba(137,180,250,.1)">'+highlighted+'</div>';
+    matchOut.innerHTML=html;
+  }catch(e){
+    errEl.textContent='❌ '+e.message;
+    matchOut.innerHTML='<span style="color:#585b70">修正正則表達式...</span>';
+    countEl.textContent='0';
+  }
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('regexPattern').value='';document.getElementById('textInput').value='';document.getElementById('matchOutput').innerHTML='<span style="color:#585b70">輸入正則模式...</span>';document.getElementById('regexError').textContent='';document.getElementById('matchCount').textContent='0';showToast('已清除');}
+
+</script>
+</body>
+</html>

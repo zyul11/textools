@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown 미리보기 — 무료 온라인 Markdown 편집기</title>
+<meta name="description" content="Markdown을 왼쪽에 작성하고 렌더링된 HTML을 오른쪽에서 실시간으로 확인하세요. 개발자, 기술 문서 작성자, 블로거에게 최적화된 도구입니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ko/markdown-preview.html">
+<meta property="og:title" content="📝 Markdown 미리보기">
+<meta property="og:description" content="Markdown을 왼쪽에 작성하고 렌더링된 HTML을 오른쪽에서 실시간으로 확인하세요.">
+<meta property="og:url" content="https://textools.site/ko/markdown-preview.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">홈</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">도구</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">📝 Markdown 미리보기</span>
+  </div>
+  <h1>📝 Markdown 미리보기</h1>
+  <p class="sub">Markdown을 작성하고 렌더링된 HTML 미리보기를 실시간으로 확인하세요</p>
+  <div class="trust-badge">🔒 귀하의 데이터는 브라우저를 떠나지 않습니다. 100% 로컬 처리.</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Markdown 입력</div>
+    <textarea id="textInput" placeholder="Markdown을 입력하세요..." oninput="renderMarkdown()" style="height:350px"># Hello World
+
+This is **bold** and *italic*.
+
+- List item 1
+- List item 2
+
+[Link](https://example.com)</textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">미리보기</div>
+    <div id="preview" style="background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;min-height:350px;overflow-y:auto;line-height:1.7"></div>
+  </div>
+</div>
+<div class="actions">
+  <button onclick="copyPreview()">📋 HTML 복사</button>
+  <button class="alt" onclick="clearAll()">지우기</button>
+</div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 추천 도구:</span>
+    <a href="/ko/text-diff.html">텍스트 차이 비교</a>
+    <a href="/ko/char-counter.html">글자 수 세기</a>
+    <a href="/ko/base64-encoder.html">Base64 인코더/디코더</a>
+    <a href="/ko/url-encoder.html">URL 인코더/디코더</a>
+    <a href="/ko/json-formatter.html">JSON 포맷터</a>
+    <a href="/ko/text-splitter.html">텍스트 분할</a>
+    <a href="/ko/">🧰 모든 도구</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>무료 온라인 Markdown 미리보기 — 실시간 HTML 렌더링 편집기</h2>
+    <p>Markdown 미리보기 도구를 사용하면 왼쪽에서 Markdown을 작성하고 오른쪽에서 렌더링된 HTML을 실시간으로 확인할 수 있습니다. 개발자, 기술 문서 작성자, 블로거 및 Markdown 파일을 다루는 모든 분께 적합합니다. 이 도구는 제목, 굵게, 기울임, 링크, 이미지, 코드 블록, 목록, 표, 인용문 등 표준 Markdown 구문을 지원합니다.</p>
+    <p>Markdown은 GitHub, GitLab 및 많은 정적 사이트 생성기의 문서 표준 형식입니다. 실시간 미리보기를 통해 게시 전 서식 오류를 발견하고, 구문을 실험하며, Markdown을 더 빠르게 배울 수 있습니다. 모든 렌더링은 브라우저에서 로컬로 수행되며 서버에 업로드되지 않습니다.</p>
+
+    <h3>주요 기능</h3>
+    <ul>
+      <li><strong>실시간 미리보기</strong> — Markdown을 입력하면 HTML이 실시간으로 업데이트됩니다</li>
+      <li><strong>전체 Markdown 지원</strong> — 제목, 목록, 코드, 표, 링크, 이미지 등</li>
+      <li><strong>HTML 출력 복사</strong> — 렌더링된 HTML을 내보내 프로젝트에 사용</li>
+      <li><strong>다크 테마</strong> — textools의 다크 디자인과 일치하여 편안한 편집 환경</li>
+      <li><strong>100% 프라이빗</strong> — 모든 작업이 브라우저에서 실행 — 서버 업로드 없음</li>
+    </ul>
+
+    <h3>관련 도구</h3>
+    <ul>
+      <li><a href="/ko/json-formatter.html">JSON 포맷터</a></li>
+      <li><a href="/ko/slug-generator.html">URL 슬러그 생성기</a></li>
+      <li><a href="/ko/text-diff.html">텍스트 차이 비교</a></li>
+      <li><a href="/ko/char-counter.html">글자 수 세기</a></li>
+      <li><a href="/ko/base64-encoder.html">Base64 인코더/디코더</a></li>
+      <li><a href="/ko/url-encoder.html">URL 인코더/디코더</a></li>
+      <li><a href="/ko/json-formatter.html">JSON 포맷터</a></li>
+      <li><a href="/ko/text-splitter.html">텍스트 분할</a></li>
+      <li><a href="/ko/line-numberer.html">줄 번호 매기기</a></li>
+      <li><a href="/ko/text-reverser.html">텍스트 뒤집기</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>📝 Markdown 미리보기 | <a href="/tools/">더 많은 도구</a> | <a href="/">홈</a> | <a href="/privacy.html">개인정보</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 모든 처리는 로컬에서 · 데이터 업로드 없음</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function renderMarkdown(){
+  var t=document.getElementById('textInput').value;
+  var html=simpleMarkdown(t);
+  document.getElementById('preview').innerHTML=html;
+}
+function simpleMarkdown(md){
+  if(!md)return '<span style="color:#585b70">왼쪽에 Markdown을 입력하세요...</span>';
+  var h=md;
+  h=h.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  h=h.replace(/^### (.+)$/gm,'<h3>$1</h3>');
+  h=h.replace(/^## (.+)$/gm,'<h2>$1</h2>');
+  h=h.replace(/^# (.+)$/gm,'<h1>$1</h1>');
+  h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  h=h.replace(/\*(.+?)\*/g,'<em>$1</em>');
+  h=h.replace(/`([^`]+)`/g,'<code style="background:#1a1a3a;padding:2px 6px;border-radius:3px;font-size:12px">$1</code>');
+  h=h.replace(/^> (.+)$/gm,'<blockquote style="border-left:3px solid #89b4fa;padding-left:12px;color:#a6adc8;margin:8px 0">$1</blockquote>');
+  h=h.replace(/^\d+\. (.+)$/gm,'<li>$1</li>');
+  h=h.replace(/^- (.+)$/gm,'<li>$1</li>');
+  h=h.replace(/<li>(.+?)<\/li>\n<li>/g,'<li>$1</li><li>');
+  h=h.replace(/(<li>.*?<\/li>)/gs,function(m){return '<ul style="padding-left:20px;margin:8px 0">'+m+'</ul>';});
+  h=h.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" style="color:#89b4fa">$1</a>');
+  h=h.replace(/^---+$/gm,'<hr style="border:none;border-top:1px solid #313244;margin:16px 0">');
+  h=h.replace(/```([\s\S]*?)```/g,function(m,c){return '<pre style="background:#1e1e2e;border:1px solid #313244;border-radius:6px;padding:12px;font-size:12px;overflow-x:auto"><code>'+c.trim()+'</code></pre>';});
+  h=h.replace(/\n\n/g,'<br><br>');
+  return h;
+}
+function copyPreview(){
+  var h=document.getElementById('preview').innerHTML;
+  if(!h||h.includes('Start typing')){showToast('⚠️ 복사할 내용이 없습니다');return;}
+  navigator.clipboard.writeText(h).then(function(){showToast('✅ HTML이 복사되었습니다!');}).catch(function(){});
+}
+function clearAll(){document.getElementById('textInput').value='# Hello\n\nType your Markdown here...';renderMarkdown();showToast('초기화됨');}
+
+</script>
+</body>
+</html>

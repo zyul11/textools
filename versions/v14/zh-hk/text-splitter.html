@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字分割器 — 按分隔符號分割文字線上工具</title>
+<meta name="description" content="文字分割器可根據分隔符號、字數或區塊大小將大量文字分割成小段。無論係分割 CSV 資料、將長文章分段，定係為 API 限制劃分文字，呢個工具都可以即時幫你完成。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/text-splitter.html">
+<meta property="og:title" content="✂️ 文字分割器">
+<meta property="og:description" content="文字分割器可根據分隔符號、字數或區塊大小將大量文字分割成小段">
+<meta property="og:url" content="https://textools.site/zh-hk/text-splitter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">主頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/zh-hk/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">✂️ 文字分割器</span>
+  </div>
+  <h1>✂️ 文字分割器</h1>
+  <p class="sub">按分隔符號、字數或換行即時分割文字</p>
+  <div class="trust-badge">🔒 100% 私隱保護 — 瀏覽器端處理，不上傳伺服器</div>
+
+  
+<textarea id="textInput" placeholder="貼上需要分割的文字..." oninput="autoSplit()"></textarea>
+<div class="actions" style="margin:8px 0">
+  <select id="delimiter" onchange="splitText()" style="background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none">
+    <option value="newline">換行</option>
+    <option value="comma">逗號</option>
+    <option value="semicolon">分號</option>
+    <option value="tab">Tab</option>
+    <option value="word">按字數（100）</option>
+    <option value="custom">自訂...</option>
+  </select>
+  <input id="customDelim" placeholder="自訂分隔符號" style="display:none;background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;width:120px;outline:none" oninput="splitText()">
+  <button onclick="splitText()">✂️ 分割</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+<div id="splitOutput" style="background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;min-height:60px;font-size:12px;line-height:1.8"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 推薦工具:</span>
+    <a href="/zh-hk/text-diff.html">文字差異比對</a>
+    <a href="/zh-hk/char-counter.html">字數計算器</a>
+    <a href="/zh-hk/base64-encoder.html">Base64 編碼/解碼</a>
+    <a href="/zh-hk/url-encoder.html">URL 編碼/解碼</a>
+    <a href="/zh-hk/json-formatter.html">JSON 格式化</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown 預覽</a>
+    <a href="/tools/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上文字分割器 — 按分隔符號、字數或區塊分割文字</h2>
+    <p>文字分割器可根據分隔符號、字數或區塊大小將大量文字分割成細小段落。無論你需要分割 CSV 資料、將長文章分為段落、為 API 字數限制劃分文字，抑或係整理資料以作批量處理，呢個工具都可以即時輕鬆完成。</p>
+    <p>你可以選擇常見的分隔符號如換行、逗號、分號、Tab，或自訂分隔符號。亦可以按字數分割，建立大小一致的文字區塊。非常適合內容創作者分割稿件、數據分析人員處理日誌，以及開發人員測試文字處理管道。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>多種分隔符號</strong> — 換行、逗號、分號、Tab 或自訂</li>
+      <li><strong>按字數分割</strong> — 按字數建立大小一致的文字區塊</li>
+      <li><strong>區塊編號</strong> — 每個段落自動編號，方便查閱</li>
+      <li><strong>複製單個區塊</strong> — 點擊任意區塊即可複製到剪貼簿</li>
+      <li><strong>100% 私隱保障</strong> — 所有處理在瀏覽器完成，資料絕不上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/zh-hk/sort-lines.html">排序行</a></li>
+      <li><a href="/zh-hk/remove-duplicates.html">移除重複行</a></li>
+      <li><a href="/zh-hk/text-diff.html">文字差異比對</a></li>
+      <li><a href="/zh-hk/char-counter.html">字數計算器</a></li>
+      <li><a href="/zh-hk/base64-encoder.html">Base64 編碼/解碼</a></li>
+      <li><a href="/zh-hk/url-encoder.html">URL 編碼/解碼</a></li>
+      <li><a href="/zh-hk/json-formatter.html">JSON 格式化</a></li>
+      <li><a href="/zh-hk/markdown-preview.html">Markdown 預覽</a></li>
+      <li><a href="/zh-hk/line-numberer.html">行號標記</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>✂️ 文字分割器 | <a href="/tools/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+(function(){
+  document.getElementById('delimiter').addEventListener('change',function(){
+    document.getElementById('customDelim').style.display=this.value==='custom'?'inline-block':'none';
+    splitText();
+  });
+})();
+function autoSplit(){setTimeout(splitText,300);}
+function splitText(){
+  var t=document.getElementById('textInput').value;
+  var delim=document.getElementById('delimiter').value;
+  var out=document.getElementById('splitOutput');
+  if(!t.trim()){out.innerHTML='<span style="color:#585b70">請在上方貼上文字進行分割</span>';return;}
+  var parts=[];
+  if(delim==='word'){
+    var words=t.trim().split(/\s+/);
+    var chunkSize=parseInt(document.getElementById('customDelim').value)||100;
+    for(var i=0;i<words.length;i+=chunkSize)parts.push(words.slice(i,i+chunkSize).join(' '));
+  }else{
+    var d={'newline':'\n','comma':',','semicolon':';','tab':'\t'};
+    var sep=delim==='custom'?document.getElementById('customDelim').value||',':d[delim];
+    parts=t.split(sep).filter(function(s){return s.trim();});
+  }
+  if(!parts.length){out.innerHTML='<span style="color:#585b70">未找到任何區塊</span>';return;}
+  var html='<div style="font-size:11px;color:#585b70;margin-bottom:8px">找到 <strong style="color:#cdd6f4">'+parts.length+'</strong> 個區塊</div>';
+  for(var i=0;i<parts.length;i++){
+    html+='<div style="background:rgba(26,26,46,.5);border:1px solid rgba(137,180,250,.08);border-radius:6px;padding:8px 10px;margin-bottom:6px;cursor:pointer" onclick="copyChunk('+i+')" title="點擊複製">';
+    html+='<span style="color:#585b70;font-size:10px;margin-right:6px">#'+(i+1)+'</span>';
+    html+='<span>'+escHtml(parts[i].slice(0,200))+'</span>';
+    if(parts[i].length>200)html+='<span style="color:#585b70">...</span>';
+    html+='</div>';
+  }
+  out.innerHTML=html;
+  window._chunks=parts;
+}
+function copyChunk(i){
+  if(window._chunks&&window._chunks[i]){
+    navigator.clipboard.writeText(window._chunks[i]).then(function(){showToast('✅ 區塊 #'+(i+1)+' 已複製！');}).catch(function(){});
+  }
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('splitOutput').innerHTML='<span style="color:#585b70">請在上方貼上文字進行分割</span>';showToast('已清除');}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} — 免費線上 {{TOOL_NAME}} 工具</title>
+<meta name="description" content="{{META_DESC}}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/{{FILENAME}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="https://textools.site/zh-hk/{{FILENAME}}">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"主頁","item":"https://textools.site/"},
+  {"@type":"ListItem","position":2,"name":"工具","item":"https://textools.site/zh-hk/"},
+  {"@type":"ListItem","position":3,"name":"模板工具"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"模板工具係咪免費？","acceptedAnswer":{"@type":"Answer","text":"係，完全免費。所有處理喺瀏覽器完成，資料唔會上傳到伺服器。"}},
+  {"@type":"Question","name":"可唔可以自訂模板？","acceptedAnswer":{"@type":"Answer","text":"可以 — 你可以定義自己嘅模板，使用自訂變數同分隔符號。"}},
+  {"@type":"Question","name":"離線可以用嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。頁面載入後所有功能都喺客戶端運行，即使斷開網絡連接都繼續用得。"}},
+  {"@type":"Question","name":"模板通常用嚟做乜？","acceptedAnswer":{"@type":"Answer","text":"模板適合用於批量電郵生成、社交媒體貼文、程式碼片段、格式信件，以及任何重複性文字模式。"}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:14px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+.output-area{background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:14px;min-height:80px;font-family:'SF Mono','Fira Code',monospace}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.usage-stat{font-size:11px;color:#585b70;text-align:center;margin:8px 0}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="margin-bottom:8px;font-size:12px">
+    <a href="/tools/zh-hk/" style="color:#585b70;text-decoration:none;">← 所有工具</a>
+  </div>
+  <h1>{{ICON}} {{DISPLAY_NAME}}</h1>
+  <p class="sub">{{SUBTITLE}}</p>
+  <div class="trust-badge">🔒 100% 私隱保障 — 瀏覽器端處理</div>
+
+  <div class="usage-stat" id="usageStat"></div>
+
+  <!-- 工具 UI 放置位置 -->
+  {{TOOL_UI}}
+
+  <div class="actions">
+    {{ACTION_BUTTONS}}
+    <button class="alt" onclick="shareResult()">🔗 分享連結</button>
+  </div>
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 推薦工具:</span>
+    <a href="/zh-hk/word-counter.html">📊 字數統計</a>
+    <a href="/zh-hk/sort-lines.html">🔤 排序行</a>
+    <a href="/zh-hk/remove-duplicates.html">🧹 移除重複行</a>
+    <a href="/tools/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    {{SEO_CONTENT}}
+  </div>
+
+  <div class="footer">
+    <p>{{ICON}} {{DISPLAY_NAME}} | <a href="/tools/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a> | <a href="/articles/">文章</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === 使用次數追蹤 ===
+(function(){
+  let n = localStorage.getItem('{{STORAGE_KEY}}_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('{{STORAGE_KEY}}_count', n);
+  document.getElementById('usageStat').textContent = '📈 你已經使用呢個工具 ' + n + ' 次';
+})();
+
+// === Hash 分享自動載入 ===
+(function(){
+  const hash = decodeURIComponent(window.location.hash.slice(1));
+  if (hash && hash.startsWith('text=')) {
+    const text = hash.slice(5);
+    if (text) {
+      document.getElementById('{{INPUT_ID}}').value = text;
+      if (typeof onInputLoad === 'function') onInputLoad(text);
+      else if (typeof updateResult === 'function') updateResult();
+    }
+  }
+})();
+
+function showToast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+
+function shareResult(){
+  var el = document.getElementById('{{OUTPUT_ID}}') || document.getElementById('{{INPUT_ID}}');
+  var t = el ? el.value : '';
+  if (!t.trim()) { showToast('⚠️ 冇內容可分享。請先輸入文字。'); return; }
+  var url = window.location.href.split('#')[0] + '#text=' + encodeURIComponent(t.slice(0,2000));
+  if (navigator.share) {
+    navigator.share({ title: '{{DISPLAY_NAME}}', text: '睇下我嘅結果！', url: url });
+  } else {
+    navigator.clipboard.writeText(url).then(function(){ showToast('🔗 分享連結已複製！可發送畀任何人'); }).catch(function(){});
+  }
+}
+
+// === 工具邏輯 ===
+{{TOOL_SCRIPT}}
+</script>
+</body>
+</html>

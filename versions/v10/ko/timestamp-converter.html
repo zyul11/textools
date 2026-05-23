@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>타임스탬프 변환기 무료 — Unix 시간 변환 온라인 도구</title>
+<meta name="description" content="무료 타임스탬프 변환기. Unix 타임스탬프(초/밀리초)를 사람이 읽을 수 있는 날짜로 즉시 변환하거나 날짜에서 타임스탬프를 생성합니다. 100% 프라이버시 보호, 브라우저 로컬 처리.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ko/timestamp-converter.html">
+<meta property="og:title" content="⏰ 타임스탬프 변환기">
+<meta property="og:description" content="Unix 타임스탬프(에포크 초/밀리초)를 사람이 읽을 수 있는 날짜로 변환하거나 날짜에서 타임스탬프를 생성합니다.">
+<meta property="og:url" content="https://textools.site/ko/timestamp-converter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="margin-bottom:8px;font-size:12px">
+    <a href="/tools/ko/" style="color:#585b70;text-decoration:none;">← 모든 도구</a>
+  </div>
+  <h1>⏰ 타임스탬프 변환기</h1>
+  <p class="sub">Unix 타임스탬프를 사람이 읽을 수 있는 날짜로, 또는 날짜에서 타임스탬프로 변환</p>
+  <div class="trust-badge">🔒 100% 프라이버시 보호 — 브라우저에서 처리됩니다</div>
+
+  
+<div style="text-align:center;padding:12px;background:rgba(26,26,46,.5);border:1px solid rgba(137,180,250,.1);border-radius:10px;margin-bottom:14px">
+  <div style="font-size:11px;color:#585b70;margin-bottom:4px">현재 Unix 시간:</div>
+  <div id="currentTimestamp" style="font-size:20px;font-weight:800;color:#cdd6f4;font-family:'SF Mono','Fira Code',monospace"></div>
+  <div id="currentDate" style="font-size:11px;color:#7f849c;margin-top:2px"></div>
+</div>
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">Unix 타임스탬프</div>
+    <input id="tsInput" placeholder="예: 1747614000" oninput="tsToDate()" style="width:100%;background:#11111b;border:1px solid #313244;border-radius:8px;padding:10px 12px;color:#cdd6f4;font-size:14px;font-family:'SF Mono','Fira Code',monospace;outline:none;margin-bottom:8px">
+    <div class="actions" style="margin-bottom:4px">
+      <button onclick="tsToDate()">→ 날짜로 변환</button>
+      <button class="alt" onclick="useNow()">📡 현재 시간</button>
+    </div>
+    <div id="tsResult" style="background:#11111b;border:1px solid rgba(137,180,250,.1);border-radius:8px;padding:12px;min-height:60px;font-size:13px;line-height:1.8"></div>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">날짜 입력</div>
+    <input id="dateInput" type="datetime-local" onchange="dateToTs()" style="width:100%;background:#11111b;border:1px solid #313244;border-radius:8px;padding:10px 12px;color:#cdd6f4;font-size:13px;outline:none;color-scheme:dark;margin-bottom:8px">
+    <div class="actions" style="margin-bottom:4px">
+      <button onclick="dateToTs()">→ 타임스탬프로 변환</button>
+    </div>
+    <div id="dateResult" style="background:#11111b;border:1px solid rgba(137,180,250,.1);border-radius:8px;padding:12px;min-height:60px;font-size:13px;line-height:1.8"></div>
+  </div>
+</div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 함께 사용해보세요:</span>
+    <a href="/tools/ko/word-counter.html">단어 카운터</a>
+    <a href="/tools/ko/sort-lines.html">줄 정렬</a>
+    <a href="/tools/ko/remove-duplicates.html">중복 제거</a>
+    <a href="/tools/ko/">🧰 모든 도구</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>무료 온라인 타임스탬프 변환기 — Unix 타임스탬프를 읽기 쉬운 날짜로</h2>
+    <p>타임스탬프 변환기는 Unix 타임스탬프(에포크 이후 초/밀리초)를 사람이 읽을 수 있는 날짜로 즉시 변환하거나, 날짜를 입력하여 Unix 타임스탬프를 생성합니다. API, 데이터베이스, 로그 파일을 다루는 개발자에게 필수적인 도구입니다.</p>
+    <p>Unix 타임스탬프는 프로그래밍, 데이터베이스(MySQL, PostgreSQL), API(JSON/REST), 시스템 로그에서 보편적으로 사용됩니다. 초와 밀리초를 모두 지원하며, ISO 8601, US, EU 등 여러 날짜 형식을 표시하고 현재 타임스탬프를 참조용으로 보여줍니다. 모든 처리는 로컬에서 이루어집니다.</p>
+
+    <h3>주요 기능</h3>
+    <ul>
+      <li><strong>타임스탬프 → 날짜</strong> — Unix 타임스탬프를 사람이 읽을 수 있는 날짜로 변환</li>
+      <li><strong>날짜 → 타임스탬프</strong> — 모든 날짜에서 Unix 타임스탬프 생성</li>
+      <li><strong>다중 형식</strong> — ISO 8601, US 형식, EU 형식 등 지원</li>
+      <li><strong>현재 타임스탬프</strong> — 실시간 업데이트되는 현재 Unix 시간 확인</li>
+      <li><strong>100% 프라이버시</strong> — 모든 처리는 브라우저에서 실행, 데이터 업로드 없음</li>
+    </ul>
+
+    <h3>관련 도구</h3>
+    <ul>
+      <li><a href="/ko/word-counter.html">단어 카운터</a></li>
+      <li><a href="/ko/sort-lines.html">줄 정렬</a></li>
+      <li><a href="/ko/remove-duplicates.html">중복 줄 제거</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>⏰ 타임스탬프 변환기 | <a href="/tools/ko/">더 많은 도구</a> | <a href="/">Home</a> | <a href="/privacy.html">개인정보</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 모든 처리는 로컬에서 실행 · 데이터 업로드 없음</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+(function updateClock(){
+  var now=Math.floor(Date.now()/1000);
+  document.getElementById('currentTimestamp').textContent=now;
+  document.getElementById('currentDate').textContent=new Date().toLocaleString('ko-KR');
+  setTimeout(updateClock,1000);
+})();
+function tsToDate(){
+  var val=document.getElementById('tsInput').value.trim();
+  var el=document.getElementById('tsResult');
+  if(!val){el.innerHTML='<span style="color:#585b70">타임스탬프를 입력하세요...</span>';return;}
+  var ts=parseInt(val);
+  if(isNaN(ts)){el.innerHTML='<span style="color:#ff6b6b">유효하지 않은 타임스탬프</span>';return;}
+  var d;
+  if(val.length>10){d=new Date(ts);}else{d=new Date(ts*1000);}
+  if(isNaN(d.getTime())){el.innerHTML='<span style="color:#ff6b6b">유효하지 않은 날짜</span>';return;}
+  el.innerHTML='<div><span style="color:#7f849c">ISO 8601:</span> <span style="color:#a6e3a1">'+d.toISOString()+'</span></div>'+
+    '<div><span style="color:#7f849c">US:</span> <span>'+d.toLocaleString('en-US')+'</span></div>'+
+    '<div><span style="color:#7f849c">EU:</span> <span>'+d.toLocaleString('en-GB')+'</span></div>';
+}
+function dateToTs(){
+  var val=document.getElementById('dateInput').value;
+  var el=document.getElementById('dateResult');
+  if(!val){el.innerHTML='<span style="color:#585b70">날짜/시간을 선택하세요...</span>';return;}
+  var d=new Date(val);
+  if(isNaN(d.getTime())){el.innerHTML='<span style="color:#ff6b6b">유효하지 않은 날짜</span>';return;}
+  var secs=Math.floor(d.getTime()/1000);
+  var ms=d.getTime();
+  el.innerHTML='<div><span style="color:#7f849c">초:</span> <span style="color:#cdd6f4;font-weight:700">'+secs+'</span></div>'+
+    '<div><span style="color:#7f849c">밀리초:</span> <span style="color:#cdd6f4;font-weight:700">'+ms+'</span></div>';
+}
+function useNow(){
+  document.getElementById('tsInput').value=Math.floor(Date.now()/1000);
+  tsToDate();
+}
+
+</script>
+</body>
+</html>

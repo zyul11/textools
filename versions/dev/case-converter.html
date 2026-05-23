@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Case Converter - Convert Text to UPPERCASE, lowercase, Title Case Online | Textools</title>
+<meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, camelCase, and more. Free online case converter. 100% private browser processing.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/case-converter.html">
+<meta property="og:title" content="Text Case Converter - Convert Text to UPPERCASE, lowercase, Title Case Online">
+<meta property="og:description" content="Convert text between UPPERCASE, lowercase, Title Case, camelCase, and more. Free online case converter. 100% private browser processing.">
+<meta property="og:url" content="https://textools.site/case-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text Case Converter - Convert Text to UPPERCASE, lowercase, Title Case Online">
+<meta name="twitter:description" content="Convert text between UPPERCASE, lowercase, Title Case, camelCase, and more. Free online case converter. 100% private browser processing.">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:200px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s;margin-bottom:12px}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.case-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.case-buttons button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.case-buttons button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.case-buttons button.active{background:linear-gradient(135deg,#a6e3a1,#3aa87a);box-shadow:0 0 12px rgba(166,227,161,.2)}
+.case-buttons button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.case-buttons button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.stats-bar{display:flex;gap:16px;margin:10px 0;font-size:12px;color:#7f849c;flex-wrap:wrap}
+.stats-bar span strong{color:#89b4fa}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.active-case-label{font-size:11px;color:#585b70;margin-bottom:4px;min-height:16px}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6adc8;margin:14px 0 6px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}}
+.seo-banner{background:linear-gradient(135deg,rgba(137,180,250,.12),rgba(166,227,161,.10));border:1px solid rgba(137,180,250,.25);border-radius:10px;padding:10px 16px;margin-bottom:16px;position:relative;overflow:hidden}.seo-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#89b4fa,#a6e3a1);opacity:.6}.seo-banner-content{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.seo-banner-icon{font-size:22px;flex-shrink:0}.seo-banner-text{flex:1;min-width:0;font-size:13px;color:#cdd6f4;line-height:1.5}.seo-banner-text strong{color:#89b4fa}.seo-banner-cta{background:linear-gradient(135deg,#89b4fa,#a6e3a1);color:#1e1e2e;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0}.seo-banner-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(137,180,250,.35)}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 3, "name": "Case Converter"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What case formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We support 8 different case formats: UPPERCASE (all capital letters), lowercase (all small letters), Title Case (capitalize first letter of each word), camelCase (first word lowercase, subsequent words capitalized), PascalCase (every word capitalized, no separators), snake_case (words separated by underscores), kebab-case (words separated by hyphens), and Capitalize Words (capitalize the first letter of every word while keeping the rest lowercase)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the case converter free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free. There are no usage limits, no signup required, and no hidden fees. All text conversion happens locally in your browser — nothing is uploaded to any server. You can convert as much text as you want, as often as you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it preserve formatting like newlines and spaces?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The case converter preserves your original formatting including newlines, paragraph breaks, and spacing. Only the letter casing is changed. This is especially important when converting multi-paragraph text or code comments where the structural formatting must remain intact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Title Case and Capitalize Words?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Title Case capitalizes the first letter of every word while leaving the rest of each word in its original case. Capitalize Words forces the first letter of each word to uppercase and all other letters to lowercase. For example, 'hello WORLD' becomes 'Hello WORLD' in Title Case but 'Hello World' in Capitalize Words."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+  <div class="seo-banner">
+    <div class="seo-banner-content">
+      <span class="seo-banner-icon">🧬</span>
+      <div class="seo-banner-text">
+        <strong>Self-Evolving SEO Audit</strong> — 24-point scan + AI Visibility check. Free.
+      </div>
+      <a href="https://seo.textools.site/" class="seo-banner-cta" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">Home</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">Case Converter</span>
+  </div>
+  <h1>🔄 Text Case Converter</h1>
+  <p class="sub">Convert text between UPPERCASE, lowercase, Title Case, camelCase, and more</p>
+  <div class="trust-badge">🔒 100% private — processed in your browser, nothing uploaded</div>
+
+  <div class="active-case-label" id="activeCaseLabel">Select a case format below</div>
+
+  <textarea id="inputText" placeholder="Paste or type your text here..." oninput="updateStats()"></textarea>
+
+  <div class="case-buttons" id="caseButtons">
+    <button onclick="applyCase('upper')">UPPERCASE</button>
+    <button onclick="applyCase('lower')">lowercase</button>
+    <button onclick="applyCase('title')">Title Case</button>
+    <button onclick="applyCase('camel')">camelCase</button>
+    <button onclick="applyCase('pascal')">PascalCase</button>
+    <button onclick="applyCase('snake')">snake_case</button>
+    <button onclick="applyCase('kebab')">kebab-case</button>
+    <button onclick="applyCase('words')">Capitalize Words</button>
+  </div>
+
+  <div class="stats-bar" id="statsBar">
+    <span>Input: <strong id="inputChars">0</strong> chars</span>
+    <span>Output: <strong id="outputChars">0</strong> chars</span>
+    <span>Words: <strong id="wordCount">0</strong></span>
+  </div>
+
+  <textarea id="outputText" readonly placeholder="Converted text will appear here..."></textarea>
+
+  <div class="actions">
+    <button class="secondary" onclick="clearAll()">🗑️ Clear</button>
+    <button class="success" id="copyBtn" onclick="copyResult()">📋 Copy Result</button>
+  </div>
+
+  <div class="rec-bar">
+    <span class="label">📌 Related tools:</span>
+    <a href="/password-generator.html">Password Generator</a>
+    <a href="/find-replace.html">Find &amp; Replace</a>
+    <a href="/word-counter.html">Word Counter</a>
+    <a href="/sort-lines.html">Sort Lines</a>
+    <a href="/remove-duplicates.html">Remove Duplicates</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online Text Case Converter — UPPERCASE, lowercase, Title Case, camelCase & More</h2>
+    <p>Our Text Case Converter is a versatile, free online tool that instantly transforms text between 8 different case formats. Whether you need to convert a block of text to UPPERCASE for emphasis, switch to lowercase for consistency, apply Title Case for headings, or transform variable names between camelCase, PascalCase, snake_case, and kebab-case for programming, this tool handles it all. All conversion happens in your browser — your text is never sent to any server, ensuring complete privacy.</p>
+    <p>Case conversion is an essential task for writers, editors, developers, data analysts, and content managers. Different contexts require different capitalization styles, and manually converting text is tedious and error-prone. Our tool eliminates the guesswork by providing instant, accurate conversion with just one click. The real-time character and word counts help you track how the conversion affects your text length.</p>
+    <p>The tool supports a wide range of use cases. Content writers can quickly reformat headings to Title Case. Software developers can convert API response field names between camelCase (common in JavaScript) and snake_case (common in Python and databases). Data analysts can normalize text data for consistent formatting before import. Students can format essay titles and section headers according to style guide requirements. Whatever your case conversion need, this tool delivers accurate, instant results.</p>
+
+    <h3>Understanding the Different Case Formats</h3>
+    <p><strong>UPPERCASE</strong> converts every letter to capital letters. This is commonly used for acronyms, warnings, emphasis, and certain formatting styles like newspaper headlines or legal document titles. Keep in mind that all-uppercase text can be harder to read in large blocks, so it's best used sparingly for short passages or specific formatting needs.</p>
+    <p><strong>lowercase</strong> converts every letter to small letters. This is useful for normalizing text, preparing content for data processing where case consistency matters, or converting text that was accidentally typed with Caps Lock on. Lowercase text is often the most readable for extended reading.</p>
+    <p><strong>Title Case</strong> capitalizes the first letter of each word while preserving the original case of remaining letters. This is the standard format for book titles, article headlines, section headings, and formal document titles. Note that Title Case preserves the original casing of non-first letters, which means it works well with mixed-case input like proper nouns that are already capitalized.</p>
+    <p><strong>camelCase</strong> starts with a lowercase letter and capitalizes the first letter of each subsequent word with no separators. This is the standard naming convention in JavaScript, TypeScript, and many other programming languages for variable names, function names, and object properties. For example, "user first name" becomes "userFirstName".</p>
+    <p><strong>PascalCase</strong> capitalizes the first letter of every word with no separators, including the first word. This is commonly used in C# and Java for class names, method names, and type definitions. It's also popular for naming components in React and other frontend frameworks. For example, "user profile card" becomes "UserProfileCard".</p>
+    <p><strong>snake_case</strong> separates words with underscores and converts all letters to lowercase. This is the standard convention in Python, Ruby, and many database systems for variable names, function names, and column names. It's also widely used in file naming and URL slugs where spaces are not allowed.</p>
+    <p><strong>kebab-case</strong> separates words with hyphens and converts all letters to lowercase. This is the most common format for URL slugs, CSS class names, HTML data attributes, and file names in web development. Kebab-case is highly readable in URLs because hyphens are treated as word separators by search engines.</p>
+    <p><strong>Capitalize Words</strong> capitalizes the first letter of every word and converts all remaining letters to lowercase. Unlike Title Case, this forces consistent capitalization regardless of the original text. This is useful for normalizing names, addresses, and other data where you want consistent Capitalize Each Word formatting.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>8 case formats</strong> — UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, Capitalize Words</li>
+      <li><strong>Instant conversion</strong> — results update immediately with a single click</li>
+      <li><strong>Real-time statistics</strong> — character counts for both input and output, plus word count</li>
+      <li><strong>One-click copy</strong> — copy converted text to clipboard with a single button</li>
+      <li><strong>Preserves formatting</strong> — newlines, spacing, and paragraph structure are kept intact</li>
+      <li><strong>100% private</strong> — all processing happens locally in your browser</li>
+      <li><strong>No signup needed</strong> — free to use, no accounts, no tracking</li>
+    </ul>
+
+    <h3>Practical Applications</h3>
+    <p><strong>Programming and development:</strong> Convert variable names, API field names, and configuration keys between different naming conventions. JavaScript developers use camelCase, Python developers use snake_case, and C# developers use PascalCase. Our converter makes it effortless to switch between conventions when moving between projects or languages.</p>
+    <p><strong>Content writing and editing:</strong> Ensure consistent heading formatting across articles, blog posts, and documentation. Use Title Case for headlines, UPPERCASE for callouts and warnings, and Capitalize Words for proper formatting of names and titles in content management systems.</p>
+    <p><strong>Data normalization:</strong> Clean up inconsistent text data from CSV exports, user-generated content, or database dumps. Normalizing to a single case format (usually lowercase) is a critical first step in data deduplication, fuzzy matching, and text analysis workflows.</p>
+    <p><strong>SEO and web development:</strong> Generate SEO-friendly URL slugs using kebab-case, format meta titles using Title Case, and normalize alt text and image file names for consistent web content management.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <p><strong>Does the converter handle non-English characters?</strong> Yes. The converter works with accented characters, Unicode letters, and extended Latin character sets. It correctly handles characters like é, ñ, ü, and others commonly found in European languages.</p>
+    <p><strong>Can I use this for code formatting?</strong> Absolutely. The camelCase, PascalCase, snake_case, and kebab-case converters are specifically designed for code naming conventions. Note that camelCase and PascalCase remove spaces and special characters, which may not be appropriate for all code contexts.</p>
+    <p><strong>Is there a limit on how much text I can convert?</strong> No. Since all processing happens locally in your browser, there are no artificial limits. You can convert text of any length — the only constraint is your browser's available memory.</p>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/password-generator.html">Random Password Generator</a> — Generate strong secure passwords</li>
+      <li><a href="/find-replace.html">Find &amp; Replace Text</a> — Search and replace text with regex support</li>
+      <li><a href="/word-counter.html">Word Counter</a> — Count words, characters, sentences, and paragraphs</li>
+      <li><a href="/sort-lines.html">Sort Lines Alphabetically</a> — Organize lists A-Z or Z-A</li>
+      <li><a href="/remove-duplicates.html">Remove Duplicate Lines</a> — Clean up repeated entries from text</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="/">Textools</a> ·
+    <a href="/password-generator.html">Password Generator</a> ·
+    <a href="/case-converter.html">Case Converter</a> ·
+    <a href="/find-replace.html">Find &amp; Replace</a> ·
+    <a href="/word-counter.html">Word Counter</a> ·
+    <a href="/sort-lines.html">Sort Lines</a>
+    <br><br>
+    <span>© 2026 Textools — Privacy-first online tools. All processing happens locally in your browser.</span>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === Usage tracking ===
+(function(){
+  let n = localStorage.getItem('cc_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('cc_count', n);
+})();
+
+let currentCase = '';
+
+function updateStats() {
+  const input = document.getElementById('inputText').value;
+  document.getElementById('inputChars').textContent = input.length;
+  const output = document.getElementById('outputText').value;
+  document.getElementById('outputChars').textContent = output.length;
+  const words = input.trim() ? input.trim().split(/\s+/).length : 0;
+  document.getElementById('wordCount').textContent = words;
+}
+
+function applyCase(type) {
+  const input = document.getElementById('inputText').value;
+  if (!input.trim()) {
+    showToast('⚠️ Please enter some text first.');
+    return;
+  }
+  
+  let result = '';
+  currentCase = type;
+  
+  // Highlight active button
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  switch(type) {
+    case 'upper':
+      result = input.toUpperCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: UPPERCASE';
+      break;
+    case 'lower':
+      result = input.toLowerCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: lowercase';
+      break;
+    case 'title':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1);
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: Title Case';
+      break;
+    case 'camel':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: camelCase';
+      break;
+    case 'pascal':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
+        .replace(/^[a-z]/, c => c.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: PascalCase';
+      break;
+    case 'snake':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_|_$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: snake_case';
+      break;
+    case 'kebab':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: kebab-case';
+      break;
+    case 'words':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ Applied: Capitalize Words';
+      break;
+  }
+  
+  document.getElementById('outputText').value = result;
+  updateStats();
+}
+
+function copyResult() {
+  const text = document.getElementById('outputText').value;
+  if (!text) { showToast('⚠️ Nothing to copy. Convert some text first.'); return; }
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = document.getElementById('copyBtn');
+  btn.textContent = '✅ Copied!';
+  setTimeout(() => { btn.textContent = '📋 Copy Result'; }, 2000);
+  showToast('✅ Copied to clipboard!');
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('outputText').value = '';
+  document.getElementById('activeCaseLabel').textContent = 'Select a case format below';
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  currentCase = '';
+  updateStats();
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

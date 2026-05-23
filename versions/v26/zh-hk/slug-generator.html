@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Slug生成器 免費 — 建立SEO友好網址</title>
+<meta name="description" content="將任何文字轉換為乾淨的SEO友好URL Slug。貼上標題或短語，即時生成小寫、連字號分隔的Slug。">
+<meta name="keywords" content="URL Slug 生成 免費, SEO Slug 建立, Slug 生成器 線上, 瀏覽器處理 URL優化">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/slug-generator.html">
+<meta property="og:title" content="🔗 URL Slug生成器">
+<meta property="og:description" content="將任何文字轉換為乾淨的SEO友好URL Slug。貼上標題或短語即可。">
+<meta property="og:url" content="https://textools.site/zh-hk/slug-generator.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">首頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🔗 URL Slug生成器</span>
+  </div>
+  <h1>🔗 URL Slug生成器</h1>
+  <p class="sub">從任何文字生成乾淨、SEO友好的URL Slug</p>
+  <div class="trust-badge">🔒 你的資料絕不離開瀏覽器。100%本地處理。</div>
+
+  
+<textarea id="textInput" placeholder="輸入標題或短語以生成Slug..." oninput="generateSlug()" style="height:120px"></textarea>
+<div class="actions" style="margin:8px 0">
+  <button onclick="copySlug()">📋 複製Slug</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+<div style="font-size:11px;color:#585b70;margin-bottom:4px">生成的Slug</div>
+<div id="slugOutput" style="background:#11111b;border:1px solid #89b4fa;border-radius:10px;padding:14px;color:#a6e3a1;font-size:16px;font-weight:600;font-family:'SF Mono','Fira Code',monospace;word-break:break-all;min-height:50px;display:flex;align-items:center"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具：</span>
+    <a href="/zh-hk/text-diff.html">文字差異比對器</a>
+    <a href="/zh-hk/char-counter.html">字數計算機</a>
+    <a href="/zh-hk/base64-encoder.html">Base64編碼器/解碼器</a>
+    <a href="/zh-hk/url-encoder.html">URL編碼器/解碼器</a>
+    <a href="/zh-hk/json-formatter.html">JSON格式化工具</a>
+    <a href="/zh-hk/markdown-preview.html">Markdown預覽</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上URL Slug生成器 — 建立SEO優化的URL Slug</h2>
+    <p>我們的URL Slug生成器將任何文字轉換為乾淨、SEO友好的URL Slug。只需輸入或貼上你的標題或短語，即時獲得適合在URL中使用的小寫、連字號分隔版本。Slug生成會移除特殊字元、將空格替換為連字號，並智能處理Unicode字元。</p>
+    <p>乾淨的URL Slug對SEO至關重要 — 它們幫助搜尋引擎理解你的頁面內容並提高點擊率。無論你是撰寫博客文章、建立產品頁面，還是建構內容管理系統，我們的Slug生成器都能幫助你建立一致、可讀的URL。所有處理均在本地進行，保障私隱。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>即時Slug生成</strong> — 輸入任何文字，即時獲得URL就緒的Slug</li>
+      <li><strong>SEO優化</strong> — 小寫、連字號分隔、乾淨格式</li>
+      <li><strong>Unicode支援</strong> — 優雅處理國際字元</li>
+      <li><strong>一鍵複製</strong> — 即時複製生成的Slug</li>
+      <li><strong>100%私密</strong> — 所有處理在瀏覽器中完成 — 零上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/case-converter.html">大小寫轉換</a></li>
+      <li><a href="/text-reverser.html">文字反轉器</a></li>
+      <li><a href="/text-diff.html">文字差異比對器</a></li>
+      <li><a href="/char-counter.html">字數計算機</a></li>
+      <li><a href="/base64-encoder.html">Base64編碼器/解碼器</a></li>
+      <li><a href="/url-encoder.html">URL編碼器/解碼器</a></li>
+      <li><a href="/json-formatter.html">JSON格式化工具</a></li>
+      <li><a href="/markdown-preview.html">Markdown預覽</a></li>
+      <li><a href="/text-splitter.html">文字分割器</a></li>
+      <li><a href="/line-numberer.html">行號標記工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🔗 URL Slug生成器 | <a href="/tools/">更多工具</a> | <a href="/">首頁</a> | <a href="/privacy.html">私隱</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本地 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function generateSlug(){
+  var t=document.getElementById('textInput').value;
+  if(!t.trim()){document.getElementById('slugOutput').textContent='slug-will-appear-here';return;}
+  var slug=t.toLowerCase().trim()
+    .replace(/[àáâãäåæ]/g,'a').replace(/[èéêë]/g,'e').replace(/[ìíîï]/g,'i').replace(/[òóôõöø]/g,'o').replace(/[ùúûü]/g,'u').replace(/[ñ]/g,'n').replace(/[ç]/g,'c')
+    .replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+  document.getElementById('slugOutput').textContent=slug||'slug';
+}
+function copySlug(){
+  var s=document.getElementById('slugOutput').textContent;
+  if(!s||s==='slug-will-appear-here'){showToast('⚠️ 請先輸入內容');return;}
+  navigator.clipboard.writeText(s).then(function(){showToast('✅ Slug已複製！');}).catch(function(){});
+}
+function clearAll(){document.getElementById('textInput').value='';generateSlug();showToast('已清除');}
+
+</script>
+</body>
+</html>

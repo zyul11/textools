@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テキスト分割 無料 — 区切り文字でテキストを分割するオンラインツール | Ziwei Tools</title>
+<meta name="description" content="区切り文字、単語数、チャンクサイズに基づいてテキストを小さなセグメントに分割。CSVデータの分割、長い記事の分割、API制限用のテキスト分割に最適。">
+<meta name="keywords" content="テキスト分割 無料, 文字列分割 オンライン, CSV 分割 ツール, ブラウザ完結 テキスト処理">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/ja/text-splitter.html">
+<meta property="og:title" content="✂️ テキスト分割">
+<meta property="og:description" content="区切り文字、単語数、チャンクサイズに基づいてテキストを小さなセグメントに分割。">
+<meta property="og:url" content="https://textools.site/ja/text-splitter.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'\25B8';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">ホーム</a>
+    <span style="color:#45475a">›</span>
+    <a href="/tools/" style="color:#585b70;text-decoration:none">ツール</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">✂️ Text Splitter</span>
+  </div>
+  <h1>✂️ テキスト分割</h1>
+  <p class="sub">区切り文字、単語数、改行でテキストを瞬時に分割</p>
+  <div class="trust-badge">🔒 ブラウザ上で完結 — サーバーにデータは送信されません</div>
+
+  
+<textarea id="textInput" placeholder="Paste text to split..." oninput="autoSplit()"></textarea>
+<div class="actions" style="margin:8px 0">
+  <select id="delimiter" onchange="splitText()" style="background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none">
+    <option value="newline">Newline</option>
+    <option value="comma">Comma</option>
+    <option value="semicolon">Semicolon</option>
+    <option value="tab">Tab</option>
+    <option value="word">By Word Count (100)</option>
+    <option value="custom">Custom...</option>
+  </select>
+  <input id="customDelim" placeholder="Custom delimiter" style="display:none;background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;width:120px;outline:none" oninput="splitText()">
+  <button onclick="splitText()">✂️ Split</button>
+  <button class="alt" onclick="clearAll()">Clear</button>
+</div>
+<div id="splitOutput" style="background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;min-height:60px;font-size:12px;line-height:1.8"></div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 関連ツール:</span>
+    <a href="/ja/text-diff.html">テキスト差分チェッカー</a>
+    <a href="/ja/char-counter.html">文字数カウンター</a>
+    <a href="/ja/base64-encoder.html">Base64エンコーダー/デコーダー</a>
+    <a href="/ja/url-encoder.html">URLエンコーダー/デコーダー</a>
+    <a href="/ja/json-formatter.html">JSONフォーマッター</a>
+    <a href="/ja/markdown-preview.html">Markdownプレビュー</a>
+    <a href="/ja/">🧰 すべてのツール</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>Free Online Text Splitter — Split Text by Delimiter, Word Count, or Chunks</h2>
+    <p>Our text splitter divides large blocks of text into smaller segments based on your chosen delimiter, word count, or chunk size. Whether you're splitting CSV data, breaking up long articles into paragraphs, partitioning text for API limits, or organizing data for batch processing, this tool makes it instant and easy.</p>
+    <p>Choose from common delimiters like newline, comma, semicolon, tab, or specify a custom delimiter. You can also split by word count for creating equal-sized text chunks. Perfect for content creators splitting transcripts, data analysts processing logs, and developers testing text processing pipelines.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Multiple delimiters</strong> — Newline, comma, semicolon, tab, or custom</li>
+      <li><strong>Split by word count</strong> — Create equal-sized text chunks by word count</li>
+      <li><strong>Chunk numbering</strong> — Each segment is numbered for easy reference</li>
+      <li><strong>Copy individual chunks</strong> — Click any chunk to copy it to clipboard</li>
+      <li><strong>100% private</strong> — すべてローカル処理 — zero data uploads</li>
+    </ul>
+
+    <h3>Related Tools</h3>
+    <ul>
+      <li><a href="/sort-lines.html">Sort Lines</a></li>
+      <li><a href="/remove-duplicates.html">Remove Duplicates</a></li>
+      <li><a href="/text-diff.html">Text Diff Checker</a></li>
+      <li><a href="/char-counter.html">Chinese Character Counter</a></li>
+      <li><a href="/base64-encoder.html">Base64 Encoder/Decoder</a></li>
+      <li><a href="/url-encoder.html">URL Encoder/Decoder</a></li>
+      <li><a href="/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/markdown-preview.html">Markdown Preview</a></li>
+      <li><a href="/line-numberer.html">Line Numberer</a></li>
+      <li><a href="/text-r
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>✂️ テキスト分割 <a href="/tools/">他のツール</a> | <a href="/">ホーム</a> | <a href="/privacy.html">プライバシー</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · すべてローカル処理 · データのアップロードはありません</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+(function(){
+  document.getElementById('delimiter').addEventListener('change',function(){
+    document.getElementById('customDelim').style.display=this.value==='custom'?'inline-block':'none';
+    splitText();
+  });
+})();
+function autoSplit(){setTimeout(splitText,300);}
+function splitText(){
+  var t=document.getElementById('textInput').value;
+  var delim=document.getElementById('delimiter').value;
+  var out=document.getElementById('splitOutput');
+  if(!t.trim()){out.innerHTML='<span style="color:#585b70">Paste text above to split</span>';return;}
+  var parts=[];
+  if(delim==='word'){
+    var words=t.trim().split(/\s+/);
+    var chunkSize=parseInt(document.getElementById('customDelim').value)||100;
+    for(var i=0;i<words.length;i+=chunkSize)parts.push(words.slice(i,i+chunkSize).join(' '));
+  }else{
+    var d={'newline':'\n','comma':',','semicolon':';','tab':'\t'};
+    var sep=delim==='custom'?document.getElementById('customDelim').value||',':d[delim];
+    parts=t.split(sep).filter(function(s){return s.trim();});
+  }
+  if(!parts.length){out.innerHTML='<span style="color:#585b70">No chunks found</span>';return;}
+  var html='<div style="font-size:11px;color:#585b70;margin-bottom:8px">Found <strong style="color:#cdd6f4">'+parts.length+'</strong> chunks</div>';
+  for(var i=0;i<parts.length;i++){
+    html+='<div style="background:rgba(26,26,46,.5);border:1px solid rgba(137,180,250,.08);border-radius:6px;padding:8px 10px;margin-bottom:6px;cursor:pointer" onclick="copyChunk('+i+')" title="Click to copy">';
+    html+='<span style="color:#585b70;font-size:10px;margin-right:6px">#'+(i+1)+'</span>';
+    html+='<span>'+escHtml(parts[i].slice(0,200))+'</span>';
+    if(parts[i].length>200)html+='<span style="color:#585b70">...</span>';
+    html+='</div>';
+  }
+  out.innerHTML=html;
+  window._chunks=parts;
+}
+function copyChunk(i){
+  if(window._chunks&&window._chunks[i]){
+    navigator.clipboard.writeText(window._chunks[i]).then(function(){showToast('✅ Chunk #'+(i+1)+' copied!');}).catch(function(){});
+  }
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('splitOutput').innerHTML='<span style="color:#585b70">Paste text above to split</span>';showToast('Cleared');}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>尋找與取代 — 免費線上搜尋取代工具 | Ziwei 文字工具</title>
+<meta name="description" content="在文件中搜尋及取代文字。支援正規表達式、大小寫區分模式及比對高亮度顯示。免費線上工具。100% 私隱保護。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/find-replace.html">
+<meta property="og:title" content="尋找與取代 — 免費線上搜尋取代工具">
+<meta property="og:description" content="在文件中搜尋及取代文字。支援正規表達式、大小寫區分及比對高亮度顯示。100% 私隱保護。">
+<meta property="og:url" content="https://textools.site/zh-hk/find-replace.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="尋找與取代 — 免費線上搜尋取代工具">
+<meta name="twitter:description" content="在文件中搜尋及取代文字。支援正規表達式、大小寫區分及比對高亮度顯示。">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:220px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s;margin-bottom:10px}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.search-row{display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.search-row input{flex:1;min-width:120px;background:#11111b;border:1px solid #313244;border-radius:8px;padding:8px 12px;color:#cdd6f4;font-size:12px;outline:none;transition:border-color .2s}
+.search-row input:focus{border-color:#89b4fa}
+.search-row input::placeholder{color:#45475a}
+.options-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.options-row label{font-size:12px;color:#a6adc8;display:flex;align-items:center;gap:5px;cursor:pointer}
+.options-row input[type="checkbox"]{accent-color:#89b4fa;cursor:pointer}
+.match-count{font-size:12px;color:#89b4fa;margin-bottom:8px;min-height:18px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.danger{background:rgba(255,68,68,.12);border:1px solid rgba(255,68,68,.3);color:#ff6666}
+.actions button.danger:hover{background:rgba(255,68,68,.2)}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.highlighted-text{width:100%;min-height:160px;max-height:300px;overflow-y:auto;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;white-space:pre-wrap;word-wrap:break-word;margin-bottom:8px}
+.highlighted-text mark{background:rgba(137,180,250,.35);color:#e0d0ff;border-radius:2px;padding:0 2px}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6adc8;margin:14px 0 6px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.search-row input{min-width:100px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "主頁", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "工具", "item": "https://textools.site/zh-hk/"},
+    {"@type": "ListItem", "position": 3, "name": "尋找與取代", "item": "https://textools.site/zh-hk/find-replace.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "尋找與取代工具是否支援正規表達式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的。啟用「正規表達式模式」即可使用正規表達式進行模式比對。您可以使用 \\d+（所有數字）、\\w+（所有單詞）或自訂模式。可在搜尋模式中使用捕獲組，並在取代字串中以 $1、$2 等方式引用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "使用此工具時文字是否安全及私密？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "絕對安全。所有文字處理完全在瀏覽器中使用 JavaScript 進行。您的文字絕不上傳至任何伺服器、絕不儲存、絕不記錄，絕不離開您的裝置。這是 Textools 的核心私隱原則 — 我們相信您的數據屬於您自己。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">主頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/zh-hk/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">尋找與取代</span>
+  </div>
+  <h1>🔍 尋找與取代</h1>
+  <p class="sub">在文件中搜尋並取代文字 — 支援正規表達式、大小寫區分模式及比對高亮度顯示</p>
+  <div class="trust-badge">🔒 100% 私隱保護 — 瀏覽器端處理，不上傳伺服器</div>
+
+  <textarea id="inputText" placeholder="在此貼上或輸入文字..." oninput="updateHighlight()"></textarea>
+
+  <div class="search-row">
+    <input type="text" id="findInput" placeholder="尋找..." oninput="updateHighlight()">
+    <input type="text" id="replaceInput" placeholder="取代為..." oninput="updateHighlight()">
+  </div>
+
+  <div class="options-row">
+    <label><input type="checkbox" id="caseSensitive" onchange="updateHighlight()"> 區分大小寫</label>
+    <label><input type="checkbox" id="regexMode" onchange="updateHighlight()"> 正規表達式模式</label>
+  </div>
+
+  <div class="match-count" id="matchCount">找到 0 個比對</div>
+
+  <div class="highlighted-text" id="highlightedOutput"><span style="color:#45475a">高亮度顯示的文字將顯示在此...</span></div>
+
+  <div class="actions">
+    <button onclick="replaceAll()">全部取代</button>
+    <button class="success" onclick="copyResult()">📋 複製結果</button>
+    <button class="secondary" onclick="clearAll()">🗑️ 清除</button>
+  </div>
+
+  <div class="rec-bar">
+    <span class="label">📌 相關工具：</span>
+    <a href="/zh-hk/case-converter.html">文字大小寫轉換</a>
+    <a href="/zh-hk/word-counter.html">字數統計</a>
+    <a href="/zh-hk/sort-lines.html">排序行</a>
+    <a href="/zh-hk/remove-duplicates.html">移除重複行</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上尋找與取代工具 — 即時搜尋取代文字</h2>
+    <p>我們的尋找與取代工具是一款強大、免費的線上工具，用於在任何文件中搜尋和取代文字。無論您需要更新文件中的名稱、修正文章中的錯字、使用正規表達式重新格式化數據，或只是查找單詞出現的次數，此工具都能提供即時視覺回饋及比對高亮度顯示。所有處理在瀏覽器中進行 — 您的文字絕不離開裝置，確保完全私隱。</p>
+    <p>此工具設有即時預覽功能，直接在文件檢視中高亮度顯示所有比對的文字。當您在「尋找」欄位中輸入時，比對部分會以紫色高亮度標示，讓您清楚看到將被取代的內容。比對計數器會即時更新，顯示準確的出現次數。您可以啟用大小寫區分搜尋來區分「Apple」和「apple」，或啟用正規表達式模式進行進階模式比對。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>即時比對高亮度顯示</strong> — 輸入時即時高亮度顯示所有比對</li>
+      <li><strong>即時比對計數</strong> — 查看準確的出現次數</li>
+      <li><strong>大小寫區分切換</strong> — 選擇忽略或區分字母大小寫</li>
+      <li><strong>正規表達式模式</strong> — 完整正規表達式支援，含捕獲組（$1、$2 等）</li>
+      <li><strong>全部取代</strong> — 一按即時取代所有比對</li>
+      <li><strong>複製結果</strong> — 一鍵複製修改後的文字</li>
+      <li><strong>100% 私隱</strong> — 所有處理在瀏覽器中進行，資料絕不上傳</li>
+    </ul>
+
+    <h3>實用應用場景</h3>
+    <p><strong>內容編輯與校對：</strong>修正長篇文章、網誌文章或文件中的錯字、更新名稱或取代過時用語。即時高亮度顯示讓您在套用前確認每項修改。</p>
+    <p><strong>資料清理與標準化：</strong>透過取代不一致的格式來清理 CSV 匯出、數據庫匯出或用戶生成的內容。使用正規表達式標準化電話號碼、電郵地址、日期或任何結構化文字模式。</p>
+    <p><strong>程式碼重構：</strong>重新命名變數、更新函數名稱或變更程式碼片段中的導入路徑。大小寫區分模式確保您僅比對到確切的識別碼。</p>
+  </div>
+
+  <div class="footer">
+    <p>🔍 尋找與取代 | <a href="/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === 使用記錄 ===
+(function(){
+  let n = localStorage.getItem('fr_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('fr_count', n);
+})();
+
+function getFindRegex() {
+  const findText = document.getElementById('findInput').value;
+  if (!findText) return null;
+  const caseSensitive = document.getElementById('caseSensitive').checked;
+  const regexMode = document.getElementById('regexMode').checked;
+  
+  try {
+    const flags = 'g' + (caseSensitive ? '' : 'i');
+    if (regexMode) {
+      return new RegExp(findText, flags);
+    } else {
+      // Escape special regex characters
+      const escaped = findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp(escaped, flags);
+    }
+  } catch(e) {
+    return { error: e.message };
+  }
+}
+
+function updateHighlight() {
+  const inputText = document.getElementById('inputText').value;
+  const findText = document.getElementById('findInput').value;
+  const outputEl = document.getElementById('highlightedOutput');
+  const matchCountEl = document.getElementById('matchCount');
+  
+  if (!inputText.trim() || !findText.trim()) {
+    if (!inputText.trim()) {
+      outputEl.innerHTML = '<span style="color:#45475a">請在上方輸入文字以查看高亮度比對...</span>';
+    } else {
+      outputEl.textContent = inputText;
+    }
+    matchCountEl.textContent = '找到 0 個比對';
+    return;
+  }
+  
+  const regex = getFindRegex();
+  if (!regex) {
+    outputEl.textContent = inputText;
+    matchCountEl.textContent = '找到 0 個比對';
+    return;
+  }
+  
+  if (regex.error) {
+    outputEl.innerHTML = '<span style="color:#ff6666">⚠️ 無效的模式：' + regex.error + '</span>';
+    matchCountEl.textContent = '⚠️ 無效的模式';
+    return;
+  }
+  
+  // Count matches
+  const textCopy = inputText;
+  const matches = textCopy.match(regex);
+  const count = matches ? matches.length : 0;
+  matchCountEl.textContent = '找到 ' + count + ' 個比對';
+  
+  // Highlight matches
+  const highlighted = textCopy.replace(regex, match => '<mark>' + match + '</mark>');
+  outputEl.innerHTML = highlighted;
+}
+
+function replaceAll() {
+  const inputText = document.getElementById('inputText').value;
+  const findText = document.getElementById('findInput').value;
+  const replaceText = document.getElementById('replaceInput').value;
+  
+  if (!inputText.trim()) {
+    showToast('⚠️ 請先輸入文字。');
+    return;
+  }
+  if (!findText.trim()) {
+    showToast('⚠️ 請輸入要尋找的文字。');
+    return;
+  }
+  
+  const regex = getFindRegex();
+  if (!regex) return;
+  if (regex.error) {
+    showToast('⚠️ 無效的正規表達式模式：' + regex.error);
+    return;
+  }
+  
+  const matches = inputText.match(regex);
+  const count = matches ? matches.length : 0;
+  
+  if (count === 0) {
+    showToast('⚠️ 找不到比對。');
+    return;
+  }
+  
+  let result;
+  if (document.getElementById('regexMode').checked) {
+    result = inputText.replace(regex, replaceText);
+  } else {
+    const escaped = replaceText.replace(/\$/g, '$$$$');
+    result = inputText.replace(regex, escaped);
+  }
+  
+  document.getElementById('inputText').value = result;
+  updateHighlight();
+  showToast('✅ 已取代 ' + count + ' 個項目！');
+}
+
+function copyResult() {
+  const text = document.getElementById('highlightedOutput').textContent;
+  if (!text || text.startsWith('請') || text.startsWith('⚠')) {
+    showToast('⚠️ 沒有可複製的內容。');
+    return;
+  }
+  navigator.clipboard.writeText(text).catch(() => {});
+  showToast('✅ 已複製到剪貼簿！');
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('findInput').value = '';
+  document.getElementById('replaceInput').value = '';
+  updateHighlight();
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

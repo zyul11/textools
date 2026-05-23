@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字大小寫轉換 — 免費線上大細楷轉換工具 | Ziwei 文字工具</title>
+<meta name="description" content="在 UPPERCASE、lowercase、Title Case、camelCase 等多種格式間轉換文字。免費線上大小寫轉換工具。100% 私隱保護 — 瀏覽器端處理，不上傳伺服器。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/case-converter.html">
+<meta property="og:title" content="文字大小寫轉換 — UPPERCASE・lowercase・Title Case 線上轉換">
+<meta property="og:description" content="在 UPPERCASE、lowercase、Title Case、camelCase 等多種格式間轉換文字。免費線上工具。">
+<meta property="og:url" content="https://textools.site/zh-hk/case-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="文字大小寫轉換 — UPPERCASE・lowercase・Title Case 線上轉換">
+<meta name="twitter:description" content="在 UPPERCASE、lowercase、Title Case、camelCase 等多種格式間轉換文字。免費線上工具。">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:200px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s;margin-bottom:12px}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.case-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.case-buttons button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.case-buttons button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.case-buttons button.active{background:linear-gradient(135deg,#a6e3a1,#3aa87a);box-shadow:0 0 12px rgba(166,227,161,.2)}
+.case-buttons button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.case-buttons button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.stats-bar{display:flex;gap:16px;margin:10px 0;font-size:12px;color:#7f849c;flex-wrap:wrap}
+.stats-bar span strong{color:#89b4fa}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.secondary{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.secondary:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.active-case-label{font-size:11px;color:#585b70;margin-bottom:4px;min-height:16px}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content h3{font-size:14px;color:#a6adc8;margin:14px 0 6px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "主頁", "item": "https://textools.site/"},
+    {"@type": "ListItem", "position": 2, "name": "工具", "item": "https://textools.site/zh-hk/"},
+    {"@type": "ListItem", "position": 3, "name": "大小寫轉換", "item": "https://textools.site/zh-hk/case-converter.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "支援哪些大小寫格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "我們支援 8 種不同的大小寫格式：UPPERCASE（全部大寫）、lowercase（全部小寫）、Title Case（每個單詞首字母大寫）、camelCase（首字小寫，後續單詞首字母大寫）、PascalCase（每個單詞首字母大寫，無分隔符）、snake_case（單詞間用底線分隔）、kebab-case（單詞間用連字號分隔）、Capitalize Words（每個單詞首字母大寫，其餘小寫）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "大小寫轉換工具是否免費？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完全免費。沒有使用限制、無需註冊、沒有隱藏費用。所有文字轉換均在瀏覽器本地完成 — 資料不會上傳到任何伺服器。您可以隨意轉換任意數量的文字。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "轉換會保留換行和空格等格式嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會的。大小寫轉換器會保留原始格式，包括換行、段落分隔和間距。只有字母大小寫會改變。這對轉換多段文字或程式碼註解尤其重要。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">主頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/zh-hk/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">大小寫轉換</span>
+  </div>
+  <h1>🔄 文字大小寫轉換</h1>
+  <p class="sub">在 UPPERCASE、lowercase、Title Case、camelCase 等多種格式間轉換文字</p>
+  <div class="trust-badge">🔒 100% 私隱保護 — 瀏覽器端處理，不上傳伺服器</div>
+
+  <div class="active-case-label" id="activeCaseLabel">請選擇以下一種大小寫格式</div>
+
+  <textarea id="inputText" placeholder="在此貼上或輸入文字..." oninput="updateStats()"></textarea>
+
+  <div class="case-buttons" id="caseButtons">
+    <button onclick="applyCase('upper')">UPPERCASE</button>
+    <button onclick="applyCase('lower')">lowercase</button>
+    <button onclick="applyCase('title')">Title Case</button>
+    <button onclick="applyCase('camel')">camelCase</button>
+    <button onclick="applyCase('pascal')">PascalCase</button>
+    <button onclick="applyCase('snake')">snake_case</button>
+    <button onclick="applyCase('kebab')">kebab-case</button>
+    <button onclick="applyCase('words')">Capitalize Words</button>
+  </div>
+
+  <div class="stats-bar" id="statsBar">
+    <span>輸入：<strong id="inputChars">0</strong> 字元</span>
+    <span>輸出：<strong id="outputChars">0</strong> 字元</span>
+    <span>單詞：<strong id="wordCount">0</strong></span>
+  </div>
+
+  <textarea id="outputText" readonly placeholder="轉換後的文字將顯示在此..."></textarea>
+
+  <div class="actions">
+    <button class="secondary" onclick="clearAll()">🗑️ 清除</button>
+    <button class="success" id="copyBtn" onclick="copyResult()">📋 複製結果</button>
+  </div>
+
+  <div class="rec-bar">
+    <span class="label">📌 相關工具：</span>
+    <a href="/zh-hk/find-replace.html">尋找與取代</a>
+    <a href="/zh-hk/word-counter.html">字數統計</a>
+    <a href="/zh-hk/sort-lines.html">排序行</a>
+    <a href="/zh-hk/remove-duplicates.html">移除重複行</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上文字大小寫轉換器 — UPPERCASE、lowercase、Title Case、camelCase 等</h2>
+    <p>我們的文字大小寫轉換器是一款多功能免費線上工具，可即時在 8 種不同的大小寫格式之間轉換文字。無論您需要將文字轉換為 UPPERCASE 以作強調、切換為 lowercase 以保持一致、套用 Title Case 作標題，或將變數名稱在 camelCase、PascalCase、snake_case 及 kebab-case 之間轉換以配合程式設計，這款工具都能輕鬆應對。所有轉換均在瀏覽器內進行 — 您的文字絕不傳送至任何伺服器，確保完全私隱。</p>
+    <p>大小寫轉換是作家、編輯、開發者、數據分析師及內容管理人員必備的重要功能。不同的場景需要不同的大寫風格，手動轉換既繁瑣又容易出錯。我們的工具只需一按即可提供即時、準確的轉換，徹底省卻煩惱。</p>
+
+    <h3>認識不同的大小寫格式</h3>
+    <p><strong>UPPERCASE</strong> 將所有字母轉換為大寫。常用於縮寫、警告、強調及特定格式（如報紙標題或法律文件名稱）。請注意，全大寫文字在大段落中較難閱讀，建議僅用於簡短文字。</p>
+    <p><strong>lowercase</strong> 將所有字母轉換為小寫。適用於文字標準化、為數據處理準備內容（大小寫一致性很重要），或轉換不小心按了 Caps Lock 輸入的文字。</p>
+    <p><strong>Title Case</strong> 將每個單詞的首字母大寫，保留其餘字母的原始大小寫。這是書名、文章標題、章節標題及正式文件標題的標準格式。</p>
+    <p><strong>camelCase</strong> 以小寫字母開頭，後續每個單詞的首字母大寫，無分隔符。這是 JavaScript、TypeScript 等編程語言中變數名稱、函數名稱及物件屬性的標準命名慣例。</p>
+    <p><strong>PascalCase</strong> 每個單詞的首字母大寫，無分隔符（包括首個單詞）。常用於 C# 和 Java 的類別名稱、方法名稱及類型定義。例如 "user profile card" 變成 "UserProfileCard"。</p>
+    <p><strong>snake_case</strong> 用底線分隔單詞，所有字母轉為小寫。這是 Python、Ruby 及許多數據庫系統中變數名稱、函數名稱和欄位名稱的標準慣例。</p>
+    <p><strong>kebab-case</strong> 用連字號分隔單詞，所有字母轉為小寫。這是 URL 字串、CSS 類別名稱及網頁開發檔案名稱最常見的格式。</p>
+    <p><strong>Capitalize Words</strong> 將每個單詞的首字母大寫，其餘字母全部轉為小寫。與 Title Case 不同，此功能會強制一致的大寫格式，不受原文影響。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>8 種大小寫格式</strong> — UPPERCASE、lowercase、Title Case、camelCase、PascalCase、snake_case、kebab-case、Capitalize Words</li>
+      <li><strong>即時轉換</strong> — 一按即時更新結果</li>
+      <li><strong>即時統計</strong> — 輸入與輸出的字元數及單詞數</li>
+      <li><strong>一鍵複製</strong> — 一鍵複製轉換後的文字</li>
+      <li><strong>保留格式</strong> — 換行、間距和段落結構保持不變</li>
+      <li><strong>100% 私隱</strong> — 所有處理在瀏覽器中進行</li>
+      <li><strong>無需註冊</strong> — 免費使用，無帳戶，無追蹤</li>
+    </ul>
+
+    <h3>常見問題</h3>
+    <p><strong>轉換器能處理非英文字元嗎？</strong> 可以。轉換器支援重音字元、Unicode 字母及擴展拉丁字元集。é、ñ、ü 等字元均可正確處理。</p>
+    <p><strong>是否可以用於程式碼格式化？</strong> 當然可以。camelCase、PascalCase、snake_case 及 kebab-case 轉換器專為程式碼命名慣例而設計。</p>
+    <p><strong>轉換文字長度有限制嗎？</strong> 沒有。所有處理均在瀏覽器本地進行，沒有任何人為限制。唯一限制是瀏覽器的可用記憶體。</p>
+  </div>
+
+  <div class="footer">
+    <p>🔄 大小寫轉換 | <a href="/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// === 使用記錄 ===
+(function(){
+  let n = localStorage.getItem('cc_count') || 0;
+  n = parseInt(n) + 1;
+  localStorage.setItem('cc_count', n);
+})();
+
+let currentCase = '';
+
+function updateStats() {
+  const input = document.getElementById('inputText').value;
+  document.getElementById('inputChars').textContent = input.length;
+  const output = document.getElementById('outputText').value;
+  document.getElementById('outputChars').textContent = output.length;
+  const words = input.trim() ? input.trim().split(/\s+/).length : 0;
+  document.getElementById('wordCount').textContent = words;
+}
+
+function applyCase(type) {
+  const input = document.getElementById('inputText').value;
+  if (!input.trim()) {
+    showToast('⚠️ 請先輸入文字。');
+    return;
+  }
+  
+  let result = '';
+  currentCase = type;
+  
+  // Highlight active button
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  switch(type) {
+    case 'upper':
+      result = input.toUpperCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：UPPERCASE';
+      break;
+    case 'lower':
+      result = input.toLowerCase();
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：lowercase';
+      break;
+    case 'title':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1);
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：Title Case';
+      break;
+    case 'camel':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：camelCase';
+      break;
+    case 'pascal':
+      result = input.toLowerCase()
+        .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
+        .replace(/^[a-z]/, c => c.toUpperCase());
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：PascalCase';
+      break;
+    case 'snake':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_|_$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：snake_case';
+      break;
+    case 'kebab':
+      result = input.toLowerCase().trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：kebab-case';
+      break;
+    case 'words':
+      result = input.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
+      });
+      document.getElementById('activeCaseLabel').textContent = '✓ 已套用：Capitalize Words';
+      break;
+  }
+  
+  document.getElementById('outputText').value = result;
+  updateStats();
+}
+
+function copyResult() {
+  const text = document.getElementById('outputText').value;
+  if (!text) { showToast('⚠️ 沒有可複製的內容，請先轉換文字。'); return; }
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = document.getElementById('copyBtn');
+  btn.textContent = '✅ 已複製！';
+  setTimeout(() => { btn.textContent = '📋 複製結果'; }, 2000);
+  showToast('✅ 已複製到剪貼簿！');
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('outputText').value = '';
+  document.getElementById('activeCaseLabel').textContent = '請選擇以下一種大小寫格式';
+  document.querySelectorAll('#caseButtons button').forEach(b => b.classList.remove('active'));
+  currentCase = '';
+  updateStats();
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 編碼解碼器 — 免費線上 Base64 轉換工具 | Ziwei 文字工具</title>
+<meta name="description" content="免費 Base64 編碼解碼器。將文字編碼為 Base64，或將 Base64 解碼還原為原始文字。100% 私隱保護 — 所有處理均在瀏覽器端完成，資料絕不上傳伺服器。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://textools.site/zh-hk/base64-encoder.html">
+<meta property="og:title" content="🔐 Base64 編碼器 / 解碼器">
+<meta property="og:description" content="免費 Base64 編碼解碼器。將文字轉換為 Base64，或解碼還原為原始文字。">
+<meta property="og:url" content="https://textools.site/zh-hk/base64-encoder.html">
+<meta property="og:image" content="https://textools.site/og-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://textools.site/og-tools.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+h1{font-size:26px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:4px}
+.sub{color:#7f849c;font-size:12px;margin-bottom:16px}
+.trust-badge{display:inline-block;background:rgba(166,227,161,.08);border:1px solid rgba(166,227,161,.12);border-radius:6px;padding:3px 10px;font-size:11px;color:#a6e3a1;margin-bottom:14px}
+textarea{width:100%;height:280px;background:#11111b;border:1px solid #313244;border-radius:10px;padding:14px;color:#cdd6f4;font-size:13px;font-family:'SF Mono','Fira Code',monospace;resize:vertical;outline:none;transition:border-color .2s}
+textarea:focus{border-color:#89b4fa}
+textarea[readonly]{color:#89b4fa}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0 8px}
+.stat-card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:12px;text-align:center}
+.stat-card .num{font-size:22px;font-weight:800;color:#cdd6f4}
+.stat-card .label{font-size:11px;color:#7f849c;margin-top:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.actions button{background:linear-gradient(135deg,#89b4fa,#74c4fa);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.actions button:hover{background:linear-gradient(135deg,#8a78ff,#6a5add);transform:translateY(-1px)}
+.actions button.alt{background:transparent;border:1px solid #45475a;color:#7f849c}
+.actions button.alt:hover{background:rgba(137,180,250,.08);border-color:#89b4fa;color:#bac2de}
+.actions button.success{background:rgba(166,227,161,.15);border:1px solid rgba(166,227,161,.3);color:#a6e3a1}
+.actions button.success:hover{background:rgba(166,227,161,.25);color:#b8eab4}
+.actions select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+.actions select:focus{border-color:#89b4fa}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#181825;border:1px solid #89b4fa;color:#cdd6f4;padding:10px 20px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+.rec-bar{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:10px;padding:14px 16px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rec-bar .label{font-size:11px;color:#7f849c;margin-right:4px}
+.rec-bar a{font-size:12px;color:#89b4fa;text-decoration:none;padding:4px 10px;border:1px solid rgba(137,180,250,.2);border-radius:6px;transition:all .2s}
+.rec-bar a:hover{background:rgba(137,180,250,.1);border-color:#89b4fa}
+.seo-content{margin-top:24px;padding:20px;border-top:1px solid rgba(137,180,250,.08)}
+.seo-content h2{font-size:16px;color:#89b4fa;margin-bottom:10px;letter-spacing:.5px}
+.seo-content p{font-size:13px;color:#a6adc8;margin-bottom:10px;line-height:1.7}
+.seo-content ul{list-style:none;padding:0}
+.seo-content ul li{font-size:12px;color:#a6adc8;padding:4px 0 4px 16px;position:relative}
+.seo-content ul li::before{content:'▸';position:absolute;left:0;color:#585b70}
+.seo-content h3{font-size:14px;color:#89b4fa;margin:16px 0 8px}
+.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
+.footer a{color:#585b70;text-decoration:none}
+.footer a:hover{color:#89b4fa}
+select{background:#11111b;color:#cdd6f4;border:1px solid #313244;border-radius:6px;padding:6px 10px;font-size:12px;outline:none}
+input[type="checkbox"]{accent-color:#89b4fa}
+@media(max-width:600px){h1{font-size:22px}.stats{grid-template-columns:repeat(3,1fr)}}
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:600px){.tool-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="font-size:12px;color:#585b70;margin-bottom:10px">
+    <a href="/" style="color:#585b70;text-decoration:none">主頁</a>
+    <span style="color:#45475a">›</span>
+    <a href="/zh-hk/" style="color:#585b70;text-decoration:none">工具</a>
+    <span style="color:#45475a">›</span>
+    <span style="color:#7f849c">🔐 Base64 編碼器 / 解碼器</span>
+  </div>
+  <h1>🔐 Base64 編碼器 / 解碼器</h1>
+  <p class="sub">將文字編碼為 Base64，或將 Base64 解碼還原為原始文字</p>
+  <div class="trust-badge">🔒 100% 私隱保護 — 瀏覽器端處理，不上傳伺服器</div>
+
+  
+<div class="tool-layout">
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">輸入</div>
+    <textarea id="textInput" placeholder="輸入或貼上要編碼/解碼的文字..." oninput="autoDetect()"></textarea>
+  </div>
+  <div>
+    <div style="font-size:11px;color:#585b70;margin-bottom:4px">輸出</div>
+    <textarea id="textOutput" readonly placeholder="結果將顯示在此..."></textarea>
+  </div>
+</div>
+<div class="actions">
+  <button onclick="encodeText()">⬆ 編碼 → Base64</button>
+  <button onclick="decodeText()">⬇ 解碼 → 文字</button>
+  <button onclick="copyOutput()">📋 複製輸出</button>
+  <button class="alt" onclick="clearAll()">清除</button>
+</div>
+
+
+  <div class="rec-bar" id="recBar">
+    <span class="label">⚡ 相關工具:</span>
+    <a href="/zh-hk/char-counter.html">字元計數器</a>
+    <a href="/zh-hk/json-formatter.html">JSON 格式化工具</a>
+    <a href="/zh-hk/line-numberer.html">行號工具</a>
+    <a href="/zh-hk/">🧰 所有工具</a>
+  </div>
+
+  <div class="seo-content">
+    <h2>免費線上 Base64 編碼解碼器 — 快速、私密、安全</h2>
+    <p>我們的免費 Base64 編碼解碼器讓您即時將文字轉換為 Base64 編碼，或將 Base64 解碼還原為可讀文字。Base64 編碼廣泛用於需要透過文字處理媒介傳輸資料的場景，包括 MIME 電子郵件附件、在 JSON 或 XML 中儲存複雜資料、在 HTML/CSS 中嵌入圖片，以及 HTTP 認證標頭。</p>
+    <p>無論您是正在除錯 API 負載的開發者、分析編碼資料的安全研究人員，還是學習編碼方案的學生，我們的工具都能輕鬆完成編碼和解碼。所有處理均在瀏覽器本地進行 — 您的資料絕不觸及任何伺服器。此工具支援 UTF-8 字元，並能在解碼無效 Base64 字串時優雅地處理錯誤。</p>
+
+    <h3>主要功能</h3>
+    <ul>
+      <li><strong>編碼與解碼</strong> — 將文字轉為 Base64，並將 Base64 解碼回文字</li>
+      <li><strong>UTF-8 支援</strong> — 支援所有 Unicode 字元，包括表情符號及中日韓文字</li>
+      <li><strong>錯誤處理</strong> — 無效 Base64 輸入顯示清晰錯誤訊息</li>
+      <li><strong>一鍵複製</strong> — 一鍵複製編碼或解碼結果</li>
+      <li><strong>100% 私隱</strong> — 所有處理在瀏覽器中完成，資料絕不上傳</li>
+    </ul>
+
+    <h3>相關工具</h3>
+    <ul>
+      <li><a href="/zh-hk/json-formatter.html">JSON 格式化工具</a></li>
+      <li><a href="/zh-hk/char-counter.html">字元計數器</a></li>
+      <li><a href="/zh-hk/line-numberer.html">行號工具</a></li>
+      <li><a href="/zh-hk/">🧰 所有工具</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>🔐 Base64 編碼器 / 解碼器 | <a href="/zh-hk/">更多工具</a> | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a></p>
+    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有處理均在本機進行 · 絕不上傳資料</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+function showToast(msg){
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+function autoDetect(){
+  var t=document.getElementById('textInput').value.trim();
+  if(!t){document.getElementById('textOutput').value='';return;}
+  if(/^[A-Za-z0-9+/]*={0,2}$/.test(t)&&t.length%4===0&&t.length>4){decodeText();}
+}
+function encodeText(){
+  try{
+    var t=document.getElementById('textInput').value;
+    document.getElementById('textOutput').value=btoa(unescape(encodeURIComponent(t)));
+  }catch(e){document.getElementById('textOutput').value='錯誤：無法編碼，請檢查輸入。';}
+}
+function decodeText(){
+  try{
+    var t=document.getElementById('textInput').value;
+    document.getElementById('textOutput').value=decodeURIComponent(escape(atob(t)));
+  }catch(e){document.getElementById('textOutput').value='錯誤：無效的 Base64 輸入。';}
+}
+function copyOutput(){
+  var t=document.getElementById('textOutput').value;
+  if(!t){showToast('⚠️ 沒有可複製的內容');return;}
+  navigator.clipboard.writeText(t).then(function(){showToast('✅ 已複製！');}).catch(function(){});
+}
+function clearAll(){document.getElementById('textInput').value='';document.getElementById('textOutput').value='';showToast('已清除');}
+
+</script>
+</body>
+</html>
