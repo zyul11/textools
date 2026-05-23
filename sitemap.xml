@@ -5,11 +5,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://textools.site/articles/</loc>
+    <loc>https://textools.site/articles/2026-05-19-remove-duplicates.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://textools.site/articles/2026-05-19-remove-duplicates.html</loc>
+    <loc>https://textools.site/articles/en/2026-05-21-seo-case-study-this-website-scored-25-100-on-seo-here.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://textools.site/articles/en/2026-05-21-seo-case-study-this-website-scored-50-100-on-seo-the.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://textools.site/articles/en/2026-05-21-seo-case-study-this-website-scored-68-100-on-seo-what.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -17,7 +25,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://textools.site/articles/en/20260521-agriculture-website-seo-score-25.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://textools.site/articles/en/20260521-free-seo-audit-how-to-check-your-websites-seo-health.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://textools.site/articles/en/20260521-is-ai-finding-your-website-seo-vs-geo.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25,411 +41,355 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://textools.site/articles/tools/</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://textools.site/base64-encoder.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/case-converter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/char-counter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/find-replace.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/fortuna-preview.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/about/</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/products/</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/products/corn-planter.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/products/potato-harvester.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/foya/products/silage-harvester.html</loc>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/base64-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/case-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/char-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/find-replace.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/json-formatter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/line-numberer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/markdown-preview.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/password-generator.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/random-picker.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/regex-tester.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/remove-duplicates.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/slug-generator.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/sort-lines.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/text-diff.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/text-reverser.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/text-splitter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/timestamp-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/url-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/whitespace-trimmer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ja/word-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/json-formatter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/base64-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/case-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/char-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/find-replace.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/ko/fortuna-preview.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/json-formatter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/line-numberer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/markdown-preview.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/password-generator.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/ko/privacy.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/random-picker.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/regex-tester.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/remove-duplicates.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/slug-generator.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/sort-lines.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/template-tool.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/text-diff.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/text-reverser.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/text-splitter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/timestamp-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/url-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/whitespace-trimmer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/ko/word-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/line-counter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/line-numberer.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/markdown-preview.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/password-generator.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/privacy.html</loc>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/random-picker.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/regex-tester.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/remove-duplicates.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/seo-audit/</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/slug-generator.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/sort-lines.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/template-tool.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/terms.html</loc>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/text-diff.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/text-reverser.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/text-splitter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/timestamp-converter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/url-encoder.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://textools.site/url-extractor.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/whitespace-trimmer.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/word-counter.html</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/base64-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/case-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/char-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/find-replace.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/zh-hk/fortuna-preview.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/json-formatter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/line-numberer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/markdown-preview.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/password-generator.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://textools.site/zh-hk/privacy.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/random-picker.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/regex-tester.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/remove-duplicates.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/slug-generator.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/sort-lines.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/template-tool.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/text-diff.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/text-reverser.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/text-splitter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/timestamp-converter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/url-encoder.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/whitespace-trimmer.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://textools.site/zh-hk/word-counter.html</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
