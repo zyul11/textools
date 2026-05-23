@@ -140,13 +140,13 @@
     "category": "encoding-conversion"
   },
   {
-    "slug": "text-extractor",
-    "keyword": "Text Extractor",
-    "emoji": "🔍",
-    "desc": "Extract URLs, emails, phone numbers, hashtags from text",
+    "slug": "url-extractor",
+    "keyword": "URL Extractor",
+    "emoji": "🔗",
+    "desc": "Extract all URLs from text as clickable/copyable list",
     "how_to": "Paste text and select what to extract (URLs, emails, etc.). Results shown as a clean list.",
     "difficulty": "medium",
-    "done": false,
+    "done": true,
     "category": "text-processing"
   },
   {
