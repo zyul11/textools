@@ -4,102 +4,263 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5545263418745440" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>文字工具 - 免費線上文字處理工具 | Textools</title>
-<meta name="description" content="免費線上文字處理工具：字數統計、移除重複行、排序行。100% 私隱保護 — 所有處理均在瀏覽器端完成，資料絕不上傳伺服器。">
-<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico" sizes="any">
+<title>免費線上文字處理工具 - 字數統計、排序、編碼轉換 | Textools</title>
+<meta name="description" content="免費線上文字處理工具：字數統計、排序行、移除重複行、大小寫轉換、密碼產生器。100% 私隱保護 — 所有處理均在瀏覽器端完成，資料絕不上傳。">
 <link rel="canonical" href="https://textools.site/zh-hk/">
-<link rel="alternate" hreflang="zh-HK" href="https://textools.site/zh-hk/">
 <link rel="alternate" hreflang="en" href="https://textools.site/">
 <link rel="alternate" hreflang="ja" href="https://textools.site/ja/">
 <link rel="alternate" hreflang="ko" href="https://textools.site/ko/">
+<link rel="alternate" hreflang="zh-HK" href="https://textools.site/zh-hk/">
 <link rel="alternate" hreflang="x-default" href="https://textools.site/">
 <meta property="og:title" content="免費線上文字處理工具 — Textools">
 <meta property="og:description" content="免費線上文字處理工具，所有運算均在瀏覽器內完成，資料絕不上傳任何伺服器。">
 <meta property="og:url" content="https://textools.site/zh-hk/">
+<meta property="og:type" content="website">
 <meta property="og:image" content="https://textools.site/og-tools.svg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="免費線上文字處理工具 — Textools">
+<meta name="twitter:description" content="免費線上文字處理工具，所有運算均在瀏覽器內完成，資料絕不上傳任何伺服器。">
 <meta name="twitter:image" content="https://textools.site/og-tools.svg">
-<meta name="twitter:description" content="免費線上文字處理工具：字數統計、移除重複行、排序行。100% 私隱保護 — 所有處理均在瀏覽器端完成，資料絕不上傳伺服器。">
+<meta name="robots" content="index, follow">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "主頁", "item": "https://textools.site/"},
-    {"@type": "ListItem", "position": 2, "name": "文字工具", "item": "https://textools.site/zh-hk/"}
-  ]
+  "@type": "WebApplication",
+  "name": "Textools - 文字處理工具",
+  "url": "https://textools.site/zh-hk/",
+  "description": "免費線上文字處理工具 - 字數統計、移除重複行、排序行、大小寫轉換、密碼產生器",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "All",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 }
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','PingFang TC','Microsoft JhengHei',Roboto,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;line-height:1.6}
-.container{max-width:900px;margin:0 auto;padding:24px 20px}
+.container{max-width:960px;margin:0 auto;padding:24px 20px}
 h1{font-size:28px;font-weight:900;background:linear-gradient(135deg,#89b4fa,#a6e3a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;margin-bottom:6px;text-align:center}
 .sub{color:#7f849c;font-size:13px;text-align:center;margin-bottom:8px;letter-spacing:.5px}
 .trust-banner{text-align:center;background:rgba(166,227,161,.06);border:1px solid rgba(166,227,161,.12);border-radius:10px;padding:10px 16px;margin:10px auto 24px;max-width:500px;font-size:13px;color:#a6e3a1}
 .trust-banner strong{color:#b8eab4}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:20px}
-.card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:12px;padding:18px;transition:all .25s;text-decoration:none;display:block;position:relative}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:20px}
+.card{background:linear-gradient(135deg,rgba(24,24,37,.95),rgba(17,17,27,.95));border:1px solid rgba(137,180,250,.12);border-radius:12px;padding:16px;transition:all .25s;text-decoration:none;display:block;position:relative}
 .card:hover{border-color:#89b4fa;transform:translateY(-2px);box-shadow:0 8px 24px rgba(137,180,250,.12)}
-.card .icon{font-size:28px;margin-bottom:6px}
-.card h3{color:#cdd6f4;font-size:15px;font-weight:600;margin-bottom:3px}
-.card p{color:#a6adc8;font-size:12px;line-height:1.5}
-.coming-soon{opacity:.4;pointer-events:none;position:relative}
-.coming-soon::after{content:'即將推出';position:absolute;top:8px;right:10px;background:rgba(137,180,250,.15);color:#89b4fa;font-size:9px;padding:2px 8px;border-radius:4px;letter-spacing:.5px}
-.footer{text-align:center;padding:30px 0;color:#45475a;font-size:11px;margin-top:20px}
-.footer a{color:#585b70;text-decoration:none}
+.card .icon{font-size:26px;margin-bottom:4px}
+.card h3{color:#cdd6f4;font-size:14px;font-weight:600;margin-bottom:2px}
+.card p{color:#a6adc8;font-size:11px;line-height:1.5}
+.sec-title{font-size:14px;color:#585b70;text-align:center;margin:28px 0 6px;letter-spacing:1px}
+.footer{text-align:center;padding:30px 0 10px;color:#45475a;font-size:11px;margin-top:20px;border-top:1px solid rgba(137,180,250,.06)}
+.footer a{color:#585b70;text-decoration:none;margin:0 6px}
 .footer a:hover{color:#89b4fa}
+.lang-links{text-align:center;margin:16px 0;font-size:11px}
+.lang-links a{color:#585b70;text-decoration:none;margin:0 4px;padding:2px 8px;border-radius:4px;border:1px solid rgba(137,180,250,.1)}
+.lang-links a:hover{color:#89b4fa;border-color:#89b4fa}
+.seo-section{margin-top:30px;padding-top:20px;border-top:1px solid rgba(137,180,250,.06)}
+.seo-section h2{font-size:15px;color:#cdd6f4;margin-bottom:10px;font-weight:600}
+.seo-section h3{font-size:13px;color:#a6adc8;margin:14px 0 6px}
+.seo-section p{font-size:12px;color:#7f849c;line-height:1.7;margin-bottom:8px}
+.seo-section ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 16px}
+.seo-section ul li{font-size:11px;color:#585b70;line-height:1.8}
+.seo-section ul li a{color:#585b70;text-decoration:none;border-bottom:1px solid transparent}
+.seo-section ul li a:hover{color:#89b4fa;border-color:#89b4fa}
 @media(max-width:600px){h1{font-size:24px}.grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="container">
-  <div style="margin-bottom:8px;font-size:12px">
-    <a href="/" style="color:#585b70;text-decoration:none;">← Textools 主頁</a>
-  </div>
-  <h1>🧰 文字工具</h1>
+
+  <h1>🧰 免費文字處理工具</h1>
   <p class="sub">免費線上文字處理 — 所有工具均在瀏覽器端執行，資料絕不離開您的裝置</p>
   <div class="trust-banner">
     <strong>🔒 100% 私隱保護</strong> — 所有文字處理均在瀏覽器本地完成，資料絕不上傳至任何伺服器，您的資料絕不離開您的裝置。
   </div>
 
+  <div class="sec-title">📝 文字分析</div>
   <div class="grid">
-    <a href="/tools/zh-hk/word-counter.html" class="card">
+    <a href="/zh-hk/word-counter.html" class="card">
       <div class="icon">📊</div>
       <h3>字數統計</h3>
-      <p>統計文字的字數、字元數、句子數、段落數及閱讀時間。</p>
+      <p>統計文字的字數、字元數、句子數、段落數及閱讀時間。支援關鍵字密度分析。</p>
     </a>
-    <a href="/tools/zh-hk/remove-duplicates.html" class="card">
-      <div class="icon">🧹</div>
-      <h3>移除重複行</h3>
-      <p>移除文字中的重複行，清理清單、CSV 資料及重複條目。</p>
+    <a href="/zh-hk/char-counter.html" class="card">
+      <div class="icon">🔢</div>
+      <h3>字元計數器</h3>
+      <p>計算含或不含空格的字元數。適用於 Twitter、SMS、Meta 描述等限制字數場景。</p>
     </a>
-    <a href="/tools/zh-hk/sort-lines.html" class="card">
-      <div class="icon">🔤</div>
-      <h3>排序行</h3>
-      <p>將文字行按字母順序排序（A-Z 或 Z-A），適合整理清單與資料。</p>
-    </a>
-    <a href="#" class="card coming-soon">
-      <div class="icon">🔍</div>
-      <h3>尋找與取代</h3>
-      <p>尋找並取代文字，支援大小寫及整詞比對。</p>
-    </a>
-    <a href="#" class="card coming-soon">
-      <div class="icon">🔄</div>
-      <h3>大小寫轉換</h3>
-      <p>將文字轉換為全大寫、全小寫、標題大小寫或句子大小寫。</p>
-    </a>
-    <a href="#" class="card coming-soon">
+    <a href="/zh-hk/line-counter.html" class="card">
       <div class="icon">📏</div>
-      <h3>反轉文字</h3>
-      <p>反轉文字、字詞或行序，產生鏡像文字與倒轉文字。</p>
+      <h3>行數計數器</h3>
+      <p>即時計算總行數、非空行數及空白行數。快速分析文字結構。</p>
+    </a>
+    <a href="/zh-hk/markdown-preview.html" class="card">
+      <div class="icon">📝</div>
+      <h3>Markdown 預覽</h3>
+      <p>即時編寫並預覽 Markdown 格式。支援表格、程式碼區塊及多種格式化語法。</p>
     </a>
   </div>
 
-  <div class="footer">
-    <p>🧰 文字工具 | <a href="/">主頁</a> | <a href="/privacy.html">私隱政策</a> | <a href="/articles/">文章</a></p>
-    <p style="margin-top:6px;font-size:10px">© 2026 Textools · 所有工具均於瀏覽器端執行 · 絕不上傳資料</p>
+  <div class="sec-title">🔧 文字處理</div>
+  <div class="grid">
+    <a href="/zh-hk/remove-duplicates.html" class="card">
+      <div class="icon">🗑️</div>
+      <h3>移除重複行</h3>
+      <p>清除清單、CSV 檔案及文字中的重複行。保留原始順序，一鍵去重。</p>
+    </a>
+    <a href="/zh-hk/sort-lines.html" class="card">
+      <div class="icon">🔤</div>
+      <h3>排序行</h3>
+      <p>將文字行按字母順序排序（A-Z 或 Z-A）。適合整理清單與資料。</p>
+    </a>
+    <a href="/zh-hk/case-converter.html" class="card">
+      <div class="icon">🔄</div>
+      <h3>大小寫轉換</h3>
+      <p>在大寫、小寫、標題大小寫、駝峰式等多種格式之間自由轉換。</p>
+    </a>
+    <a href="/zh-hk/find-replace.html" class="card">
+      <div class="icon">🔍</div>
+      <h3>尋找與取代</h3>
+      <p>搜尋並取代文字內容。支援正規表達式模式，適合進階比對需求。</p>
+    </a>
+    <a href="/zh-hk/text-reverser.html" class="card">
+      <div class="icon">↩️</div>
+      <h3>反轉文字</h3>
+      <p>反轉文字、字詞或行序。適合迴文測試、謎題處理及格式轉換。</p>
+    </a>
+    <a href="/zh-hk/text-splitter.html" class="card">
+      <div class="icon">✂️</div>
+      <h3>文字分割器</h3>
+      <p>按分隔符號、換行或正規表達式模式分割文字。提取特定區塊內容。</p>
+    </a>
+    <a href="/zh-hk/text-diff.html" class="card">
+      <div class="icon">📋</div>
+      <h3>文字差異比對</h3>
+      <p>並排比較兩段文字。高亮顯示新增、刪除及修改的內容。</p>
+    </a>
+    <a href="/zh-hk/whitespace-trimmer.html" class="card">
+      <div class="icon">🧹</div>
+      <h3>空白字元清理</h3>
+      <p>移除多餘空格、定位點及換行。清理雜亂的文字格式。</p>
+    </a>
+    <a href="/zh-hk/line-numberer.html" class="card">
+      <div class="icon">🔢</div>
+      <h3>行號標記</h3>
+      <p>為文字添加行號。自訂前綴、後綴、起始編號及位數補齊。</p>
+    </a>
+    <a href="/zh-hk/template-tool.html" class="card">
+      <div class="icon">📄</div>
+      <h3>範本工具</h3>
+      <p>使用自訂值填入文字範本。建立可重複使用的文字模式與表單。</p>
+    </a>
   </div>
+
+  <div class="sec-title">🔣 編碼與轉換</div>
+  <div class="grid">
+    <a href="/zh-hk/base64-encoder.html" class="card">
+      <div class="icon">🔐</div>
+      <h3>Base64 編碼/解碼</h3>
+      <p>將文字與 Base64 格式之間進行編碼及解碼。支援檔案及文字輸入。</p>
+    </a>
+    <a href="/zh-hk/url-encoder.html" class="card">
+      <div class="icon">🔗</div>
+      <h3>URL 編碼/解碼</h3>
+      <p>編碼 URL 參數及解碼百分比編碼的 URL。處理特殊字元。</p>
+    </a>
+    <a href="/zh-hk/slug-generator.html" class="card">
+      <div class="icon">📌</div>
+      <h3>URL Slug 產生器</h3>
+      <p>從文字產生簡潔友善的 URL 別名。適用於網誌文章及頁面。</p>
+    </a>
+    <a href="/zh-hk/timestamp-converter.html" class="card">
+      <div class="icon">⏰</div>
+      <h3>時間戳轉換器</h3>
+      <p>在 Unix 時間戳與人類可讀日期之間轉換。支援多時區。</p>
+    </a>
+    <a href="/zh-hk/json-formatter.html" class="card">
+      <div class="icon">📋</div>
+      <h3>JSON 格式化工具</h3>
+      <p>格式化、驗證及美化 JSON 資料。樹狀檢視支援摺疊節點。</p>
+    </a>
+  </div>
+
+  <div class="sec-title">🛠️ 工具</div>
+  <div class="grid">
+    <a href="/zh-hk/password-generator.html" class="card">
+      <div class="icon">🔐</div>
+      <h3>密碼產生器</h3>
+      <p>產生高強度隨機密碼。可自訂長度、符號及數字組合。</p>
+    </a>
+    <a href="/zh-hk/regex-tester.html" class="card">
+      <div class="icon">🔬</div>
+      <h3>正規表達式測試器</h3>
+      <p>即時測試正規表達式。查看比對結果、分組及取代效果。</p>
+    </a>
+    <a href="/zh-hk/random-picker.html" class="card">
+      <div class="icon">🎲</div>
+      <h3>隨機選取器</h3>
+      <p>從清單中隨機選取項目。適用於抽獎、抽籤及團隊分組。</p>
+    </a>
+  </div>
+
+  <div class="lang-links">
+    <a href="/">English</a>
+    <a href="/ja/">日本語</a>
+    <a href="/ko/">한국어</a>
+  </div>
+
+  <div class="seo-section">
+    <h2>免費線上文字處理工具 — 私隱、快速、可靠</h2>
+    <p>Textools.site 提供不斷增長的免費文字處理工具集，所有工具皆以私隱為先。每項工具都設計得快速直覺且完全私密 — 所有處理均在您的瀏覽器中使用 JavaScript 完成，絕不將任何資料傳送至任何伺服器。</p>
+
+    <h3>為什麼選擇 Textools？</h3>
+    <p>無論您是檢查字數的作家、清理資料的開發者，還是整理筆記的學生，Textools 都能讓您即時獲取所需工具。無需註冊、無廣告干擾、無需將檔案上傳至不明伺服器。開啟即可使用。</p>
+
+    <h3>所有文字工具</h3>
+    <ul>
+      <li><a href="/zh-hk/word-counter.html">字數統計</a> — 統計字數、字元數、句子數及段落數</li>
+      <li><a href="/zh-hk/char-counter.html">字元計數器</a> — 計算含或不含空格的字元數</li>
+      <li><a href="/zh-hk/line-counter.html">行數計數器</a> — 計算總行數、非空行數及空白行數</li>
+      <li><a href="/zh-hk/remove-duplicates.html">移除重複行</a> — 清除清單中的重複條目</li>
+      <li><a href="/zh-hk/sort-lines.html">排序行</a> — 按字母順序 A-Z 或 Z-A 即時排序</li>
+      <li><a href="/zh-hk/case-converter.html">大小寫轉換</a> — 在多種大小寫格式之間轉換</li>
+      <li><a href="/zh-hk/find-replace.html">尋找與取代</a> — 搜尋並取代，支援正規表達式</li>
+      <li><a href="/zh-hk/text-reverser.html">反轉文字</a> — 反轉文字、字詞或行</li>
+      <li><a href="/zh-hk/text-splitter.html">文字分割器</a> — 按分隔符號或模式分割文字</li>
+      <li><a href="/zh-hk/text-diff.html">文字差異比對</a> — 並排比較兩段文字</li>
+      <li><a href="/zh-hk/whitespace-trimmer.html">空白字元清理</a> — 移除多餘空格及定位點</li>
+      <li><a href="/zh-hk/line-numberer.html">行號標記</a> — 為文字添加行號</li>
+      <li><a href="/zh-hk/template-tool.html">範本工具</a> — 使用自訂值填入文字範本</li>
+      <li><a href="/zh-hk/markdown-preview.html">Markdown 預覽</a> — 即時編寫並預覽 Markdown</li>
+      <li><a href="/zh-hk/base64-encoder.html">Base64 編碼/解碼</a> — 編碼及解碼 Base64</li>
+      <li><a href="/zh-hk/url-encoder.html">URL 編碼/解碼</a> — 編碼 URL 參數</li>
+      <li><a href="/zh-hk/slug-generator.html">URL Slug 產生器</a> — 產生簡潔的 URL 別名</li>
+      <li><a href="/zh-hk/timestamp-converter.html">時間戳轉換器</a> — 在 Unix 時間與日期之間轉換</li>
+      <li><a href="/zh-hk/json-formatter.html">JSON 格式化工具</a> — 格式化及驗證 JSON</li>
+      <li><a href="/zh-hk/password-generator.html">密碼產生器</a> — 建立高強度安全密碼</li>
+      <li><a href="/zh-hk/regex-tester.html">正規表達式測試器</a> — 即時測試正規表達式</li>
+      <li><a href="/zh-hk/random-picker.html">隨機選取器</a> — 從清單中隨機選取項目</li>
+    </ul>
+
+    <h3>常見用途</h3>
+    <p>我們的工具被內容創作者用來檢查文章長度、開發者清理日誌檔案、資料分析師對 CSV 匯出進行去重、以及學生格式化論文。每項工具均支援複製貼上工作流程，即時顯示結果。</p>
+  </div>
+
+  <div class="footer">
+    <a href="/zh-hk/">Textools</a> ·
+    <a href="/zh-hk/word-counter.html">字數統計</a> ·
+    <a href="/zh-hk/char-counter.html">字元計數器</a> ·
+    <a href="/zh-hk/line-counter.html">行數計數器</a> ·
+    <a href="/zh-hk/remove-duplicates.html">移除重複行</a> ·
+    <a href="/zh-hk/find-replace.html">尋找與取代</a> ·
+    <a href="/zh-hk/password-generator.html">密碼產生器</a> ·
+    <a href="/zh-hk/case-converter.html">大小寫轉換</a> ·
+    <a href="/">English</a> ·
+    <a href="/privacy.html">私隱政策</a>
+    <br><br>
+    <span>© 2026 Textools — 以私隱為先的文字處理工具。所有資料均留在您的裝置上。</span>
+  </div>
+
 </div>
 </body>
 </html>
